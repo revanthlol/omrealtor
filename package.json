@@ -1,0 +1,20 @@
+{
+  "name": "om-enterprises-realtor",
+  "version": "1.0.0",
+  "description": "Premium Editorial Real Estate Website for OM ENTERPRISES (omrealtor.com) · Ulwe, Navi Mumbai",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3030",
+    "start": "python3 -m http.server 3030",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "real-estate",
+    "ulwe",
+    "navi-mumbai",
+    "om-enterprises",
+    "omrealtor"
+  ],
+  "author": "Om Enterprises",
+  "license": "ISC"
+}
