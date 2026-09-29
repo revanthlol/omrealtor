@@ -2,12 +2,12 @@
 **Brand & Domain:** [omrealtor.com](https://omrealtor.com)  
 **Location:** Shop / Office No. 2, Sai Nakshatra, Plot No. 116, Sector 18, Ulwe, Kharkopar, Navi Mumbai, Maharashtra 410206  
 **Google Plus Code:** `X29C+PC Kharkopar, Maharashtra`  
-**Google Maps Profile:** `/g/11gfxl55bd` ([Direct Link](https://share.google/NFXPxHE3tBVkWqDWu))  
+**Google Maps Profile:** `/g/11gfxl55bd` ([Direct Link](https://maps.app.goo.gl/8yNu6cMamPBmxs388))  
 **MahaRERA Registration No:** `A52000018878`  
 **Official Slogan / Motto:** *"Building Relations"*  
 **Primary Leadership:** Mr. Manoj Kumar ("Manoj Sir")  
-**Primary Contact:** `+91 98209 87706` / `098209 87706` (Navi Mumbai / Ulwe HQ)  
-**Secondary Contact:** `+91 91376 37158` (Mumbai Branch)  
+**Primary Contact:** `+91 91376 37158` (Calls & WhatsApp)  
+**Secondary Contact:** `+91 98209 87706` (Alt line)  
 **Operating Hours:** Tuesday – Sunday: 10:00 AM – 8:30 PM (Mondays Closed / Prior Appointment)
 
 ---

@@ -23,6 +23,35 @@ document.documentElement.classList.add("js");
     }
   });
 
+  // Apple-style smooth scroll reveal with IntersectionObserver
+  if (!reducedMotion && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.05
+    });
+
+    document.querySelectorAll("[data-reveal]").forEach((el) => {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-revealed"));
+  }
+
+  // Seamless reviews marquee duplicate
+  const marquee = document.querySelector(".reviews-marquee-track");
+  if (marquee && !reducedMotion) {
+    const clone = marquee.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    marquee.parentElement?.appendChild(clone);
+  }
+
   const reviews = Array.from(document.querySelectorAll(".review"));
   if (reviews.length) {
     let reviewIndex = 0;

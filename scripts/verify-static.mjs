@@ -35,8 +35,9 @@ for (const page of pages) {
   if (!/<link rel="canonical"/.test(html)) throw new Error(`Missing canonical in ${page}`);
   if (!/<script type="application\/ld\+json">/.test(html)) throw new Error(`Missing structured data in ${page}`);
   if ((html.match(/<h1\b/g) || []).length !== 1) throw new Error(`Expected one h1 in ${page}`);
-  if (!/href="https:\/\/wa\.me\/919820987706/.test(html)) throw new Error(`Missing WhatsApp contact in ${page}`);
-  if (!/href="tel:\+919820987706"/.test(html)) throw new Error(`Missing phone contact in ${page}`);
+  if (!/href="https:\/\/wa\.me\/919137637158/.test(html)) throw new Error(`Missing WhatsApp contact in ${page}`);
+  if (!/href="tel:\+919137637158"/.test(html)) throw new Error(`Missing primary phone contact in ${page}`);
+  if (!/href="tel:\+919820987706"/.test(html)) throw new Error(`Missing alt phone contact in ${page}`);
   if (html.includes("—") || html.includes("–")) throw new Error(`Found a banned dash character in ${page}`);
   if (/ओम एंटरप्राइजेज/.test(html)) throw new Error(`Found removed Hindi wordmark in ${page}`);
 }
