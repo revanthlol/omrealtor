@@ -213,7 +213,7 @@ Credential items are compact, factual panes separated by shared hairlines. Each 
 
 ### Reveal Motion
 
-The first viewport enters once with a short upward type resolve and a slow image settle. Below the fold, a single IntersectionObserver reveals major blocks as they enter view, with restrained stagger only where sibling order communicates hierarchy. Hover zoom is limited to photographic discovery cards. Reduced-motion mode renders every block immediately and removes all transition delay.
+The first viewport enters once with a short upward type resolve and a slow image settle. Below the fold, content remains immediately available; motion is limited to interaction feedback, menu state, review changes and restrained photographic hover zoom. Reduced-motion mode removes every transition delay.
 
 ## Do's and Don'ts
 

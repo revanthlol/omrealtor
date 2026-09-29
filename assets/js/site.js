@@ -33,19 +33,24 @@ document.documentElement.classList.add("js");
     showReview(0);
   }
 
-  const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
-  if (reducedMotion || !("IntersectionObserver" in window)) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-    return;
+  // Smooth clean URL enhancement on live production host (e.g. Vercel)
+  if (window.location.protocol !== "file:") {
+    const isLive = !window.location.port || window.location.port === "80" || window.location.port === "443";
+    if (isLive) {
+      document.querySelectorAll("a[href]").forEach((link) => {
+        const href = link.getAttribute("href");
+        if (!href) return;
+        if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:") || href.startsWith("#")) return;
+        if (href === "./index.html" || href === "index.html") {
+          link.setAttribute("href", "/");
+        } else if (href.includes(".html")) {
+          const [path, hash] = href.split("#");
+          const clean = "/" + path.replace(/^\.\//, "").replace(/\.html$/, "");
+          link.setAttribute("href", clean + (hash ? "#" + hash : ""));
+        }
+      });
+    }
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, { rootMargin: "0px 0px -8%", threshold: 0.12 });
-
-  revealItems.forEach((item) => observer.observe(item));
+  if (reducedMotion) document.documentElement.classList.add("reduced-motion");
 })();
