@@ -62,12 +62,26 @@ document.documentElement.classList.add("js");
 
       let originalDimension = 0; // Height on desktop, Width on mobile
       const measureDimensions = () => {
+        if (!originalItems.length || !clones.length) return;
         if (isMobile()) {
-          const trackStyle = window.getComputedStyle(track);
-          const gap = parseFloat(trackStyle.gap) || 24;
-          originalDimension = originalItems.reduce((acc, el) => acc + el.offsetWidth + gap, 0);
+          const firstClone = clones[0];
+          const firstOriginal = originalItems[0];
+          if (firstClone && firstOriginal && firstClone.offsetLeft > firstOriginal.offsetLeft) {
+            originalDimension = firstClone.offsetLeft - firstOriginal.offsetLeft;
+          } else {
+            const trackStyle = window.getComputedStyle(track);
+            const gap = parseFloat(trackStyle.gap) || 20;
+            const visible = originalItems.filter((el) => el.offsetWidth > 0);
+            originalDimension = visible.reduce((acc, el) => acc + el.offsetWidth + gap, 0);
+          }
         } else {
-          originalDimension = originalItems.reduce((acc, el) => acc + el.offsetHeight, 0);
+          const firstClone = clones[0];
+          const firstOriginal = originalItems[0];
+          if (firstClone && firstOriginal && firstClone.offsetTop > firstOriginal.offsetTop) {
+            originalDimension = firstClone.offsetTop - firstOriginal.offsetTop;
+          } else {
+            originalDimension = originalItems.reduce((acc, el) => acc + el.offsetHeight, 0);
+          }
         }
       };
 
