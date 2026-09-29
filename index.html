@@ -6,8 +6,8 @@
   <title>OM Enterprises | Property Advisor in Ulwe, Navi Mumbai</title>
   <meta name="description" content="Buy, rent, invest, and verify property in Ulwe with local guidance from OM Enterprises and Mr. Manoj Kumar.">
   <link rel="canonical" href="https://omrealtor.com/">
-  <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#15191f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f5f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151a20" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://omrealtor.com/">
   <meta property="og:title" content="OM Enterprises | Property Advisor in Ulwe">
@@ -23,7 +23,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/img/hero.webp" as="image" fetchpriority="high">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="/assets/css/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,11 +44,7 @@
       "addressCountry": "IN"
     },
     "areaServed": ["Ulwe", "Navi Mumbai"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "232"
-    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "232" },
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -55,566 +53,111 @@
     }]
   }
   </script>
-  <style>
-    @font-face {
-      font-family: "Geist";
-      src: url("/fonts/geist-latin.woff2") format("woff2");
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
-    }
-    :root {
-      color-scheme: light dark;
-      --bg: #f2f4f3;
-      --surface: #e7eaec;
-      --surface-strong: #d9dee2;
-      --ink: #15191f;
-      --muted: #59626e;
-      --line: #c2c8cf;
-      --accent: #0757d9;
-      --accent-hover: #0648b5;
-      --accent-ink: #f7f9fc;
-      --image-scrim: rgba(10, 18, 29, 0.68);
-      --focus: #0757d9;
-      --header-height: 74px;
-      --page-pad: clamp(1rem, 3vw, 3rem);
-      --max-width: 1500px;
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #15191f;
-        --surface: #1e242c;
-        --surface-strong: #29313b;
-        --ink: #edf1f5;
-        --muted: #b0bac5;
-        --line: #3d4651;
-        --accent: #5d91ff;
-        --accent-hover: #7aa5ff;
-        --accent-ink: #10151c;
-        --image-scrim: rgba(4, 8, 14, 0.72);
-        --focus: #84adff;
-      }
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scrollbar-color: var(--accent) var(--surface); scrollbar-width: thin; }
-    body {
-      margin: 0;
-      min-width: 320px;
-      overflow-x: hidden;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Geist", "Noto Sans Devanagari", system-ui, sans-serif;
-      font-size: 1rem;
-      line-height: 1.55;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-    ::selection { background: var(--accent); color: var(--accent-ink); }
-    img { display: block; width: 100%; max-width: 100%; }
-    button, a, summary { -webkit-tap-highlight-color: transparent; }
-    button, input, textarea { font: inherit; }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
-    a:hover { text-decoration-thickness: 2px; }
-    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
-    .skip-link {
-      position: fixed;
-      top: 0.75rem;
-      left: 0.75rem;
-      z-index: 100;
-      padding: 0.7rem 1rem;
-      background: var(--accent);
-      color: var(--accent-ink);
-      transform: translateY(-160%);
-      transition: transform 180ms ease;
-    }
-    .skip-link:focus { transform: translateY(0); }
-    .site-shell { width: min(100%, var(--max-width)); margin-inline: auto; }
-    .page-pad { padding-inline: var(--page-pad); }
-    .section { padding-block: clamp(6.5rem, 12vw, 11rem); }
-    .section-heading {
-      max-width: 920px;
-      margin: 0 0 clamp(2.5rem, 5vw, 5rem);
-      font-size: clamp(2.45rem, 6vw, 5.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-      font-weight: 660;
-      text-wrap: balance;
-    }
-    .lede {
-      max-width: 68ch;
-      margin: 0;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 1.4vw, 1.28rem);
-    }
-    .site-header {
-      position: relative;
-      z-index: 20;
-      height: var(--header-height);
-      border-bottom: 1px solid var(--line);
-      background: color-mix(in srgb, var(--bg) 94%, transparent);
-      backdrop-filter: blur(14px);
-    }
-    .nav {
-      height: 100%;
-      display: grid;
-      grid-template-columns: minmax(210px, 1fr) auto auto;
-      align-items: center;
-      gap: 2.25rem;
-    }
-    .wordmark {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.72rem;
-      width: fit-content;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 750;
-      letter-spacing: -0.025em;
-      white-space: nowrap;
-    }
-    .wordmark-devanagari { color: var(--muted); font-size: 0.85rem; font-weight: 560; }
-    .nav-links { display: flex; align-items: center; gap: clamp(1.2rem, 2.5vw, 2.6rem); }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 560; transition: color 180ms ease; }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-action {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0.72rem 1rem;
-      background: var(--accent);
-      color: var(--accent-ink);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 680;
-      white-space: nowrap;
-      transition: background 180ms ease, transform 180ms var(--ease);
-    }
-    .nav-action:hover { background: var(--accent-hover); }
-    .nav-action:active { transform: scale(0.98); }
-    .mobile-menu { display: none; position: relative; }
-    .mobile-menu summary { list-style: none; min-height: 44px; display: grid; place-items: center; cursor: pointer; font-weight: 650; }
-    .mobile-menu summary::-webkit-details-marker { display: none; }
-    .mobile-menu-panel {
-      position: absolute;
-      top: calc(100% + 0.9rem);
-      right: 0;
-      width: min(82vw, 340px);
-      padding: 1rem;
-      border: 1px solid var(--line);
-      background: var(--bg);
-      box-shadow: 0 22px 60px color-mix(in srgb, var(--ink) 18%, transparent);
-    }
-    .mobile-menu-panel a { display: block; padding: 0.9rem; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 620; }
-    .mobile-menu-panel a:last-child { border-bottom: 0; background: var(--accent); color: var(--accent-ink); }
-    .hero {
-      min-height: calc(100dvh - var(--header-height));
-      display: grid;
-      grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
-      border-bottom: 1px solid var(--line);
-    }
-    .hero-copy {
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: clamp(3rem, 7vh, 5.5rem) clamp(2rem, 5vw, 5.4rem) clamp(3rem, 6vh, 4.5rem) var(--page-pad);
-    }
-    .hero h1 {
-      max-width: 100%;
-      margin: 0;
-      font-size: clamp(3.25rem, 4.7vw, 5.1rem);
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      font-weight: 720;
-      text-wrap: balance;
-    }
-    .hero h1 > span { display: block; white-space: nowrap; }
-    .hero h1 .accent-period { color: var(--accent); }
-    .hero-subtitle { max-width: 31rem; margin: clamp(1.6rem, 4vh, 2.8rem) 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.45vw, 1.32rem); line-height: 1.45; }
-    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.35rem; margin-top: clamp(2rem, 5vh, 3.6rem); }
-    .button-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0.94rem 1.45rem;
-      background: var(--accent);
-      color: var(--accent-ink);
-      text-decoration: none;
-      font-weight: 700;
-      white-space: nowrap;
-      transition: background 180ms ease, transform 180ms var(--ease);
-    }
-    .button-primary:hover { background: var(--accent-hover); }
-    .button-primary:active { transform: scale(0.98); }
-    .text-action { color: var(--accent); font-weight: 680; white-space: nowrap; }
-    .hero-media { position: relative; min-width: 0; overflow: hidden; background: var(--surface-strong); }
-    .hero-media img { height: 100%; object-fit: cover; object-position: 56% center; }
-    .proof-rail { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
-    .proof-item { min-width: 0; padding: 1.4rem var(--page-pad); border-right: 1px solid var(--line); }
-    .proof-item:last-child { border-right: 0; }
-    .proof-item strong { display: block; margin-bottom: 0.18rem; font-size: 1rem; font-weight: 710; }
-    .proof-item span { color: var(--muted); font-size: 0.84rem; }
-    .services-intro { margin-bottom: clamp(2.5rem, 5vw, 5rem); }
-    .services-intro .lede { max-width: 54ch; }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-auto-flow: dense;
-      border: 1px solid var(--line);
-      background: var(--line);
-      gap: 1px;
-    }
-    .service-cell {
-      min-width: 0;
-      min-height: 310px;
-      padding: clamp(1.5rem, 3vw, 2.7rem);
-      background: var(--bg);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-    }
-    .service-cell h3 { max-width: 11ch; margin: 0; font-size: clamp(1.7rem, 3vw, 3.1rem); line-height: 1; letter-spacing: -0.035em; }
-    .service-cell p { max-width: 32ch; margin: 2rem 0 0; color: var(--muted); }
-    .service-cell.is-image { grid-column: span 7; padding: 0; }
-    .service-cell.is-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 800ms var(--ease); }
-    .service-cell.is-image:hover img { transform: scale(1.035); }
-    .service-cell.is-primary { grid-column: span 5; background: var(--accent); color: var(--accent-ink); }
-    .service-cell.is-primary p { color: color-mix(in srgb, var(--accent-ink) 82%, transparent); }
-    .service-cell.is-third { grid-column: span 4; }
-    .advisory { position: relative; display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: clamp(2rem, 7vw, 7rem); align-items: start; }
-    .advisory-copy {
-      min-height: calc(100dvh - var(--header-height));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-block: 4rem;
-    }
-    .advisory-copy h2 { margin-bottom: 2rem; }
-    .advisory-copy .lede { max-width: 42ch; }
-    .advisory-panels { padding-block: clamp(2rem, 8vh, 7rem); }
-    .advisory-panel { min-height: min(72dvh, 720px); margin-bottom: clamp(2rem, 6vh, 5rem); background: var(--surface); overflow: hidden; }
-    .advisory-panel:last-child { margin-bottom: 0; }
-    .advisory-panel img { aspect-ratio: 16 / 9; height: auto; object-fit: cover; }
-    .advisory-panel-copy { padding: clamp(1.4rem, 3vw, 2.6rem); }
-    .advisory-panel h3 { margin: 0 0 0.8rem; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1; letter-spacing: -0.03em; }
-    .advisory-panel p { max-width: 55ch; margin: 0; color: var(--muted); }
-    .ulwe-story { border-block: 1px solid var(--line); padding-block: clamp(6rem, 14vw, 13rem); }
-    .story-copy { max-width: 1180px; margin: 0; font-size: clamp(2.2rem, 5.7vw, 5.4rem); line-height: 1.04; letter-spacing: -0.04em; font-weight: 620; }
-    .story-copy .word { opacity: 0.16; }
-    .gallery-heading { max-width: 720px; }
-    .accordion { display: flex; gap: 1px; height: min(68dvh, 690px); background: var(--line); border: 1px solid var(--line); overflow: hidden; }
-    .accordion-panel {
-      position: relative;
-      flex: 1 1 0;
-      min-width: 0;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      background: var(--surface-strong);
-      color: #f4f7fb;
-      text-align: left;
-      cursor: pointer;
-      transition: flex 700ms var(--ease);
-    }
-    .accordion-panel[aria-expanded="true"] { flex: 3 1 0; }
-    .accordion-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 800ms var(--ease); }
-    .accordion-panel:hover img, .accordion-panel:focus-visible img { transform: scale(1.04); }
-    .accordion-panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--image-scrim), transparent 62%); }
-    .accordion-title { position: absolute; z-index: 1; left: 1.35rem; right: 1.35rem; bottom: 1.3rem; font-size: clamp(1.1rem, 2vw, 2rem); font-weight: 680; line-height: 1.06; }
-    .reviews-layout { display: grid; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: clamp(2rem, 8vw, 8rem); align-items: start; }
-    .reviews-layout h2 { margin-bottom: 1.4rem; }
-    .review-stage { min-height: 330px; border-top: 1px solid var(--line); padding-top: clamp(2rem, 5vw, 4rem); }
-    .review { display: none; }
-    .review.is-active { display: block; }
-    .review blockquote { max-width: 24ch; margin: 0; font-size: clamp(1.8rem, 3.7vw, 3.8rem); line-height: 1.08; letter-spacing: -0.035em; font-weight: 570; }
-    .review footer { margin-top: 2rem; color: var(--muted); }
-    .review-controls { display: flex; gap: 0.65rem; margin-top: 2.5rem; }
-    .review-controls button {
-      min-height: 44px;
-      padding: 0.7rem 1rem;
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--ink);
-      cursor: pointer;
-      font-weight: 620;
-      transition: background 180ms ease, color 180ms ease;
-    }
-    .review-controls button:hover { background: var(--ink); color: var(--bg); }
-    .review-controls button:active { transform: scale(0.98); }
-    .contact-block {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-      gap: clamp(3rem, 8vw, 9rem);
-      padding-block: clamp(6rem, 11vw, 10rem);
-      border-top: 1px solid var(--line);
-    }
-    .contact-block h2 { max-width: 8ch; margin: 0 0 2.6rem; font-size: clamp(3.4rem, 8vw, 7rem); line-height: 0.9; letter-spacing: -0.04em; }
-    .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
-    .contact-details { display: grid; align-content: start; gap: 2rem; }
-    .contact-detail { padding-top: 1.1rem; border-top: 1px solid var(--line); }
-    .contact-detail h3 { margin: 0 0 0.55rem; font-size: 0.95rem; }
-    .contact-detail p { max-width: 38ch; margin: 0; color: var(--muted); }
-    .site-footer { border-top: 1px solid var(--line); padding-block: 2rem 6rem; }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 2rem; align-items: start; }
-    .footer-brand p { max-width: 34ch; margin: 0.7rem 0 0; color: var(--muted); font-size: 0.9rem; }
-    .footer-links { display: grid; gap: 0.5rem; }
-    .footer-links a { width: fit-content; color: var(--muted); }
-    .footer-meta { color: var(--muted); font-size: 0.82rem; text-align: right; }
-    .mobile-action-bar { display: none; }
-    .visually-hidden {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-    @media (max-width: 1024px) {
-      .nav { grid-template-columns: 1fr auto; }
-      .nav-links, .nav > .nav-action { display: none; }
-      .mobile-menu { display: block; }
-      .hero { grid-template-columns: minmax(0, 46fr) minmax(0, 54fr); }
-      .hero h1 { font-size: clamp(3rem, 6vw, 4.4rem); }
-      .proof-rail { grid-template-columns: repeat(2, 1fr); }
-      .proof-item:nth-child(2) { border-right: 0; }
-      .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .advisory { grid-template-columns: 1fr 1.2fr; gap: 2.5rem; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-meta { grid-column: 1 / -1; text-align: left; }
-    }
-    @media (max-width: 767px) {
-      :root { --header-height: 66px; --page-pad: 1rem; }
-      .section { padding-block: 6rem; }
-      .wordmark { display: grid; gap: 0; line-height: 1.08; }
-      .wordmark-devanagari { font-size: 0.72rem; }
-      .hero { min-height: auto; grid-template-columns: 1fr; }
-      .hero-copy { min-height: calc(58dvh - var(--header-height)); padding: 3.25rem var(--page-pad) 3rem; }
-      .hero h1 { max-width: 100%; font-size: clamp(2.85rem, 12vw, 4.15rem); }
-      .hero-subtitle { max-width: 25rem; margin-top: 1.5rem; font-size: 1.05rem; }
-      .hero-actions { margin-top: 2rem; gap: 1rem; }
-      .hero-media { height: 46dvh; min-height: 360px; }
-      .proof-rail { grid-template-columns: 1fr 1fr; }
-      .proof-item { padding: 1.1rem 1rem; }
-      .proof-item strong { font-size: 0.9rem; }
-      .proof-item span { font-size: 0.76rem; }
-      .service-grid { grid-template-columns: 1fr; }
-      .service-cell, .service-cell.is-image, .service-cell.is-primary, .service-cell.is-third { grid-column: 1; min-height: 270px; }
-      .service-cell.is-image { min-height: 360px; }
-      .advisory { display: block; }
-      .advisory-copy { min-height: auto; padding: 0 0 3.5rem; }
-      .advisory-panels { padding: 0; }
-      .advisory-panel { min-height: auto; margin-bottom: 1rem; }
-      .ulwe-story { padding-block: 6rem; }
-      .story-copy { font-size: clamp(2.15rem, 10.5vw, 3.6rem); }
-      .accordion { height: auto; display: grid; grid-template-columns: 1fr; gap: 1px; }
-      .accordion-panel { width: 100%; height: 118px; flex: none; transition: height 500ms var(--ease); }
-      .accordion-panel[aria-expanded="true"] { height: 285px; }
-      .reviews-layout { grid-template-columns: 1fr; gap: 2rem; }
-      .review-stage { min-height: 360px; }
-      .review blockquote { max-width: 20ch; }
-      .contact-block { grid-template-columns: 1fr; }
-      .contact-block h2 { max-width: 7ch; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-meta { text-align: left; }
-      .site-footer { padding-bottom: 6.5rem; }
-      .mobile-action-bar {
-        position: fixed;
-        z-index: 40;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: grid;
-        grid-template-columns: 1.35fr 0.65fr;
-        padding: 0.6rem;
-        background: var(--bg);
-        border-top: 1px solid var(--line);
-      }
-      .mobile-action-bar a { min-height: 46px; display: grid; place-items: center; text-decoration: none; font-weight: 700; }
-      .mobile-action-bar a:first-child { background: var(--accent); color: var(--accent-ink); }
-      .mobile-action-bar a:last-child { border: 1px solid var(--line); border-left: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-      .story-copy .word { opacity: 1; }
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <nav class="nav site-shell page-pad" aria-label="Primary navigation">
-      <a class="wordmark" href="#top" aria-label="OM Enterprises home">
-        <span>OM ENTERPRISES</span>
-        <span class="wordmark-devanagari" lang="hi">ओम एंटरप्राइजेज</span>
-      </a>
+    <nav class="nav site-shell" aria-label="Primary navigation">
+      <a class="wordmark" href="/" aria-label="OM Enterprises home">OM ENTERPRISES</a>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#advisory">How we help</a>
-        <a href="#ulwe">Ulwe guide</a>
-        <a href="#contact">Contact</a>
+        <a href="/projects">Projects</a><a href="/services">Services</a><a href="/ulwe">Ulwe</a><a href="/about">About</a><a href="/contact">Contact</a>
       </div>
       <a class="nav-action" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
       <details class="mobile-menu">
-        <summary>Menu</summary>
-        <div class="mobile-menu-panel">
-          <a href="#services">Services</a>
-          <a href="#advisory">How we help</a>
-          <a href="#ulwe">Ulwe guide</a>
-          <a href="#contact">Contact</a>
-          <a href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
-        </div>
+        <summary aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <div class="mobile-menu-panel"><a href="/projects">Projects</a><a href="/services">Services</a><a href="/ulwe">Ulwe</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a></div>
       </details>
     </nav>
   </header>
+
   <main id="main-content">
-    <section class="hero site-shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
+    <section class="home-hero site-shell" aria-labelledby="hero-title">
+      <div class="home-hero-copy">
         <h1 id="hero-title"><span>Find the right</span><span>property in Ulwe<span class="accent-period">.</span></span></h1>
-        <p class="hero-subtitle">Local advice for buying, renting and investing, from search to registration.</p>
-        <div class="hero-actions">
-          <a class="button-primary" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
-          <a class="text-action" href="tel:+919820987706">Call +91 98209 87706</a>
-        </div>
+        <p class="hero-subtitle">Local advice for buying, renting and investing, from search through registration.</p>
+        <div class="hero-actions"><a class="button-primary" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a><a class="text-action" href="tel:+919820987706">Call +91 98209 87706</a></div>
       </div>
-      <figure class="hero-media">
-        <img src="img/hero.webp" alt="Contemporary residence with a pool" width="1600" height="1061" fetchpriority="high">
+      <figure class="home-hero-media">
+        <img src="/img/hero.webp" alt="Contemporary residential building and pool" width="1600" height="1061" fetchpriority="high">
+        <figcaption class="hero-caption">Independent property guidance across Ulwe and Navi Mumbai.</figcaption>
       </figure>
     </section>
+
     <section class="proof-rail site-shell" aria-label="Business credentials">
       <div class="proof-item"><strong>MahaRERA registered</strong><span>A52000018878</span></div>
       <div class="proof-item"><strong>4.9 Google rating</strong><span>232+ supplied profile reviews</span></div>
       <div class="proof-item"><strong>Sector 18 office</strong><span>Sai Nakshatra, Ulwe</span></div>
       <div class="proof-item"><strong>Tuesday to Sunday</strong><span>10:00 AM to 8:30 PM</span></div>
     </section>
-    <section class="section site-shell page-pad" id="services" aria-labelledby="services-title">
-      <div class="services-intro">
-        <h2 class="section-heading" id="services-title">Property decisions need more than listings.</h2>
-        <p class="lede">OM Enterprises brings the search, paperwork, negotiation and follow-through into one local advisory relationship.</p>
-      </div>
+
+    <section class="section site-shell page-pad" aria-labelledby="services-title">
+      <div class="section-intro" data-reveal><h2 class="section-heading" id="services-title">Property decisions need more than listings.</h2><p class="lede">Search, paperwork, negotiation and follow-through stay connected through one local advisory relationship.</p></div>
       <div class="service-grid">
-        <figure class="service-cell is-image"><img src="img/sai_nakshatra.webp" alt="Residential tower exterior" width="1200" height="1600" loading="lazy"></figure>
-        <article class="service-cell is-primary"><h3>Buy with clarity</h3><p>Compare the right sectors, projects and home types before you commit your time or money.</p></article>
-        <article class="service-cell is-third"><h3>Rent without guesswork</h3><p>Property matching, tenant coordination, agreements and practical move-in support.</p></article>
-        <article class="service-cell is-third"><h3>Invest with local context</h3><p>Evaluate residential or commercial opportunities against access, use and realistic demand.</p></article>
-        <article class="service-cell is-third"><h3>Check the paperwork</h3><p>Review the key CIDCO, title, OC, CC and MahaRERA documents before the deal moves ahead.</p></article>
+        <figure class="service-cell is-image" data-reveal><img src="/img/sai_nakshatra.webp" alt="Residential tower in Ulwe" width="1200" height="1600" loading="lazy"></figure>
+        <article class="service-cell is-primary" data-reveal style="--reveal-delay: 70ms"><h3>Buy with clarity</h3><p>Compare sectors, projects and home types before committing time or money.</p><a class="service-link" href="/projects">Explore project guidance</a></article>
+        <article class="service-cell is-third" data-reveal><h3>Rent without guesswork</h3><p>Property matching, tenant coordination, agreements and practical move-in support.</p></article>
+        <article class="service-cell is-third" data-reveal style="--reveal-delay: 70ms"><h3>Invest with local context</h3><p>Evaluate residential or commercial options against access, use and realistic demand.</p></article>
+        <article class="service-cell is-third" data-reveal style="--reveal-delay: 140ms"><h3>Check the paperwork</h3><p>Review the available CIDCO, title, OC, CC and MahaRERA documents.</p><a class="service-link" href="/services">View all services</a></article>
       </div>
     </section>
-    <section class="section site-shell page-pad advisory" id="advisory" aria-labelledby="advisory-title">
-      <div class="advisory-copy">
-        <h2 class="section-heading" id="advisory-title">One advisor through the whole transaction.</h2>
-        <p class="lede">A property deal has connected decisions. Keeping one informed person involved reduces missed details and repeated explanations.</p>
-      </div>
-      <div class="advisory-panels">
-        <article class="advisory-panel"><img src="img/consultation.webp" alt="Property consultation at a desk" width="1200" height="800" loading="lazy"><div class="advisory-panel-copy"><h3>Understand the requirement</h3><p>Budget, commute, carpet area, possession, family needs and investment goals shape the shortlist.</p></div></article>
-        <article class="advisory-panel"><img src="img/interior_living.webp" alt="Modern apartment living room" width="1200" height="900" loading="lazy"><div class="advisory-panel-copy"><h3>Inspect what matters</h3><p>Visit options with a clear comparison of layout, building condition, access and day-to-day usability.</p></div></article>
-        <article class="advisory-panel"><img src="img/greenfield.webp" alt="House model and keys on a desk" width="1200" height="901" loading="lazy"><div class="advisory-panel-copy"><h3>Verify before agreement</h3><p>Review the available approvals, title documents, carpet area disclosures and transaction terms.</p></div></article>
-        <article class="advisory-panel"><img src="img/office_advisory.webp" alt="Advisor reviewing property documents with clients" width="1200" height="801" loading="lazy"><div class="advisory-panel-copy"><h3>Stay supported after registration</h3><p>Coordinate the practical handover, society process, utility updates and local service referrals when needed.</p></div></article>
-      </div>
-    </section>
-    <section class="ulwe-story" id="ulwe" aria-labelledby="ulwe-title">
+
+    <section class="evidence-section" aria-labelledby="evidence-title">
       <div class="site-shell page-pad">
-        <h2 class="visually-hidden" id="ulwe-title">Why local Ulwe knowledge matters</h2>
-        <p class="story-copy" data-word-reveal>Ulwe changes block by block. Station access, road width, building approvals, daily services and future infrastructure all affect whether a property works for you. Local context turns a long list of options into a decision you can explain.</p>
-      </div>
-    </section>
-    <section class="section site-shell page-pad" aria-labelledby="gallery-title">
-      <h2 class="section-heading gallery-heading" id="gallery-title">See the work up close.</h2>
-      <div class="accordion" role="group" aria-label="Property advisory areas">
-        <button class="accordion-panel" type="button" aria-expanded="true"><img src="img/interior_balcony.webp" alt="Balcony overlooking a residential neighborhood" width="1200" height="801" loading="lazy"><span class="accordion-title">Home search</span></button>
-        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/rental_residency.webp" alt="Residential building suitable for rental search" width="1200" height="893" loading="lazy"><span class="accordion-title">Rentals</span></button>
-        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/boulevard.webp" alt="Mixed-use boulevard and commercial frontage" width="1200" height="800" loading="lazy"><span class="accordion-title">Commercial property</span></button>
-        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/greenfield.webp" alt="House model and keys representing property documentation" width="1200" height="901" loading="lazy"><span class="accordion-title">Paperwork</span></button>
-      </div>
-    </section>
-    <section class="section site-shell page-pad reviews-layout" aria-labelledby="reviews-title">
-      <div><h2 class="section-heading" id="reviews-title">What clients say.</h2><p class="lede">Excerpts supplied from the OM Enterprises Google profile.</p></div>
-      <div>
-        <div class="review-stage" aria-live="polite">
-          <article class="review is-active"><blockquote>“Super responsive, helpful and knowledgeable.”</blockquote><footer>Aarti Soni, Google reviewer</footer></article>
-          <article class="review"><blockquote>“Really helpful and knowledgeable. A must visit for real estate deal makers.”</blockquote><footer>Shubham Shinde, Google Local Guide</footer></article>
-          <article class="review"><blockquote>“Professional, knowledgeable and transparent throughout the entire process.”</blockquote><footer>Guriya Kumari, Google reviewer</footer></article>
+        <h2 class="section-heading compact evidence-heading" id="evidence-title" data-reveal>Local advice backed by visible proof.</h2>
+        <p class="evidence-copy" data-reveal>Facts from the supplied company profile, paired with the places and property decisions OM Enterprises works with every day.</p>
+        <div class="evidence-grid">
+          <article class="evidence-card" data-reveal><img src="/img/ulwe_aerial.webp" alt="Aerial view of planned development in Ulwe" width="1400" height="1751" loading="lazy"><div class="evidence-card-copy"><strong>Since 2012</strong><span>Supplied company history in Ulwe</span></div></article>
+          <article class="evidence-card" data-reveal style="--reveal-delay: 60ms"><img src="/img/office_advisory.webp" alt="Property advisory meeting at a desk" width="1200" height="801" loading="lazy"><div class="evidence-card-copy"><strong>4.9</strong><span>Google rating in the supplied profile</span></div></article>
+          <article class="evidence-card" data-reveal style="--reveal-delay: 120ms"><img src="/img/aeropolis.webp" alt="Residential towers in Navi Mumbai" width="1200" height="795" loading="lazy"><div class="evidence-card-copy"><strong>232+</strong><span>Google reviews in the supplied profile</span></div></article>
+          <article class="evidence-card" data-reveal style="--reveal-delay: 180ms"><img src="/img/boulevard.webp" alt="Landscaped residential and commercial district" width="1200" height="800" loading="lazy"><div class="evidence-card-copy"><strong>5 areas</strong><span>Sales, rentals, commercial, legal and loans</span></div></article>
         </div>
+        <p class="evidence-note">Profile figures should be rechecked periodically against the live Google listing.</p>
+      </div>
+    </section>
+
+    <section class="section site-shell page-pad" aria-labelledby="projects-title">
+      <div class="section-intro" data-reveal><h2 class="section-heading" id="projects-title">A better shortlist starts with the brief.</h2><p class="lede">No stale inventory grid. Tell us what needs to work, then compare current options directly.</p></div>
+      <div class="project-preview">
+        <article class="project-feature" data-reveal><img src="/img/rivera.webp" alt="Contemporary residential development" width="1200" height="816" loading="lazy"><div class="project-feature-copy"><h3>Homes to buy.</h3><p>New launches and resale options matched to budget, carpet area, commute and possession needs.</p></div></article>
+        <div class="project-side">
+          <article data-reveal style="--reveal-delay: 70ms"><h3>Homes to rent.</h3><div><p>Practical rental search for families, professionals and owners.</p><a class="service-link" href="/projects#rent">Rental guidance</a></div></article>
+          <article data-reveal style="--reveal-delay: 120ms"><h3>Commercial spaces.</h3><div><p>Retail shops and offices assessed for visibility, access and intended use.</p><a class="service-link" href="/projects#commercial">Commercial guidance</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight site-shell page-pad" aria-labelledby="process-title">
+      <div class="section-intro" data-reveal><h2 class="section-heading compact" id="process-title">One advisor through the transaction.</h2></div>
+      <div class="process-grid">
+        <article class="process-item" data-reveal><h3>Define the requirement</h3><p>Budget, commute, carpet area, timing and family needs shape the search.</p></article>
+        <article class="process-item" data-reveal style="--reveal-delay: 60ms"><h3>Compare the options</h3><p>Review layout, building condition, sector access and everyday usability.</p></article>
+        <article class="process-item" data-reveal style="--reveal-delay: 120ms"><h3>Verify the documents</h3><p>Check the available approvals, title records, disclosures and agreement terms.</p></article>
+        <article class="process-item" data-reveal style="--reveal-delay: 180ms"><h3>Complete the handover</h3><p>Coordinate registration, society steps, utilities and practical follow-through.</p></article>
+      </div>
+    </section>
+
+    <section class="section site-shell page-pad reviews-layout" aria-labelledby="reviews-title">
+      <div data-reveal><h2 class="section-heading compact" id="reviews-title">What clients say.</h2><p class="lede">Excerpts supplied from the OM Enterprises Google profile.</p></div>
+      <div data-reveal style="--reveal-delay: 80ms">
+        <div class="review-stage" aria-live="polite"><article class="review is-active"><blockquote>“Super responsive, helpful and knowledgeable.”</blockquote><footer>Aarti Soni, Google reviewer</footer></article><article class="review"><blockquote>“Really helpful and knowledgeable. A must visit for real estate deal makers.”</blockquote><footer>Shubham Shinde, Google Local Guide</footer></article><article class="review"><blockquote>“Professional, knowledgeable and transparent throughout the entire process.”</blockquote><footer>Guriya Kumari, Google reviewer</footer></article></div>
         <div class="review-controls" aria-label="Review controls"><button type="button" data-review-prev>Previous</button><button type="button" data-review-next>Next</button></div>
       </div>
     </section>
-    <section class="contact-block site-shell page-pad" id="contact" aria-labelledby="contact-title">
-      <div><h2 id="contact-title">Talk property with Manoj.</h2><div class="contact-actions"><a class="button-primary" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a><a class="text-action" href="tel:+919820987706">Call +91 98209 87706</a></div></div>
-      <div class="contact-details">
-        <div class="contact-detail"><h3>Visit the office</h3><p>Shop No. 2, Sai Nakshatra, Plot No. 116, Sector 18, Ulwe, Kharkopar, Navi Mumbai, Maharashtra 410206.</p><p><a href="https://share.google/NFXPxHE3tBVkWqDWu" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
-        <div class="contact-detail"><h3>Working hours</h3><p>Tuesday to Sunday, 10:00 AM to 8:30 PM. Monday by prior appointment only.</p></div>
-        <div class="contact-detail"><h3>Mumbai branch</h3><p><a href="tel:+919137637158">+91 91376 37158</a></p></div>
-      </div>
+
+    <section class="contact-band" aria-labelledby="contact-title">
+      <div class="contact-band-grid site-shell page-pad" data-reveal><h2 id="contact-title">Talk property with Manoj.</h2><div><p>Share your budget, preferred sector and property type. Get direct guidance without a generic lead form.</p><a class="button-secondary" href="/contact">Contact OM Enterprises</a></div></div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="footer-grid site-shell page-pad">
-      <div class="footer-brand"><a class="wordmark" href="#top"><span>OM ENTERPRISES</span><span class="wordmark-devanagari" lang="hi">ओम एंटरप्राइजेज</span></a><p>Building Relations. Property advisory for Ulwe and Navi Mumbai.</p></div>
-      <nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#advisory">How we help</a><a href="#ulwe">Ulwe guide</a><a href="#contact">Contact</a></nav>
+      <div class="footer-brand"><a class="wordmark" href="/">OM ENTERPRISES</a><p>Building Relations. Property advisory for Ulwe and Navi Mumbai.</p></div>
+      <nav class="footer-links" aria-label="Property links"><strong>Property</strong><a href="/projects">Projects</a><a href="/services">Services</a><a href="/ulwe">Ulwe guide</a></nav>
+      <nav class="footer-links" aria-label="Company links"><strong>Company</strong><a href="/about">About</a><a href="/contact">Contact</a><a href="https://share.google/NFXPxHE3tBVkWqDWu" target="_blank" rel="noopener">Google Maps</a></nav>
       <div class="footer-meta"><div>MahaRERA: A52000018878</div><div>© <span data-year>2026</span> OM Enterprises</div></div>
     </div>
   </footer>
   <nav class="mobile-action-bar" aria-label="Quick contact"><a href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a><a href="tel:+919820987706">Call</a></nav>
-  <script src="/vendor/gsap.min.js"></script>
-  <script src="/vendor/ScrollTrigger.min.js"></script>
-  <script>
-    (() => {
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const year = document.querySelector("[data-year]");
-      if (year) year.textContent = new Date().getFullYear();
-      document.querySelectorAll(".mobile-menu-panel a").forEach((link) => {
-        link.addEventListener("click", () => {
-          const menu = link.closest("details");
-          if (menu) menu.removeAttribute("open");
-        });
-      });
-      const accordionPanels = Array.from(document.querySelectorAll(".accordion-panel"));
-      accordionPanels.forEach((panel) => {
-        panel.addEventListener("click", () => {
-          accordionPanels.forEach((item) => item.setAttribute("aria-expanded", String(item === panel)));
-        });
-      });
-      const reviews = Array.from(document.querySelectorAll(".review"));
-      let reviewIndex = 0;
-      const showReview = (index) => {
-        reviewIndex = (index + reviews.length) % reviews.length;
-        reviews.forEach((review, current) => review.classList.toggle("is-active", current === reviewIndex));
-      };
-      document.querySelector("[data-review-prev]")?.addEventListener("click", () => showReview(reviewIndex - 1));
-      document.querySelector("[data-review-next]")?.addEventListener("click", () => showReview(reviewIndex + 1));
-      const story = document.querySelector("[data-word-reveal]");
-      if (story) {
-        const copy = story.textContent.trim();
-        story.setAttribute("aria-label", copy);
-        story.innerHTML = copy.split(/\s+/).map((word) => `<span class="word" aria-hidden="true">${word}</span>`).join(" ");
-      }
-      if (!reducedMotion && window.gsap && window.ScrollTrigger) {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".hero-copy > *", { y: 28, opacity: 0, duration: 0.85, stagger: 0.09, ease: "expo.out", clearProps: "transform,opacity" });
-        gsap.from(".hero-media img", { scale: 1.06, duration: 1.4, ease: "expo.out", clearProps: "transform" });
-        ScrollTrigger.matchMedia({
-          "(min-width: 768px)": () => {
-            ScrollTrigger.create({ trigger: ".advisory", start: "top top", end: "bottom bottom", pin: ".advisory-copy", pinSpacing: false });
-            gsap.utils.toArray(".advisory-panel").forEach((panel) => {
-              gsap.fromTo(panel, { scale: 0.92, opacity: 0.52 }, { scale: 1, opacity: 1, ease: "none", scrollTrigger: { trigger: panel, start: "top 86%", end: "top 34%", scrub: true } });
-            });
-          }
-        });
-        if (story) {
-          gsap.to(story.querySelectorAll(".word"), { opacity: 1, stagger: 0.035, ease: "none", scrollTrigger: { trigger: story, start: "top 78%", end: "bottom 55%", scrub: true } });
-        }
-      } else {
-        document.querySelectorAll(".story-copy .word").forEach((word) => { word.style.opacity = "1"; });
-      }
-    })();
-  </script>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

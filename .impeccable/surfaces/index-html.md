@@ -2,7 +2,7 @@
 version: 1
 slug: "index-html"
 primary_target: "index.html"
-related_targets: []
+related_targets: ["projects.html", "services.html", "ulwe.html", "about.html", "contact.html", "assets/css/site.css", "assets/js/site.js"]
 ---
 
 # Home

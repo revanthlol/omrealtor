@@ -17,9 +17,5 @@
     "omrealtor"
   ],
   "author": "Om Enterprises",
-  "license": "ISC",
-  "dependencies": {
-    "@fontsource-variable/geist": "^5.3.0",
-    "gsap": "^3.13.0"
-  }
+  "license": "ISC"
 }

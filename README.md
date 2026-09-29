@@ -10,13 +10,23 @@ npm run dev
 
 Open `http://localhost:3030`.
 
+## Routes
+
+- `/`: homepage and primary conversion path
+- `/projects`: current project-guidance categories without fake live inventory
+- `/services`: full advisory service scope
+- `/ulwe`: sector and connectivity guide
+- `/about`: company and principal consultant
+- `/contact`: phone, WhatsApp, office, and visit details
+
 ## Project structure
 
-- `index.html`: semantic homepage, responsive styles, and small interaction layer
+- `*.html`: semantic static routes with route-specific metadata
+- `assets/css/site.css`: shared responsive design system
+- `assets/js/site.js`: shared navigation, review, and reveal interactions
 - `404.html`: branded not-found page
 - `img/`: supplied property and advisory photography plus the social share image
 - `fonts/`: self-hosted Geist variable font
-- `vendor/`: pinned GSAP runtime used for the two scroll interactions
 - `PRODUCT.md`: durable product facts and constraints
 - `.impeccable/surfaces/`: page direction contract
 

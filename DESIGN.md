@@ -23,7 +23,7 @@ colors:
 typography:
   display:
     fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
-    fontSize: "clamp(3.25rem, 4.7vw, 5.1rem)"
+    fontSize: "clamp(3.1rem, 4vw, 4.5rem)"
     fontWeight: 720
     lineHeight: 0.92
     letterSpacing: "-0.04em"
@@ -59,6 +59,8 @@ typography:
     letterSpacing: "normal"
 rounded:
   architectural: "0px"
+  control: "8px"
+  glass-shell: "14px"
 spacing:
   hairline: "1px"
   xs: "0.65rem"
@@ -72,25 +74,25 @@ components:
     backgroundColor: "{colors.cobalt}"
     textColor: "{colors.cobalt-ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.architectural}"
+    rounded: "{rounded.control}"
     padding: "0.94rem 1.45rem"
     height: "54px"
   button-primary-hover:
     backgroundColor: "{colors.cobalt-hover}"
     textColor: "{colors.cobalt-ink}"
-    rounded: "{rounded.architectural}"
+    rounded: "{rounded.control}"
   button-secondary:
     backgroundColor: "transparent"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.architectural}"
+    rounded: "{rounded.control}"
     padding: "0.7rem 1rem"
     height: "44px"
   nav-action:
     backgroundColor: "{colors.cobalt}"
     textColor: "{colors.cobalt-ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.architectural}"
+    rounded: "{rounded.control}"
     padding: "0.72rem 1rem"
     height: "44px"
   service-card:
@@ -116,6 +118,7 @@ The experience is editorial in scale but operational in purpose. Wide Geist typo
 - Square architectural panels, real repository photography, and border-built hierarchy.
 - Expansive type and asymmetrical grids that collapse cleanly to one column.
 - Purposeful scroll narrative with a complete reduced-motion fallback.
+- A persistent frosted navigation shell that keeps project discovery and direct contact available on every route.
 
 ## Colors
 
@@ -164,9 +167,9 @@ The palette is mineral and infrastructural: quiet neutral planes carry the conte
 
 ## Layout
 
-The page is capped at 1500px and uses fluid horizontal padding. The 74px desktop header gives way to a hero that fills the remaining dynamic viewport height. Its desktop grid is a deliberate 42/58 split between copy and photography, shifting to 46/54 at tablet width before becoming a single-column composition below 768px. On mobile the header becomes 66px, the copy leads, and the image follows at a useful fixed viewport presence.
+The page is capped at 1500px and uses fluid horizontal padding. A 64px fixed navigation shell is inset 12px from the viewport and stays visible across every route. The homepage hero fills the remaining dynamic viewport height using a deliberate 44/56 split between copy and photography. Its headline is capped at 4.9rem with an 11-character measure so type and image retain a clear seam. Below 768px, the composition becomes one column, copy leads, and the image follows at a useful fixed viewport presence.
 
-The recurring composition is a window grid. Proof is a four-column rail, services use a dense 12-column mosaic, the advisory sequence uses an asymmetrical two-column track, and reviews and contact each use weighted two-column splits. Hairline seams bind these areas into one system. Below 1024px navigation and proof simplify; below 768px services, advisory, gallery, reviews, contact, and footer resolve to one column without retaining desktop pinning.
+The recurring composition is a window grid. Proof is a four-column rail, services use a dense 12-column mosaic, profile evidence uses a four-image vertical gallery, and project guidance uses one dominant image beside two stacked briefs. Dedicated Projects, Services, Ulwe, About and Contact pages extend the system with asymmetrical page heroes, staggered category grids, sector grids and structured content lists. Hairline seams bind these areas into one system. Below 1024px navigation and proof simplify; below 768px every multi-column layout resolves to one column.
 
 Section rhythm is intentionally generous. Major sections use the fluid section spacing token, while internal gaps step through the smaller spacing scale. Photography is cropped with `object-fit: cover`; it fills panes rather than floating as decorated cards.
 
@@ -174,15 +177,15 @@ Section rhythm is intentionally generous. Major sections use the fluid section s
 
 ## Elevation & Depth
 
-The system is flat by default. Depth comes from image planes, tonal changes, cropping, and one-pixel dividers, not ambient card shadows. The only shipped shadow is a temporary deep shadow on the open mobile navigation panel so it remains distinct from page content. The desktop header uses a subtle translucent canvas and 14px backdrop blur as functional separation from content beneath it.
+The system is flat by default. Depth comes from image planes, tonal changes, cropping, and one-pixel dividers, not ambient card shadows. The fixed navigation uses a translucent canvas, 18px backdrop blur, a refractive inner highlight and one soft tinted shadow as functional separation from content beneath it. The open mobile navigation uses the same material at a deeper elevation.
 
 **The Border-Before-Shadow Rule.** Use a divider or stronger neutral plane for structure. Reserve shadow for a genuinely overlaid surface.
 
 ## Shapes
 
-The form language is square and architectural. Buttons, cards, panels, rails, image crops, and controls all use zero radius. One-pixel borders act like mullions; adjacent panes share seams rather than becoming separate rounded tiles. Photography is clipped to the exact rectangular panel bounds.
+The content language remains square and architectural. Cards, panels, rails and image crops use zero radius, while interactive controls use an 8px radius and the persistent glass navigation shell uses 14px. One-pixel borders act like mullions; adjacent panes share seams rather than becoming separate rounded tiles. Photography is clipped to the exact rectangular panel bounds.
 
-**The No Soft Corners Rule.** Do not round containers or controls; the rigid window geometry is a defining brand behavior.
+**The Controlled Radius Rule.** Content panes stay square. Only controls and the glass navigation shell may use the documented small radii.
 
 ## Components
 
@@ -202,23 +205,15 @@ The form language is square and architectural. Buttons, cards, panels, rails, im
 
 ### Navigation
 
-The desktop navigation is a 74px three-track grid: bilingual wordmark, muted section links, and one solid cobalt WhatsApp action. Links shift from muted to primary ink on hover. Below 1024px, section links and the desktop action become a native `details` menu with visibly bordered rows and a cobalt final action. Below 768px, a persistent bottom action bar keeps WhatsApp and call actions reachable.
+The desktop navigation is a fixed 64px three-track glass shell: English wordmark, route links, and one solid cobalt WhatsApp action. It is always visible and inset from the viewport edge. Links gain a thin cobalt underline on hover and on the current route. Below 1100px, route links and the desktop action become a native `details` menu with a morphing two-line control and a frosted dropdown. Below 768px, a persistent bottom action bar keeps WhatsApp and call actions reachable.
 
 ### Proof Rail
 
 Credential items are compact, factual panes separated by shared hairlines. Each uses a strong first line and smaller muted evidence beneath it. The rail moves from four columns to two without becoming a carousel.
 
-### Advisory Sequence
+### Reveal Motion
 
-On desktop, the narrative column pins while four tall image-and-copy panels pass beside it. Panel scale and opacity resolve with scroll progress. On mobile, pinning is removed and every panel appears in normal document flow.
-
-### Property Accordion
-
-Four edge-to-edge photographic panes share the available track. Exactly one pane exposes an expanded state through `aria-expanded`; desktop expansion changes flex proportion from 1 to 3, while mobile expansion changes height from 118px to 285px. Titles remain visible over a lower image scrim in every state.
-
-### Scrubbed Story Reveal
-
-The Ulwe explanation is a single oversized paragraph whose words begin at low opacity and resolve through a scroll scrub. Its full text remains available as an accessible label, and reduced-motion mode renders every word at full opacity immediately.
+The first viewport enters once with a short upward type resolve and a slow image settle. Below the fold, a single IntersectionObserver reveals major blocks as they enter view, with restrained stagger only where sibling order communicates hierarchy. Hover zoom is limited to photographic discovery cards. Reduced-motion mode renders every block immediately and removes all transition delay.
 
 ## Do's and Don'ts
 
@@ -231,7 +226,7 @@ The Ulwe explanation is a single oversized paragraph whose words begin at low op
 - **Do** make reduced-motion output complete rather than merely faster.
 
 ### Don't:
-- **Don't** add rounded cards, pill buttons, glass panels, decorative glows, or ambient shadows.
+- **Don't** add rounded content cards, pill buttons, decorative glass panels, glows, or ambient shadows. Glass is reserved for persistent navigation surfaces.
 - **Don't** introduce a second accent color, gradients, or ornamental color blocks.
 - **Don't** replace the supplied repository imagery with unrelated luxury-property collages or generated lifestyle scenes.
 - **Don't** turn the layout into a uniform card grid; preserve the weighted architectural proportions.
