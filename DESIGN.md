@@ -1,0 +1,239 @@
+---
+name: "OM Enterprises"
+description: "A precise, locally grounded property-advisory system built as an Ulwe window grid."
+colors:
+  canvas: "#f2f4f3"
+  surface: "#e7eaec"
+  surface-strong: "#d9dee2"
+  ink: "#15191f"
+  ink-muted: "#59626e"
+  divider: "#c2c8cf"
+  cobalt: "#0757d9"
+  cobalt-hover: "#0648b5"
+  cobalt-ink: "#f7f9fc"
+  canvas-dark: "#15191f"
+  surface-dark: "#1e242c"
+  surface-strong-dark: "#29313b"
+  ink-dark: "#edf1f5"
+  ink-muted-dark: "#b0bac5"
+  divider-dark: "#3d4651"
+  cobalt-dark: "#5d91ff"
+  cobalt-hover-dark: "#7aa5ff"
+  cobalt-ink-dark: "#10151c"
+typography:
+  display:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "clamp(3.25rem, 4.7vw, 5.1rem)"
+    fontWeight: 720
+    lineHeight: 0.92
+    letterSpacing: "-0.04em"
+  headline:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "clamp(2.45rem, 6vw, 5.8rem)"
+    fontWeight: 660
+    lineHeight: 0.98
+    letterSpacing: "-0.04em"
+  title:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "clamp(1.7rem, 3vw, 3.1rem)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.035em"
+  lede:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "clamp(1.05rem, 1.4vw, 1.28rem)"
+    fontWeight: 400
+    lineHeight: 1.55
+    letterSpacing: "normal"
+  body:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.55
+    letterSpacing: "normal"
+  label:
+    fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 680
+    lineHeight: 1.2
+    letterSpacing: "normal"
+rounded:
+  architectural: "0px"
+spacing:
+  hairline: "1px"
+  xs: "0.65rem"
+  sm: "1rem"
+  md: "1.5rem"
+  lg: "2rem"
+  page: "clamp(1rem, 3vw, 3rem)"
+  section: "clamp(6.5rem, 12vw, 11rem)"
+components:
+  button-primary:
+    backgroundColor: "{colors.cobalt}"
+    textColor: "{colors.cobalt-ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.architectural}"
+    padding: "0.94rem 1.45rem"
+    height: "54px"
+  button-primary-hover:
+    backgroundColor: "{colors.cobalt-hover}"
+    textColor: "{colors.cobalt-ink}"
+    rounded: "{rounded.architectural}"
+  button-secondary:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.architectural}"
+    padding: "0.7rem 1rem"
+    height: "44px"
+  nav-action:
+    backgroundColor: "{colors.cobalt}"
+    textColor: "{colors.cobalt-ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.architectural}"
+    padding: "0.72rem 1rem"
+    height: "44px"
+  service-card:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.architectural}"
+    padding: "clamp(1.5rem, 3vw, 2.7rem)"
+---
+
+# Design System: OM Enterprises
+
+## Overview
+
+**Creative North Star: "The Ulwe Window Grid"**
+
+The system treats the page like a precise architectural elevation: squared panes, charcoal mullions, mineral surfaces, and supplied views into homes and residential settings. It makes local property advice feel concrete and legible without borrowing the glossy collage language of luxury-property portals or the soft beige styling of generic realtor templates.
+
+The experience is editorial in scale but operational in purpose. Wide Geist typography delivers direct claims, structural dividers organize evidence, and a single cobalt accent marks every meaningful action. Motion supports the advisory story: the narrative pins while service panes pass, then the Ulwe explanation resolves word by word. It never delays access to content, and the reduced-motion path presents the complete story immediately.
+
+**Key Characteristics:**
+- Mineral off-white and system-dark canvases with charcoal structure.
+- One cobalt action accent, used deliberately and consistently.
+- Square architectural panels, real repository photography, and border-built hierarchy.
+- Expansive type and asymmetrical grids that collapse cleanly to one column.
+- Purposeful scroll narrative with a complete reduced-motion fallback.
+
+## Colors
+
+The palette is mineral and infrastructural: quiet neutral planes carry the content while cobalt identifies interaction.
+
+### Primary
+- **Signal Cobalt:** The only action color. Use it for primary buttons, linked actions, selection, focus, and the hero's terminal punctuation.
+- **Deep Signal Cobalt:** The light-theme hover state for solid cobalt actions.
+- **Night Signal Cobalt:** The brighter system-dark equivalent, tuned to remain legible against charcoal surfaces.
+
+### Neutral
+- **Mineral Canvas:** The light-theme page field and default card plane.
+- **Soft Concrete:** The light-theme secondary surface for advisory panels.
+- **Structural Concrete:** The stronger light-theme image fallback and inset plane.
+- **Charcoal Ink:** Primary light-theme text and the source of structural contrast.
+- **Slate Copy:** Supporting light-theme copy.
+- **Window Mullion:** Hairline dividers, grid seams, and control borders.
+- **System Charcoal:** The dark-theme page field, paired with progressively lighter inset surfaces and cool off-white text.
+
+### Named Rules
+
+**The One Signal Rule.** Cobalt is the only chromatic interface accent; never introduce a second action color.
+
+**The Structural Neutral Rule.** Create hierarchy with neutral planes and divider lines before reaching for color.
+
+## Typography
+
+**Display Font:** Geist Variable (with Noto Sans Devanagari and system sans-serif fallbacks)
+**Body Font:** Geist Variable (with Noto Sans Devanagari and system sans-serif fallbacks)
+
+**Character:** One self-hosted variable family carries the full system. Tight, heavy display settings feel architectural; regular body settings stay plainspoken and readable. Devanagari retains an explicit fallback rather than being forced through an incompatible Latin face.
+
+### Hierarchy
+- **Display:** Tight two-line hero statements. Keep the line height compressed, tracking negative, and line breaks deliberate on desktop.
+- **Headline:** Oversized section arguments, balanced across a broad measure.
+- **Title:** Panel and service titles with compact leading and short measures around 11 characters wide where the grid allows.
+- **Lede:** Supporting arguments up to roughly 68 characters per line, set in muted ink.
+- **Body:** Explanatory and operational copy at the default reading rhythm.
+- **Label:** Compact navigation, buttons, controls, and proof labels with increased weight rather than uppercase styling.
+
+### Named Rules
+
+**The Wide Sans Rule.** Use scale, weight, and tight spacing for hierarchy; do not introduce a decorative display face.
+
+**The Two-Line Promise Rule.** The desktop hero promise stays exactly two lines, with the second line remaining unbroken.
+
+## Layout
+
+The page is capped at 1500px and uses fluid horizontal padding. The 74px desktop header gives way to a hero that fills the remaining dynamic viewport height. Its desktop grid is a deliberate 42/58 split between copy and photography, shifting to 46/54 at tablet width before becoming a single-column composition below 768px. On mobile the header becomes 66px, the copy leads, and the image follows at a useful fixed viewport presence.
+
+The recurring composition is a window grid. Proof is a four-column rail, services use a dense 12-column mosaic, the advisory sequence uses an asymmetrical two-column track, and reviews and contact each use weighted two-column splits. Hairline seams bind these areas into one system. Below 1024px navigation and proof simplify; below 768px services, advisory, gallery, reviews, contact, and footer resolve to one column without retaining desktop pinning.
+
+Section rhythm is intentionally generous. Major sections use the fluid section spacing token, while internal gaps step through the smaller spacing scale. Photography is cropped with `object-fit: cover`; it fills panes rather than floating as decorated cards.
+
+**The Window Grid Rule.** Large areas must align to shared panes and seams; avoid free-floating cards with arbitrary offsets.
+
+## Elevation & Depth
+
+The system is flat by default. Depth comes from image planes, tonal changes, cropping, and one-pixel dividers, not ambient card shadows. The only shipped shadow is a temporary deep shadow on the open mobile navigation panel so it remains distinct from page content. The desktop header uses a subtle translucent canvas and 14px backdrop blur as functional separation from content beneath it.
+
+**The Border-Before-Shadow Rule.** Use a divider or stronger neutral plane for structure. Reserve shadow for a genuinely overlaid surface.
+
+## Shapes
+
+The form language is square and architectural. Buttons, cards, panels, rails, image crops, and controls all use zero radius. One-pixel borders act like mullions; adjacent panes share seams rather than becoming separate rounded tiles. Photography is clipped to the exact rectangular panel bounds.
+
+**The No Soft Corners Rule.** Do not round containers or controls; the rigid window geometry is a defining brand behavior.
+
+## Components
+
+### Buttons
+- **Shape:** Square architectural rectangle with no radius and a minimum 44px touch target; the main call to action is 54px tall.
+- **Primary:** Solid Signal Cobalt with cool off-white text and compact horizontal padding.
+- **Hover / Focus:** Deepen the cobalt on hover, compress to 98% on active, and retain the global 3px cobalt focus outline with a 4px offset.
+- **Secondary:** Transparent with a one-pixel divider border; invert to ink on hover where used for review controls.
+- **Text action:** Signal Cobalt text with a visible underline treatment; use for direct telephone actions paired with a primary WhatsApp action.
+
+### Cards / Containers
+- **Corner Style:** Square, always.
+- **Background:** Default cards match the canvas; advisory panels use the secondary surface; a single featured service card may use Signal Cobalt.
+- **Shadow Strategy:** None at rest.
+- **Border:** One-pixel divider seams organize multi-card grids.
+- **Internal Padding:** Fluid between the medium and large spacing rhythm; image cells remove padding and crop edge to edge.
+
+### Navigation
+
+The desktop navigation is a 74px three-track grid: bilingual wordmark, muted section links, and one solid cobalt WhatsApp action. Links shift from muted to primary ink on hover. Below 1024px, section links and the desktop action become a native `details` menu with visibly bordered rows and a cobalt final action. Below 768px, a persistent bottom action bar keeps WhatsApp and call actions reachable.
+
+### Proof Rail
+
+Credential items are compact, factual panes separated by shared hairlines. Each uses a strong first line and smaller muted evidence beneath it. The rail moves from four columns to two without becoming a carousel.
+
+### Advisory Sequence
+
+On desktop, the narrative column pins while four tall image-and-copy panels pass beside it. Panel scale and opacity resolve with scroll progress. On mobile, pinning is removed and every panel appears in normal document flow.
+
+### Property Accordion
+
+Four edge-to-edge photographic panes share the available track. Exactly one pane exposes an expanded state through `aria-expanded`; desktop expansion changes flex proportion from 1 to 3, while mobile expansion changes height from 118px to 285px. Titles remain visible over a lower image scrim in every state.
+
+### Scrubbed Story Reveal
+
+The Ulwe explanation is a single oversized paragraph whose words begin at low opacity and resolve through a scroll scrub. Its full text remains available as an accessible label, and reduced-motion mode renders every word at full opacity immediately.
+
+## Do's and Don'ts
+
+### Do:
+- **Do** use real repository photography as full-bleed architectural panes.
+- **Do** preserve cobalt for actions, focus, and sparse emphasis.
+- **Do** organize dense information with shared one-pixel seams and neutral surface shifts.
+- **Do** keep desktop narrative motion tied to reading progress and restore normal flow on mobile.
+- **Do** expose all interactive states through semantic attributes and visible focus treatment.
+- **Do** make reduced-motion output complete rather than merely faster.
+
+### Don't:
+- **Don't** add rounded cards, pill buttons, glass panels, decorative glows, or ambient shadows.
+- **Don't** introduce a second accent color, gradients, or ornamental color blocks.
+- **Don't** replace the supplied repository imagery with unrelated luxury-property collages or generated lifestyle scenes.
+- **Don't** turn the layout into a uniform card grid; preserve the weighted architectural proportions.
+- **Don't** hide content behind hover-only behavior, scroll effects, or desktop-only composition.
+- **Don't** use motion that delays access, hijacks scrolling, or survives a reduced-motion preference.

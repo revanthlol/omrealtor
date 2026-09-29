@@ -1,0 +1,16 @@
+{
+  "name": "OM Enterprises",
+  "short_name": "OM Realtor",
+  "description": "Property advisory in Ulwe, Navi Mumbai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f4f3",
+  "theme_color": "#0757d9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

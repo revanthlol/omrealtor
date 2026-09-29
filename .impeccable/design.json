@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T06:20:27+05:30",
+  "title": "Design System: OM Enterprises",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Mineral Canvas", "canonical": "#f2f4f3", "tonalRamp": ["#202322", "#3a3e3c", "#555a57", "#747a77", "#969c99", "#b9beba", "#dadddb", "#f2f4f3"] },
+      "surface": { "role": "neutral", "displayName": "Soft Concrete", "canonical": "#e7eaec", "tonalRamp": ["#202326", "#393e42", "#53595e", "#71787e", "#939a9f", "#b6bcc0", "#d2d7da", "#eef0f1"] },
+      "surface-strong": { "role": "neutral", "displayName": "Structural Concrete", "canonical": "#d9dee2", "tonalRamp": ["#1d2226", "#363c42", "#4f575e", "#6c757d", "#8e979f", "#b1b9c0", "#cfd5da", "#edf0f2"] },
+      "ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#15191f", "tonalRamp": ["#15191f", "#2d333b", "#474f59", "#636c77", "#828b96", "#a4abb4", "#c8cdd2", "#eef0f2"] },
+      "ink-muted": { "role": "neutral", "displayName": "Slate Copy", "canonical": "#59626e", "tonalRamp": ["#171b20", "#303741", "#4a535f", "#66717e", "#85909c", "#a6afb8", "#c9cfd4", "#eef0f2"] },
+      "divider": { "role": "neutral", "displayName": "Window Mullion", "canonical": "#c2c8cf", "tonalRamp": ["#1b1f24", "#343a41", "#4d555e", "#69727c", "#8b949d", "#adb5bd", "#cbd0d5", "#eef0f2"] },
+      "cobalt": { "role": "primary", "displayName": "Signal Cobalt", "canonical": "#0757d9", "tonalRamp": ["#00153d", "#002b70", "#0043aa", "#0757d9", "#3377ed", "#6798f7", "#a2befc", "#e4edff"] },
+      "cobalt-hover": { "role": "primary", "displayName": "Deep Signal Cobalt", "canonical": "#0648b5", "tonalRamp": ["#001337", "#002862", "#003c91", "#0648b5", "#356cca", "#6c92df", "#a5baf0", "#e4ecfb"] },
+      "cobalt-ink": { "role": "neutral", "displayName": "Cool White", "canonical": "#f7f9fc", "tonalRamp": ["#1d222a", "#383f49", "#545c67", "#747c87", "#969da7", "#bac0c8", "#dce0e5", "#f7f9fc"] },
+      "canvas-dark": { "role": "neutral", "displayName": "System Charcoal", "canonical": "#15191f", "tonalRamp": ["#15191f", "#2d333b", "#474f59", "#636c77", "#828b96", "#a4abb4", "#c8cdd2", "#eef0f2"] },
+      "surface-dark": { "role": "neutral", "displayName": "Night Surface", "canonical": "#1e242c", "tonalRamp": ["#161a20", "#303740", "#4a535e", "#67717d", "#86909b", "#a7afb8", "#c9cfd5", "#eef0f2"] },
+      "surface-strong-dark": { "role": "neutral", "displayName": "Night Structural Surface", "canonical": "#29313b", "tonalRamp": ["#171b20", "#323a44", "#4d5661", "#69747f", "#89939d", "#aab2bb", "#ccd1d6", "#eef0f2"] },
+      "ink-dark": { "role": "neutral", "displayName": "Night Ink", "canonical": "#edf1f5", "tonalRamp": ["#1c2126", "#373d44", "#535a62", "#727981", "#939aa1", "#b6bcc2", "#d7dce0", "#edf1f5"] },
+      "ink-muted-dark": { "role": "neutral", "displayName": "Night Slate Copy", "canonical": "#b0bac5", "tonalRamp": ["#1a1f24", "#343b43", "#4f5862", "#6b7580", "#8b96a1", "#adb7c1", "#cdd3d9", "#eef0f2"] },
+      "divider-dark": { "role": "neutral", "displayName": "Night Mullion", "canonical": "#3d4651", "tonalRamp": ["#181c21", "#333a43", "#4e5761", "#6a747e", "#8a949e", "#abb4bd", "#ccd2d7", "#eef0f2"] },
+      "cobalt-dark": { "role": "primary", "displayName": "Night Signal Cobalt", "canonical": "#5d91ff", "tonalRamp": ["#001946", "#00317c", "#0d4fba", "#3973e5", "#5d91ff", "#85acff", "#b2cbff", "#e6eeff"] },
+      "cobalt-hover-dark": { "role": "primary", "displayName": "Night Signal Hover", "canonical": "#7aa5ff", "tonalRamp": ["#001a45", "#123579", "#3156ae", "#5579df", "#7aa5ff", "#9abaff", "#bfd3ff", "#e8efff"] },
+      "cobalt-ink-dark": { "role": "neutral", "displayName": "Night Action Ink", "canonical": "#10151c", "tonalRamp": ["#10151c", "#29313a", "#444d57", "#606b76", "#7f8a95", "#a1aab3", "#c6cbd1", "#edf0f2"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Two-line hero promise and the largest conversion statements." },
+      "headline": { "displayName": "Headline", "purpose": "Oversized section arguments across broad measures." },
+      "title": { "displayName": "Panel Title", "purpose": "Service, advisory, and gallery pane titles." },
+      "lede": { "displayName": "Lede", "purpose": "Muted supporting arguments with a controlled reading measure." },
+      "body": { "displayName": "Body", "purpose": "Operational details and explanatory copy." },
+      "label": { "displayName": "Label", "purpose": "Navigation, actions, controls, and proof labels." }
+    },
+    "shadows": [
+      { "name": "mobile-menu-overlay", "value": "0 22px 60px color-mix(in srgb, var(--ink) 18%, transparent)", "purpose": "Separates the open mobile navigation panel from page content; no other resting surface uses shadow." }
+    ],
+    "motion": [
+      { "name": "ease-architectural", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Image crops, accordion proportions, and active-state transforms." },
+      { "name": "state-fast", "value": "180ms ease", "purpose": "Color and menu-state feedback." },
+      { "name": "accordion-desktop", "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Expands the selected photographic pane from one to three flex shares." },
+      { "name": "accordion-mobile", "value": "500ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Expands the selected mobile pane from 118px to 285px." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Disables nonessential animation and reveals all story words immediately when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "767px" },
+      { "name": "tablet-navigation", "value": "1024px" },
+      { "name": "content-cap", "value": "1500px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single solid treatment for WhatsApp and other primary conversion actions.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">WhatsApp Manoj</a>",
+      "css": ".ds-primary-action { display:inline-flex; align-items:center; justify-content:center; min-height:54px; padding:.94rem 1.45rem; border:0; border-radius:0; background:var(--accent,#0757d9); color:var(--accent-ink,#f7f9fc); font:700 .9rem/1.2 Geist,system-ui,sans-serif; text-decoration:none; transition:background 180ms ease,transform 180ms cubic-bezier(.16,1,.3,1); } .ds-primary-action:hover { background:var(--accent-hover,#0648b5); } .ds-primary-action:active { transform:scale(.98); } .ds-primary-action:focus-visible { outline:3px solid var(--focus,#0757d9); outline-offset:4px; }"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A direct-call action paired with a solid conversion button.",
+      "html": "<a class=\"ds-text-action\" href=\"#\">Call +91 98209 87706</a>",
+      "css": ".ds-text-action { color:var(--accent,#0757d9); font:680 1rem/1.2 Geist,system-ui,sans-serif; text-decoration-line:underline; text-decoration-thickness:1px; text-underline-offset:.24em; white-space:nowrap; } .ds-text-action:hover { text-decoration-thickness:2px; } .ds-text-action:focus-visible { outline:3px solid var(--focus,#0757d9); outline-offset:4px; }"
+    },
+    {
+      "name": "Desktop Navigation",
+      "kind": "nav",
+      "refersTo": "nav-action",
+      "description": "A bilingual wordmark, quiet section links, and one cobalt action on a 74px structural rail.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\"><span>OM ENTERPRISES</span><span class=\"ds-devanagari\" lang=\"hi\">ओम एंटरप्राइजेज</span></a><div class=\"ds-nav-links\"><a href=\"#\">Services</a><a href=\"#\">How we help</a><a href=\"#\">Ulwe guide</a></div><a class=\"ds-nav-action\" href=\"#\">WhatsApp Manoj</a></nav>",
+      "css": ".ds-nav { min-height:74px; display:grid; grid-template-columns:minmax(210px,1fr) auto auto; align-items:center; gap:2.25rem; padding:0 clamp(1rem,3vw,3rem); border-bottom:1px solid var(--line,#c2c8cf); background:var(--bg,#f2f4f3); color:var(--ink,#15191f); font-family:Geist,system-ui,sans-serif; } .ds-nav a { text-decoration:none; } .ds-wordmark { display:inline-flex; gap:.72rem; align-items:baseline; color:var(--ink,#15191f); font-weight:750; letter-spacing:-.025em; } .ds-devanagari { color:var(--muted,#59626e); font-size:.85rem; font-weight:560; } .ds-nav-links { display:flex; gap:clamp(1.2rem,2.5vw,2.6rem); } .ds-nav-links a { color:var(--muted,#59626e); font-size:.92rem; font-weight:560; } .ds-nav-links a:hover { color:var(--ink,#15191f); } .ds-nav-action { min-height:44px; display:grid; place-items:center; padding:.72rem 1rem; background:var(--accent,#0757d9); color:var(--accent-ink,#f7f9fc); font-size:.9rem; font-weight:680; } .ds-nav a:focus-visible { outline:3px solid var(--focus,#0757d9); outline-offset:4px; }"
+    },
+    {
+      "name": "Proof Item",
+      "kind": "card",
+      "description": "A compact factual pane for credentials, with evidence beneath the claim.",
+      "html": "<div class=\"ds-proof\"><strong>MahaRERA registered</strong><span>A52000018878</span></div>",
+      "css": ".ds-proof { padding:1.4rem clamp(1rem,3vw,3rem); border-right:1px solid var(--line,#c2c8cf); background:var(--bg,#f2f4f3); color:var(--ink,#15191f); font-family:Geist,system-ui,sans-serif; } .ds-proof strong { display:block; margin-bottom:.18rem; font-size:1rem; font-weight:710; } .ds-proof span { color:var(--muted,#59626e); font-size:.84rem; }"
+    },
+    {
+      "name": "Featured Service Pane",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "A full-height square pane; cobalt is reserved for the single featured service.",
+      "html": "<article class=\"ds-service\"><h3>Buy with clarity</h3><p>Compare the right sectors, projects and home types before you commit your time or money.</p></article>",
+      "css": ".ds-service { min-height:310px; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(1.5rem,3vw,2.7rem); border-radius:0; background:var(--accent,#0757d9); color:var(--accent-ink,#f7f9fc); font-family:Geist,system-ui,sans-serif; } .ds-service h3 { max-width:11ch; margin:0; font-size:clamp(1.7rem,3vw,3.1rem); line-height:1; letter-spacing:-.035em; } .ds-service p { max-width:32ch; margin:2rem 0 0; color:color-mix(in srgb,var(--accent-ink,#f7f9fc) 82%,transparent); }"
+    },
+    {
+      "name": "Advisory Panel",
+      "kind": "card",
+      "description": "A tall edge-to-edge photograph followed by a restrained explanatory surface.",
+      "html": "<article class=\"ds-advisory\"><img src=\"/img/consultation.webp\" alt=\"Property consultation at a desk\"><div><h3>Understand the requirement</h3><p>Budget, commute, carpet area, possession, family needs and investment goals shape the shortlist.</p></div></article>",
+      "css": ".ds-advisory { overflow:hidden; border-radius:0; background:var(--surface,#e7eaec); color:var(--ink,#15191f); font-family:Geist,system-ui,sans-serif; } .ds-advisory img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; } .ds-advisory div { padding:clamp(1.4rem,3vw,2.6rem); } .ds-advisory h3 { margin:0 0 .8rem; font-size:clamp(1.7rem,3vw,2.8rem); line-height:1; letter-spacing:-.03em; } .ds-advisory p { max-width:55ch; margin:0; color:var(--muted,#59626e); line-height:1.55; }"
+    },
+    {
+      "name": "Property Accordion Pane",
+      "kind": "custom",
+      "description": "A photographic pane whose title stays visible while the selected state expands.",
+      "html": "<button class=\"ds-accordion\" type=\"button\" aria-expanded=\"true\"><img src=\"/img/interior_balcony.webp\" alt=\"Balcony overlooking a residential neighborhood\"><span>Home search</span></button>",
+      "css": ".ds-accordion { position:relative; width:100%; height:285px; padding:0; overflow:hidden; border:0; border-radius:0; background:var(--surface-strong,#d9dee2); color:#f4f7fb; text-align:left; cursor:pointer; transition:height 500ms cubic-bezier(.16,1,.3,1); } .ds-accordion img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 800ms cubic-bezier(.16,1,.3,1); } .ds-accordion::after { content:\"\"; position:absolute; inset:0; background:linear-gradient(to top,rgba(10,18,29,.68),transparent 62%); } .ds-accordion span { position:absolute; z-index:1; left:1.35rem; right:1.35rem; bottom:1.3rem; font:680 clamp(1.1rem,2vw,2rem)/1.06 Geist,system-ui,sans-serif; } .ds-accordion:hover img,.ds-accordion:focus-visible img { transform:scale(1.04); } .ds-accordion:focus-visible { outline:3px solid var(--focus,#0757d9); outline-offset:-4px; }"
+    },
+    {
+      "name": "Review Control",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A flat bordered control that inverts on hover without introducing another accent.",
+      "html": "<button class=\"ds-review-control\" type=\"button\">Next</button>",
+      "css": ".ds-review-control { min-height:44px; padding:.7rem 1rem; border:1px solid var(--line,#c2c8cf); border-radius:0; background:transparent; color:var(--ink,#15191f); font:620 .9rem/1.2 Geist,system-ui,sans-serif; cursor:pointer; transition:background 180ms ease,color 180ms ease,transform 180ms ease; } .ds-review-control:hover { background:var(--ink,#15191f); color:var(--bg,#f2f4f3); } .ds-review-control:active { transform:scale(.98); } .ds-review-control:focus-visible { outline:3px solid var(--focus,#0757d9); outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Ulwe Window Grid",
+    "overview": "The system treats the page like a precise architectural elevation: squared panes, charcoal mullions, mineral surfaces, and supplied views into homes and residential settings. It makes local property advice feel concrete and legible without borrowing the glossy collage language of luxury-property portals or the soft beige styling of generic realtor templates.\n\nThe experience is editorial in scale but operational in purpose. Wide Geist typography delivers direct claims, structural dividers organize evidence, and a single cobalt accent marks every meaningful action. Motion supports the advisory story: the narrative pins while service panes pass, then the Ulwe explanation resolves word by word. It never delays access to content, and the reduced-motion path presents the complete story immediately.",
+    "keyCharacteristics": [
+      "Mineral off-white and system-dark canvases with charcoal structure.",
+      "One cobalt action accent, used deliberately and consistently.",
+      "Square architectural panels, real repository photography, and border-built hierarchy.",
+      "Expansive type and asymmetrical grids that collapse cleanly to one column.",
+      "Purposeful scroll narrative with a complete reduced-motion fallback."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Cobalt is the only chromatic interface accent; never introduce a second action color.", "section": "colors" },
+      { "name": "The Structural Neutral Rule", "body": "Create hierarchy with neutral planes and divider lines before reaching for color.", "section": "colors" },
+      { "name": "The Wide Sans Rule", "body": "Use scale, weight, and tight spacing for hierarchy; do not introduce a decorative display face.", "section": "typography" },
+      { "name": "The Two-Line Promise Rule", "body": "The desktop hero promise stays exactly two lines, with the second line remaining unbroken.", "section": "typography" },
+      { "name": "The Window Grid Rule", "body": "Large areas must align to shared panes and seams; avoid free-floating cards with arbitrary offsets.", "section": "layout" },
+      { "name": "The Border-Before-Shadow Rule", "body": "Use a divider or stronger neutral plane for structure. Reserve shadow for a genuinely overlaid surface.", "section": "elevation" },
+      { "name": "The No Soft Corners Rule", "body": "Do not round containers or controls; the rigid window geometry is a defining brand behavior.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do use real repository photography as full-bleed architectural panes.",
+      "Do preserve cobalt for actions, focus, and sparse emphasis.",
+      "Do organize dense information with shared one-pixel seams and neutral surface shifts.",
+      "Do keep desktop narrative motion tied to reading progress and restore normal flow on mobile.",
+      "Do expose all interactive states through semantic attributes and visible focus treatment.",
+      "Do make reduced-motion output complete rather than merely faster."
+    ],
+    "donts": [
+      "Don't add rounded cards, pill buttons, glass panels, decorative glows, or ambient shadows.",
+      "Don't introduce a second accent color, gradients, or ornamental color blocks.",
+      "Don't replace the supplied repository imagery with unrelated luxury-property collages or generated lifestyle scenes.",
+      "Don't turn the layout into a uniform card grid; preserve the weighted architectural proportions.",
+      "Don't hide content behind hover-only behavior, scroll effects, or desktop-only composition.",
+      "Don't use motion that delays access, hijacks scrolling, or survives a reduced-motion preference."
+    ]
+  }
+}

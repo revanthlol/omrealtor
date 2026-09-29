@@ -1,3638 +1,620 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline — Tennis Club &amp; Academy</title>
-  <meta name="description" content="A members' tennis club and academy where focused coaching meets championship courts.">
-
-  <!-- Google Font: Onest (400, 500) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Lenis Import Map -->
-  <script type="importmap">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OM Enterprises | Property Advisor in Ulwe, Navi Mumbai</title>
+  <meta name="description" content="Buy, rent, invest, and verify property in Ulwe with local guidance from OM Enterprises and Mr. Manoj Kumar.">
+  <link rel="canonical" href="https://omrealtor.com/">
+  <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15191f" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omrealtor.com/">
+  <meta property="og:title" content="OM Enterprises | Property Advisor in Ulwe">
+  <meta property="og:description" content="Local guidance for buying, renting, investing, and property paperwork in Ulwe, Navi Mumbai.">
+  <meta property="og:image" content="https://omrealtor.com/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="OM Enterprises">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OM Enterprises | Property Advisor in Ulwe">
+  <meta name="twitter:description" content="Local guidance for buying, renting, investing, and property paperwork in Ulwe, Navi Mumbai.">
+  <meta name="twitter:image" content="https://omrealtor.com/img/og-cover.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <script type="application/ld+json">
   {
-    "imports": {
-      "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm"
-    }
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "OM Enterprises",
+    "alternateName": "Om Enterprises Ulwe",
+    "url": "https://omrealtor.com/",
+    "telephone": "+919820987706",
+    "slogan": "Building Relations",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 2, Sai Nakshatra, Plot No. 116, Sector 18",
+      "addressLocality": "Ulwe, Navi Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "410206",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Ulwe", "Navi Mumbai"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "232"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "20:30"
+    }]
   }
   </script>
-
   <style>
-    /* -------------------------------------------------------------
-       1. CSS RESET & VARIABLES
-       ------------------------------------------------------------- */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    @font-face {
+      font-family: "Geist";
+      src: url("/fonts/geist-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
     }
-
     :root {
-      --background: #ffffff;
-      --foreground: #0a0a0a;
-      --brand: #2563c9;        /* primary royal blue */
-      --brand-deep: #0f2f63;   /* deep navy — hero/stats/footer base */
-      --brand-light: #5790e6;  /* light blue accent / focus ring */
-      --accent-teal: #0b6e97;  /* blue court caption tint */
-      --surface: #f4f4f4;      /* off-white section bg */
-      --surface-card: #ffffff;
-      --ink: #0a0a0a;          /* near-black headings */
-      --ink-soft: #717784;     /* muted body */
-      --ghost: #d7dae1;        /* oversized ghost text */
-      --hairline: #e6e8ec;     /* subtle borders */
-      --on-brand: #ffffff;     /* text on navy */
-
-      /* Radii */
-      --radius-card: 1.5rem;
-      --radius-card-lg: 2rem;
-      --radius-pill: 62.5rem;
-      --radius-xl: 0.75rem;
-
-      /* Easings */
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-      --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+      color-scheme: light dark;
+      --bg: #f2f4f3;
+      --surface: #e7eaec;
+      --surface-strong: #d9dee2;
+      --ink: #15191f;
+      --muted: #59626e;
+      --line: #c2c8cf;
+      --accent: #0757d9;
+      --accent-hover: #0648b5;
+      --accent-ink: #f7f9fc;
+      --image-scrim: rgba(10, 18, 29, 0.68);
+      --focus: #0757d9;
+      --header-height: 74px;
+      --page-pad: clamp(1rem, 3vw, 3rem);
+      --max-width: 1500px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
-
-    /* Adaptive rem grid */
-    html {
-      font-size: 16px;
-      scroll-behavior: auto; /* Handled by Lenis */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #15191f;
+        --surface: #1e242c;
+        --surface-strong: #29313b;
+        --ink: #edf1f5;
+        --muted: #b0bac5;
+        --line: #3d4651;
+        --accent: #5d91ff;
+        --accent-hover: #7aa5ff;
+        --accent-ink: #10151c;
+        --image-scrim: rgba(4, 8, 14, 0.72);
+        --focus: #84adff;
+      }
     }
-
-    @media (max-width: 1920px) { html { font-size: 0.833333vw; } }
-    @media (max-width: 1440px) { html { font-size: 1.111111vw; } }
-    @media (max-width: 1024px) { html { font-size: 1.5625vw; } }
-    @media (max-width: 640px)  { html { font-size: 4.444444vw; } }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scrollbar-color: var(--accent) var(--surface); scrollbar-width: thin; }
     body {
-      min-height: 100vh;
-      background: var(--background);
-      color: var(--foreground);
-      font-family: "Onest", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-weight: 400;
-      line-height: 1.4;
-      overflow-x: clip;
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Geist", "Noto Sans Devanagari", system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
-
-    img, svg, video {
-      display: block;
-      max-width: 100%;
-    }
-
-    button {
-      cursor: pointer;
-      font-family: inherit;
-      background: none;
-      border: none;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--brand-light);
-      outline-offset: 2px;
-    }
-
-    /* Page container */
-    main {
-      width: 100%;
-      overflow-x: clip;
-      padding: 0.5rem;
-    }
-
-    @media (min-width: 640px) {
-      main {
-        padding: 0.75rem;
-      }
-    }
-
-    /* -------------------------------------------------------------
-       2. REVEAL & MOTION HELPER UTILITIES
-       ------------------------------------------------------------- */
-    .clip-line {
-      overflow: hidden;
-      display: block;
-      padding-bottom: 0.14em;
-    }
-
-    .clip-line-inner {
-      display: inline-block;
-      transform: translateY(115%);
-      opacity: 0;
-      will-change: transform, opacity;
-    }
-
-    .word-clip {
-      overflow: hidden;
-      display: inline-block;
-      padding-bottom: 0.14em;
-      vertical-align: top;
-    }
-
-    .word-inner {
-      display: inline-block;
-      transform: translateY(115%);
-      opacity: 0;
-      will-change: transform, opacity;
-    }
-
-    /* Inview generic helper */
-    .inview-fade-up {
-      opacity: 0;
-      transform: translateY(28px);
-      will-change: opacity, transform;
-    }
-
-    /* -------------------------------------------------------------
-       3. SHARED COMPONENTS (EYEBROW, PILL BUTTON, ARROW BUTTON, DOTS)
-       ------------------------------------------------------------- */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem; /* text-xs */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-    }
-
-    .eyebrow .dot {
-      width: 0.375rem;
-      height: 0.375rem;
-      border-radius: var(--radius-pill);
-      flex-shrink: 0;
-    }
-
-    .eyebrow.tone-dark {
-      color: var(--ink-soft);
-    }
-    .eyebrow.tone-dark .dot {
-      background: var(--brand);
-    }
-
-    .eyebrow.tone-light {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .eyebrow.tone-light .dot {
-      background: var(--brand-light);
-    }
-
-    /* Pill Button */
-    .pill-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      border-radius: var(--radius-pill);
-      padding: 0.875rem 1.75rem;
-      font-size: 0.875rem; /* text-sm */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
-      white-space: nowrap;
-    }
-
-    .pill-button .btn-arrow {
-      width: 1rem;
-      height: 1rem;
-      transition: transform 260ms var(--ease-out-expo);
-    }
-
-    @media (hover: hover) and (min-width: 769px) {
-      .pill-button:hover .btn-arrow {
-        transform: translateX(5px);
-      }
-    }
-
-    .pill-button.variant-light {
-      background: #ffffff;
-      color: var(--brand-deep);
-    }
-    @media (hover: hover) and (min-width: 769px) {
-      .pill-button.variant-light:hover {
-        background: var(--brand-light);
-        color: #ffffff;
-      }
-    }
-
-    .pill-button.variant-solid {
-      background: var(--ink);
-      color: #ffffff;
-    }
-    @media (hover: hover) and (min-width: 769px) {
-      .pill-button.variant-solid:hover {
-        background: var(--brand-deep);
-      }
-    }
-
-    .pill-button.variant-outline {
-      border: 1px solid currentColor;
-      color: var(--ink);
-      background: transparent;
-    }
-    @media (hover: hover) and (min-width: 769px) {
-      .pill-button.variant-outline:hover {
-        background: var(--ink);
-        color: #ffffff;
-      }
-    }
-
-    /* Arrow Button (Carousels) */
-    .arrow-button {
-      width: 3rem;
-      height: 3rem;
-      border-radius: var(--radius-pill);
-      display: grid;
-      place-items: center;
-      transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
-    }
-    @media (min-width: 640px) {
-      .arrow-button {
-        width: 3.5rem;
-        height: 3.5rem;
-      }
-    }
-
-    .arrow-button svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      transition: transform 260ms var(--ease-out-expo);
-    }
-
-    @media (hover: hover) and (min-width: 769px) {
-      .arrow-button:hover svg {
-        transform: scale(1.15);
-      }
-      .arrow-button.btn-prev:hover svg {
-        transform: scaleX(-1) scale(1.15);
-      }
-    }
-
-    .arrow-button.variant-outline {
-      border: 1px solid var(--hairline);
-      background: transparent;
-      color: var(--ink);
-    }
-    @media (hover: hover) and (min-width: 769px) {
-      .arrow-button.variant-outline:hover {
-        border-color: var(--ink);
-      }
-    }
-
-    .arrow-button.variant-solid {
-      background: var(--ink);
-      border: 1px solid var(--ink);
-      color: #ffffff;
-    }
-    @media (hover: hover) and (min-width: 769px) {
-      .arrow-button.variant-solid:hover {
-        background: var(--brand-deep);
-        border-color: var(--brand-deep);
-      }
-    }
-
-    .arrow-button.btn-prev svg {
-      transform: scaleX(-1);
-    }
-
-    /* Carousel Dots */
-    .carousel-dots {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .carousel-dot {
-      padding: 0.375rem;
-      display: inline-flex;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .carousel-dot .dot-pill {
-      height: 0.375rem;
-      border-radius: var(--radius-pill);
-      transition: width 260ms var(--ease-out-expo), background-color 260ms ease;
-      display: block;
-    }
-
-    /* Dark tone dots */
-    .carousel-dots.tone-dark .carousel-dot .dot-pill {
-      width: 0.375rem;
-      background: var(--ghost);
-    }
-    .carousel-dots.tone-dark .carousel-dot.active .dot-pill {
-      width: 1.25rem;
-      background: var(--ink);
-    }
-
-    /* Light tone dots */
-    .carousel-dots.tone-light .carousel-dot .dot-pill {
-      width: 0.375rem;
-      background: rgba(255, 255, 255, 0.4);
-    }
-    .carousel-dots.tone-light .carousel-dot.active .dot-pill {
-      width: 1.25rem;
-      background: #ffffff;
-    }
-
-    /* -------------------------------------------------------------
-       4. INTRO LOADER
-       ------------------------------------------------------------- */
-    #intro-loader {
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+    img { display: block; width: 100%; max-width: 100%; }
+    button, a, summary { -webkit-tap-highlight-color: transparent; }
+    button, input, textarea { font: inherit; }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+    .skip-link {
       position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: var(--brand-deep);
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      will-change: transform;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 100;
+      padding: 0.7rem 1rem;
+      background: var(--accent);
+      color: var(--accent-ink);
+      transform: translateY(-160%);
+      transition: transform 180ms ease;
     }
-
-    .loader-wordmark {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0;
-      transform: translateY(16px);
-      will-change: transform, opacity;
+    .skip-link:focus { transform: translateY(0); }
+    .site-shell { width: min(100%, var(--max-width)); margin-inline: auto; }
+    .page-pad { padding-inline: var(--page-pad); }
+    .section { padding-block: clamp(6.5rem, 12vw, 11rem); }
+    .section-heading {
+      max-width: 920px;
+      margin: 0 0 clamp(2.5rem, 5vw, 5rem);
+      font-size: clamp(2.45rem, 6vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 660;
+      text-wrap: balance;
     }
-
-    .loader-wordmark svg {
-      width: 1.75rem;
-      height: 1.75rem;
+    .lede {
+      max-width: 68ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.4vw, 1.28rem);
     }
-
-    .loader-wordmark span {
-      font-size: 1.5rem; /* text-2xl */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-
-    .loader-track {
-      width: 10rem;
-      height: 1px;
-      border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.2);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .loader-bar {
-      width: 100%;
-      height: 100%;
-      background: #ffffff;
-      transform: scaleX(0);
-      transform-origin: left;
-      will-change: transform;
-    }
-
-    /* -------------------------------------------------------------
-       5. SITE HEADER & HERO SECTION
-       ------------------------------------------------------------- */
-    .hero-section {
-      background: var(--brand-deep);
-      color: #ffffff;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      border-radius: var(--radius-card-lg);
-      height: calc(100svh - 1rem);
-      min-height: 36rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: 640px) {
-      .hero-section {
-        height: calc(100svh - 1.5rem);
-      }
-    }
-
-    /* Parallax Plate */
-    .hero-parallax-wrapper {
-      position: absolute;
-      inset: 0;
-      z-index: -10;
-      overflow: hidden;
-    }
-
-    .hero-parallax-inner {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -16%;
-      height: 132%;
-      width: 100%;
-      will-change: transform;
-    }
-
-    .hero-bg-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-gradient-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 47, 99, 0.65) 0%,
-        rgba(15, 47, 99, 0.35) 50%,
-        rgba(15, 47, 99, 0.75) 100%
-      );
-    }
-
-    /* Header inside Hero */
     .site-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.5rem 1.5rem 0;
-      font-size: 0.75rem; /* text-xs */
-      color: #ffffff;
+      position: relative;
       z-index: 20;
+      height: var(--header-height);
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(14px);
     }
-
-    @media (min-width: 640px) {
-      .site-header {
-        padding: 2rem 2.5rem 0;
-      }
-    }
-
-    .header-nav-left {
-      flex: 1;
-      display: none;
+    .nav {
+      height: 100%;
+      display: grid;
+      grid-template-columns: minmax(210px, 1fr) auto auto;
       align-items: center;
-      gap: 2rem;
+      gap: 2.25rem;
     }
-
-    @media (min-width: 1024px) {
-      .header-nav-left {
-        display: flex;
-      }
-    }
-
-    .header-nav-left a {
-      color: rgba(255, 255, 255, 0.9);
-      transition: color 180ms ease;
-    }
-    .header-nav-left a:hover {
-      color: #ffffff;
-    }
-
-    .header-brand {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .wordmark {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.72rem;
+      width: fit-content;
+      color: var(--ink);
+      text-decoration: none;
       font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-
-    @media (min-width: 1024px) {
-      .header-brand {
-        justify-content: center;
-      }
-    }
-
-    .header-brand svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    .header-nav-right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem;
-    }
-
-    @media (min-width: 640px) {
-      .header-nav-right {
-        gap: 1.25rem;
-      }
-    }
-
-    .btn-book-visit-header {
-      display: none;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #ffffff;
-      background: none;
-      border: none;
-    }
-
-    @media (min-width: 640px) {
-      .btn-book-visit-header {
-        display: inline-block;
-      }
-      .btn-book-visit-header:hover {
-        text-decoration: underline;
-      }
-    }
-
-    .btn-burger {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      display: grid;
-      place-items: center;
-      gap: 5px;
-      padding: 0.75rem 0.5rem;
-      transition: background 200ms ease;
-    }
-
-    @media (hover: hover) and (min-width: 769px) {
-      .btn-burger:hover {
-        background: rgba(255, 255, 255, 0.25);
-      }
-    }
-
-    .burger-bar {
-      width: 1rem;
-      height: 1px;
-      background: #ffffff;
-      display: block;
-    }
-
-    /* Giant Title */
-    .hero-title-wrap {
-      padding: 1rem 1.5rem 0;
-      z-index: 10;
-      overflow: hidden;
-    }
-
-    @media (min-width: 640px) {
-      .hero-title-wrap {
-        padding: 1.5rem 2.5rem 0;
-      }
-    }
-
-    #hero-title {
-      font-size: clamp(2.4rem, 9.6vw, 12.5vw);
-      font-weight: 500;
-      text-transform: uppercase;
-      line-height: 0.85;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-      margin: 0;
-    }
-
-    @media (max-width: 640px) {
-      #hero-title {
-        font-size: 11vw;
-        white-space: normal;
-        line-height: 0.92;
-      }
-    }
-
-    #hero-title .word-clip {
-      margin-right: 0.22em;
-    }
-
-    /* Hero Bottom Row */
-    .hero-bottom-row {
-      margin-top: auto;
-      padding: 0 1.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      z-index: 10;
-    }
-
-    @media (min-width: 640px) {
-      .hero-bottom-row {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 0 2.5rem 2.5rem;
-      }
-    }
-
-    /* Tagline */
-    .hero-tagline {
-      font-size: 2.4rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      color: rgba(255, 255, 255, 0.85);
-      margin: 0;
-    }
-
-    /* Hero Right Cluster */
-    .hero-right-cluster {
-      display: flex;
-      align-items: flex-end;
-      gap: 1rem;
-    }
-
-    /* Collection Slider Card */
-    .collection-slider-wrap {
-      display: none;
-      width: 16rem;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    @media (min-width: 768px) {
-      .collection-slider-wrap {
-        display: flex;
-      }
-    }
-
-    .collection-card {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      border-radius: var(--radius-card);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0.75rem;
-      box-shadow: 0 8px 32px rgba(15, 47, 99, 0.2);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      position: relative;
-      overflow: hidden;
-      min-height: 5rem;
-    }
-
-    .collection-card-inner {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      width: 100%;
-      will-change: transform, opacity;
-    }
-
-    .collection-card-img {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: var(--radius-xl);
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .collection-info {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .collection-brand {
-      font-size: 0.7rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #ffffff;
-    }
-
-    .collection-title {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .collection-cta {
-      font-size: 0.65rem;
-      text-decoration: underline;
-      color: #ffffff;
-      margin-top: 0.2rem;
-    }
-
-    /* Membership Card */
-    .membership-card {
-      width: 100%;
-      max-width: 20rem;
-      border-radius: var(--radius-card);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0.75rem;
-      box-shadow: 0 8px 32px rgba(15, 47, 99, 0.2);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      display: flex;
-      gap: 0.75rem;
-      align-items: stretch;
-    }
-
-    @media (min-width: 640px) {
-      .membership-card {
-        width: 15rem;
-        max-width: 15rem;
-      }
-    }
-
-    .membership-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1;
-    }
-
-    .membership-stat {
-      font-size: 1.875rem; /* text-3xl */
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .membership-avatars {
-      display: flex;
-      align-items: center;
-      margin-left: 0;
-    }
-
-    .membership-avatar {
-      width: 1.25rem;
-      height: 1.25rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(15, 47, 99, 0.4);
-      margin-right: -0.5rem;
-    }
-
-    .membership-caption {
-      font-size: 0.65rem;
-      color: rgba(255, 255, 255, 0.8);
+      font-weight: 750;
+      letter-spacing: -0.025em;
       white-space: nowrap;
     }
-
-    .membership-img {
-      width: 4rem;
-      aspect-ratio: 3 / 4;
-      border-radius: var(--radius-xl);
-      object-fit: cover;
-    }
-
-    /* -------------------------------------------------------------
-       6. TRUST SECTION ("TRUSTED BY SERIOUS PLAYERS")
-       ------------------------------------------------------------- */
-    .trust-section {
-      background: var(--background);
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      padding: 4rem 1.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .trust-section {
-        padding: 5rem 2.5rem;
-      }
-    }
-
-    .trust-top-row {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      z-index: 20;
-      position: relative;
-    }
-
-    @media (min-width: 640px) {
-      .trust-top-row {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-    }
-
-    /* Percentage Badge */
-    .percent-badge {
-      width: 7rem;
-      height: 7rem;
-      border-radius: var(--radius-pill);
-      background: var(--surface);
-      display: flex;
-      flex-direction: column;
+    .wordmark-devanagari { color: var(--muted); font-size: 0.85rem; font-weight: 560; }
+    .nav-links { display: flex; align-items: center; gap: clamp(1.2rem, 2.5vw, 2.6rem); }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 560; transition: color 180ms ease; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-action {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 0.5rem;
-      will-change: transform, opacity;
-    }
-
-    @media (min-width: 640px) {
-      .percent-badge {
-        width: 8rem;
-        height: 8rem;
-      }
-    }
-
-    .percent-badge .pct-num {
-      font-size: 1.5rem; /* text-2xl */
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .percent-badge .pct-sub {
-      font-size: 0.6rem;
-      color: var(--ink-soft);
-      max-width: 7em;
-      margin-top: 0.25rem;
-      line-height: 1.2;
-    }
-
-    /* Trust Badge Card */
-    .trust-badge-card {
-      max-width: 28rem;
-      background: var(--surface);
-      border-radius: var(--radius-card);
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      will-change: transform, opacity;
-    }
-
-    @media (min-width: 640px) {
-      .trust-badge-card {
-        padding: 1.5rem;
-        gap: 1.25rem;
-      }
-    }
-
-    .chip-index {
-      display: inline-block;
-      align-self: flex-start;
-      border-radius: var(--radius-xl);
-      background: var(--background);
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem; /* text-xl */
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .trust-badge-title {
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 500;
-      margin: 0;
-    }
-
-    .trust-badge-body {
-      font-size: 0.75rem; /* text-xs */
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Oversized Ghost Heading */
-    .trust-ghost-wrap {
-      pointer-events: none;
-      user-select: none;
-      z-index: 0;
-      max-width: 88rem;
-      margin: 3rem auto 0;
-      width: 100%;
-    }
-
-    #trust-title {
-      font-size: 8.2vw;
-      font-weight: 500;
-      text-transform: uppercase;
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      margin: 0;
-      width: 100%;
-    }
-
-    .ghost-row {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .ghost-word {
-      color: var(--ghost);
-      display: inline-block;
-      will-change: transform;
-    }
-
-    .ghost-word.highlight-ink {
-      color: var(--ink);
-    }
-
-    /* Center Coach Card */
-    .coach-card-wrapper {
-      position: relative;
-      z-index: 10;
-      margin: 2rem auto;
-      display: flex;
-      justify-content: center;
-      will-change: transform, opacity;
-    }
-
-    @media (min-width: 640px) {
-      .coach-card-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-      }
-    }
-
-    .coach-card {
-      width: 13rem;
-      aspect-ratio: 3 / 4;
-      border-radius: var(--radius-card);
-      background: var(--brand);
-      overflow: hidden;
-      position: relative;
-      transform: rotate(6deg);
-      box-shadow: 0 16px 40px rgba(15, 47, 99, 0.15);
-    }
-
-    @media (min-width: 640px) {
-      .coach-card {
-        width: 16rem;
-      }
-    }
-
-    .coach-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      will-change: opacity;
-    }
-
-    .coach-caption {
-      position: absolute;
-      left: 0.75rem;
-      right: 0.75rem;
-      bottom: 0.75rem;
-      border-radius: var(--radius-xl);
-      background: rgba(15, 47, 99, 0.4);
-      color: #ffffff;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .coach-caption .coach-name {
-      font-size: 0.875rem; /* text-sm */
-      font-weight: 500;
-    }
-
-    .coach-caption .coach-role {
-      font-size: 0.65rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    /* Carousel Controls Row */
-    .trust-controls-row {
-      position: relative;
-      z-index: 20;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 3rem;
-    }
-
-    @media (min-width: 640px) {
-      .trust-controls-row {
-        margin-top: 6rem;
-      }
-    }
-
-    /* -------------------------------------------------------------
-       7. PROGRAMS SECTION
-       ------------------------------------------------------------- */
-    .programs-section {
-      background: var(--surface);
-      padding: 6rem 1.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .programs-section {
-        padding: 6rem 2.5rem;
-      }
-    }
-
-    #programs-title {
-      font-size: 3rem; /* text-5xl */
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-top: 1rem;
-    }
-
-    .programs-list {
-      list-style: none;
-      margin-top: 3.5rem;
-    }
-
-    .program-row-link {
-      display: block;
-      border-top: 1px solid var(--hairline);
-      padding: 1.75rem 0;
-      transition: background 180ms ease;
-    }
-
-    .program-row-link:last-child {
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .program-row-inner {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .program-index {
-      width: 2.5rem;
-      font-size: 0.875rem; /* text-sm */
-      font-weight: 500;
-      color: var(--ink-soft);
-      flex-shrink: 0;
-    }
-
-    .program-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .program-name {
-      font-size: 1.5rem; /* text-2xl */
-      font-weight: 500;
-      letter-spacing: -0.01em;
-    }
-
-    @media (min-width: 640px) {
-      .program-name {
-        font-size: 1.875rem; /* text-3xl */
-      }
-    }
-
-    .program-desc {
-      font-size: 0.875rem; /* text-sm */
-      color: var(--ink-soft);
-    }
-
-    .program-arrow-circle {
-      width: 2.75rem;
-      height: 2.75rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--hairline);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .program-arrow-circle svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      opacity: 0.55;
-      transform: translateX(0);
-      will-change: transform, opacity;
-    }
-
-    /* -------------------------------------------------------------
-       8. FACILITIES SECTION
-       ------------------------------------------------------------- */
-    .facilities-section {
-      background: var(--background);
-      border-radius: var(--radius-card-lg);
-      margin-top: -2.5rem; /* Overlap into Programs */
-      padding: 4rem 1.5rem 5rem;
-      position: relative;
-      z-index: 5;
-    }
-
-    @media (min-width: 640px) {
-      .facilities-section {
-        padding: 4rem 2.5rem 5rem;
-      }
-    }
-
-    .facilities-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      align-items: flex-end;
-    }
-
-    @media (min-width: 768px) {
-      .facilities-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .facilities-intro-col {
-      max-width: 24rem;
-    }
-
-    .facilities-icon-img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: var(--radius-card);
-      object-fit: cover;
-      will-change: transform, opacity;
-    }
-
-    #facilities-title {
-      font-size: 3rem; /* text-5xl */
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-top: 1.5rem;
-    }
-
-    .facilities-body-text {
-      font-size: 0.875rem; /* text-sm */
-      color: var(--ink-soft);
-      max-width: 20rem;
-      margin-top: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .facilities-body-word {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(18px);
-      will-change: transform, opacity;
-    }
-
-    /* Court Cards */
-    .facilities-cards-cluster {
-      display: flex;
-      align-items: flex-end;
-      gap: 1.25rem;
-    }
-
-    .court-card-figure {
-      flex: 1;
-      aspect-ratio: 3 / 4;
-      border-radius: var(--radius-card);
-      overflow: hidden;
-      background: var(--surface);
-      position: relative;
-      will-change: transform, opacity;
-    }
-
-    .court-card-figure.stagger-baseline {
-      margin-bottom: 2rem;
-    }
-
-    .court-card-figure img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      will-change: transform;
-    }
-
-    .court-glass-caption {
-      position: absolute;
-      left: 0.75rem;
-      right: 0.75rem;
-      bottom: 0.75rem;
-      border-radius: var(--radius-xl);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: #ffffff;
-      padding: 0.75rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .court-glass-caption.tone-clay {
-      background: rgba(15, 47, 99, 0.4);
-    }
-
-    .court-glass-caption.tone-blue {
-      background: rgba(11, 110, 151, 0.55);
-    }
-
-    .court-caption-name {
-      font-size: 0.875rem; /* text-sm */
-      font-weight: 500;
-    }
-
-    .court-caption-desc {
-      font-size: 0.65rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.35;
-    }
-
-    /* -------------------------------------------------------------
-       9. STATS SECTION
-       ------------------------------------------------------------- */
-    .stats-section {
-      background: var(--brand-deep);
-      color: #ffffff;
-      border-radius: var(--radius-card-lg);
-      margin-top: 0.75rem;
-      padding: 5rem 1.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .stats-section {
-        padding: 5rem 2.5rem;
-      }
-    }
-
-    #stats-title {
-      font-size: 3rem; /* text-5xl */
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-top: 1rem;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 2rem;
-      row-gap: 3rem;
-      margin-top: 4rem;
-    }
-
-    @media (min-width: 1024px) {
-      .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .stat-cell {
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      padding-top: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      will-change: transform, opacity;
-    }
-
-    .stat-value {
-      font-size: 3.75rem; /* text-6xl */
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
-
-    @media (min-width: 640px) {
-      .stat-value {
-        font-size: 4.5rem; /* text-7xl */
-      }
-    }
-
-    .stat-label {
-      font-size: 0.875rem; /* text-sm */
-      color: rgba(255, 255, 255, 0.65);
-      margin-top: 0.75rem;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
+      min-height: 44px;
+      padding: 0.72rem 1rem;
+      background: var(--accent);
+      color: var(--accent-ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 680;
       white-space: nowrap;
-      border-width: 0;
+      transition: background 180ms ease, transform 180ms var(--ease);
     }
-
-    /* -------------------------------------------------------------
-       10. TESTIMONIALS SECTION
-       ------------------------------------------------------------- */
-    .testimonials-section {
-      background: var(--background);
-      padding: 5rem 1.5rem;
+    .nav-action:hover { background: var(--accent-hover); }
+    .nav-action:active { transform: scale(0.98); }
+    .mobile-menu { display: none; position: relative; }
+    .mobile-menu summary { list-style: none; min-height: 44px; display: grid; place-items: center; cursor: pointer; font-weight: 650; }
+    .mobile-menu summary::-webkit-details-marker { display: none; }
+    .mobile-menu-panel {
+      position: absolute;
+      top: calc(100% + 0.9rem);
+      right: 0;
+      width: min(82vw, 340px);
+      padding: 1rem;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      box-shadow: 0 22px 60px color-mix(in srgb, var(--ink) 18%, transparent);
     }
-
-    @media (min-width: 640px) {
-      .testimonials-section {
-        padding: 6rem 2.5rem;
-      }
-    }
-
-    #testimonials-title {
-      font-size: 3rem; /* text-5xl */
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-top: 1rem;
-    }
-
-    .testimonials-grid {
-      list-style: none;
+    .mobile-menu-panel a { display: block; padding: 0.9rem; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 620; }
+    .mobile-menu-panel a:last-child { border-bottom: 0; background: var(--accent); color: var(--accent-ink); }
+    .hero {
+      min-height: calc(100dvh - var(--header-height));
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-      margin-top: 3.5rem;
+      grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+      border-bottom: 1px solid var(--line);
     }
-
-    @media (min-width: 768px) {
-      .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .testimonial-card {
+    .hero-copy {
+      min-width: 0;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      border-radius: var(--radius-card);
-      background: var(--surface);
-      padding: 1.75rem;
-      will-change: transform, opacity;
+      justify-content: center;
+      padding: clamp(3rem, 7vh, 5.5rem) clamp(2rem, 5vw, 5.4rem) clamp(3rem, 6vh, 4.5rem) var(--page-pad);
     }
-
-    .quote-glyph {
-      font-size: 2.25rem; /* text-4xl */
-      color: var(--brand);
-      line-height: 1;
-      font-family: serif;
-    }
-
-    .testimonial-quote {
-      font-size: 1.125rem; /* text-lg */
-      line-height: 1.5;
-      color: var(--ink);
-      margin-top: 1rem;
-      font-style: normal;
-    }
-
-    .testimonial-author {
-      border-top: 1px solid var(--hairline);
-      padding-top: 1rem;
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .author-name {
-      font-weight: 500;
-      color: var(--ink);
-    }
-
-    .author-role {
-      font-size: 0.875rem; /* text-sm */
-      color: var(--ink-soft);
-      font-style: italic;
-    }
-
-    /* -------------------------------------------------------------
-       11. FOOTER
-       ------------------------------------------------------------- */
-    .footer-section {
-      background: var(--brand-deep);
-      color: #ffffff;
-      border-radius: var(--radius-card-lg);
-      margin-top: 0.75rem;
-      padding: 3.5rem 1.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .footer-section {
-        padding: 4rem 2.5rem;
-      }
-    }
-
-    .footer-cta-band {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding-bottom: 3.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    @media (min-width: 640px) {
-      .footer-cta-band {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-    }
-
-    .footer-cta-title {
-      font-size: 3.75rem; /* text-6xl */
-      font-weight: 500;
+    .hero h1 {
+      max-width: 100%;
+      margin: 0;
+      font-size: clamp(3.25rem, 4.7vw, 5.1rem);
       line-height: 0.92;
-      letter-spacing: -0.02em;
-      margin-top: 1rem;
+      letter-spacing: -0.04em;
+      font-weight: 720;
+      text-wrap: balance;
     }
-
-    .footer-cols-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      padding: 3.5rem 0;
-    }
-
-    @media (min-width: 768px) {
-      .footer-cols-grid {
-        grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      }
-    }
-
-    .footer-brand-col {
-      max-width: 20rem;
-    }
-
-    .footer-logo {
-      display: flex;
+    .hero h1 > span { display: block; white-space: nowrap; }
+    .hero h1 .accent-period { color: var(--accent); }
+    .hero-subtitle { max-width: 31rem; margin: clamp(1.6rem, 4vh, 2.8rem) 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.45vw, 1.32rem); line-height: 1.45; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.35rem; margin-top: clamp(2rem, 5vh, 3.6rem); }
+    .button-primary {
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-
-    .footer-logo svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    .footer-blurb {
-      font-size: 0.875rem; /* text-sm */
-      color: rgba(255, 255, 255, 0.65);
-      margin-top: 1rem;
-      line-height: 1.5;
-    }
-
-    .footer-address {
-      font-style: normal;
-      font-size: 0.875rem; /* text-sm */
-      color: rgba(255, 255, 255, 0.8);
-      margin-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .footer-address a {
-      transition: color 180ms ease;
-    }
-    .footer-address a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .footer-muted-address {
-      color: rgba(255, 255, 255, 0.55);
-    }
-
-    .footer-nav-col {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .footer-nav-heading {
-      font-size: 0.75rem; /* text-xs */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .footer-nav-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      font-size: 0.875rem; /* text-sm */
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .footer-nav-links a {
-      transition: color 180ms ease;
-    }
-    .footer-nav-links a:hover {
-      color: #ffffff;
-    }
-
-    .footer-bottom-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 2rem;
-      font-size: 0.875rem; /* text-sm */
-      color: rgba(255, 255, 255, 0.6);
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 640px) {
-      .footer-bottom-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    .footer-social-links, .footer-legal-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    .footer-social-links a, .footer-legal-links a {
-      color: rgba(255, 255, 255, 0.6);
-      transition: color 180ms ease;
-    }
-    .footer-social-links a:hover, .footer-legal-links a:hover {
-      color: #ffffff;
-    }
-
-    /* -------------------------------------------------------------
-       12. CONTACT MODAL (PORTALED)
-       ------------------------------------------------------------- */
-    #contact-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 90;
-      display: flex;
-      align-items: flex-end;
       justify-content: center;
-      padding: 0.75rem;
-      pointer-events: none;
-      opacity: 0;
+      min-height: 54px;
+      padding: 0.94rem 1.45rem;
+      background: var(--accent);
+      color: var(--accent-ink);
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: background 180ms ease, transform 180ms var(--ease);
     }
-
-    @media (min-width: 640px) {
-      #contact-modal {
-        align-items: center;
-        padding: 1.5rem;
-      }
+    .button-primary:hover { background: var(--accent-hover); }
+    .button-primary:active { transform: scale(0.98); }
+    .text-action { color: var(--accent); font-weight: 680; white-space: nowrap; }
+    .hero-media { position: relative; min-width: 0; overflow: hidden; background: var(--surface-strong); }
+    .hero-media img { height: 100%; object-fit: cover; object-position: 56% center; }
+    .proof-rail { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
+    .proof-item { min-width: 0; padding: 1.4rem var(--page-pad); border-right: 1px solid var(--line); }
+    .proof-item:last-child { border-right: 0; }
+    .proof-item strong { display: block; margin-bottom: 0.18rem; font-size: 1rem; font-weight: 710; }
+    .proof-item span { color: var(--muted); font-size: 0.84rem; }
+    .services-intro { margin-bottom: clamp(2.5rem, 5vw, 5rem); }
+    .services-intro .lede { max-width: 54ch; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-auto-flow: dense;
+      border: 1px solid var(--line);
+      background: var(--line);
+      gap: 1px;
     }
-
-    #contact-modal.modal-open {
-      pointer-events: auto;
+    .service-cell {
+      min-width: 0;
+      min-height: 310px;
+      padding: clamp(1.5rem, 3vw, 2.7rem);
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
     }
-
-    .modal-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 47, 99, 0.4);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      opacity: 0;
-      will-change: opacity;
+    .service-cell h3 { max-width: 11ch; margin: 0; font-size: clamp(1.7rem, 3vw, 3.1rem); line-height: 1; letter-spacing: -0.035em; }
+    .service-cell p { max-width: 32ch; margin: 2rem 0 0; color: var(--muted); }
+    .service-cell.is-image { grid-column: span 7; padding: 0; }
+    .service-cell.is-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 800ms var(--ease); }
+    .service-cell.is-image:hover img { transform: scale(1.035); }
+    .service-cell.is-primary { grid-column: span 5; background: var(--accent); color: var(--accent-ink); }
+    .service-cell.is-primary p { color: color-mix(in srgb, var(--accent-ink) 82%, transparent); }
+    .service-cell.is-third { grid-column: span 4; }
+    .advisory { position: relative; display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+    .advisory-copy {
+      min-height: calc(100dvh - var(--header-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-block: 4rem;
     }
-
-    .modal-panel {
+    .advisory-copy h2 { margin-bottom: 2rem; }
+    .advisory-copy .lede { max-width: 42ch; }
+    .advisory-panels { padding-block: clamp(2rem, 8vh, 7rem); }
+    .advisory-panel { min-height: min(72dvh, 720px); margin-bottom: clamp(2rem, 6vh, 5rem); background: var(--surface); overflow: hidden; }
+    .advisory-panel:last-child { margin-bottom: 0; }
+    .advisory-panel img { aspect-ratio: 16 / 9; height: auto; object-fit: cover; }
+    .advisory-panel-copy { padding: clamp(1.4rem, 3vw, 2.6rem); }
+    .advisory-panel h3 { margin: 0 0 0.8rem; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1; letter-spacing: -0.03em; }
+    .advisory-panel p { max-width: 55ch; margin: 0; color: var(--muted); }
+    .ulwe-story { border-block: 1px solid var(--line); padding-block: clamp(6rem, 14vw, 13rem); }
+    .story-copy { max-width: 1180px; margin: 0; font-size: clamp(2.2rem, 5.7vw, 5.4rem); line-height: 1.04; letter-spacing: -0.04em; font-weight: 620; }
+    .story-copy .word { opacity: 0.16; }
+    .gallery-heading { max-width: 720px; }
+    .accordion { display: flex; gap: 1px; height: min(68dvh, 690px); background: var(--line); border: 1px solid var(--line); overflow: hidden; }
+    .accordion-panel {
       position: relative;
-      width: 100%;
-      max-height: 92svh;
-      overflow-y: auto;
-      border-radius: var(--radius-card-lg);
-      background: var(--surface-card);
-      padding: 1.5rem;
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      background: var(--surface-strong);
+      color: #f4f7fb;
+      text-align: left;
+      cursor: pointer;
+      transition: flex 700ms var(--ease);
+    }
+    .accordion-panel[aria-expanded="true"] { flex: 3 1 0; }
+    .accordion-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 800ms var(--ease); }
+    .accordion-panel:hover img, .accordion-panel:focus-visible img { transform: scale(1.04); }
+    .accordion-panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--image-scrim), transparent 62%); }
+    .accordion-title { position: absolute; z-index: 1; left: 1.35rem; right: 1.35rem; bottom: 1.3rem; font-size: clamp(1.1rem, 2vw, 2rem); font-weight: 680; line-height: 1.06; }
+    .reviews-layout { display: grid; grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); gap: clamp(2rem, 8vw, 8rem); align-items: start; }
+    .reviews-layout h2 { margin-bottom: 1.4rem; }
+    .review-stage { min-height: 330px; border-top: 1px solid var(--line); padding-top: clamp(2rem, 5vw, 4rem); }
+    .review { display: none; }
+    .review.is-active { display: block; }
+    .review blockquote { max-width: 24ch; margin: 0; font-size: clamp(1.8rem, 3.7vw, 3.8rem); line-height: 1.08; letter-spacing: -0.035em; font-weight: 570; }
+    .review footer { margin-top: 2rem; color: var(--muted); }
+    .review-controls { display: flex; gap: 0.65rem; margin-top: 2.5rem; }
+    .review-controls button {
+      min-height: 44px;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--line);
+      background: transparent;
       color: var(--ink);
-      box-shadow: 0 24px 64px rgba(15, 47, 99, 0.25);
-      transform: translateY(28px) scale(0.96);
-      opacity: 0;
-      will-change: transform, opacity;
+      cursor: pointer;
+      font-weight: 620;
+      transition: background 180ms ease, color 180ms ease;
     }
-
-    @media (min-width: 640px) {
-      .modal-panel {
-        max-width: 32rem;
-        padding: 2rem;
-      }
-    }
-
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .modal-title {
-      font-size: 2.25rem; /* text-4xl */
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin-top: 0.75rem;
-    }
-
-    @media (min-width: 640px) {
-      .modal-title {
-        font-size: 3rem; /* text-5xl */
-      }
-    }
-
-    .btn-close-modal {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: var(--radius-pill);
-      background: var(--surface);
+    .review-controls button:hover { background: var(--ink); color: var(--bg); }
+    .review-controls button:active { transform: scale(0.98); }
+    .contact-block {
       display: grid;
-      place-items: center;
-      transition: background 180ms ease;
-      flex-shrink: 0;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: clamp(3rem, 8vw, 9rem);
+      padding-block: clamp(6rem, 11vw, 10rem);
+      border-top: 1px solid var(--line);
     }
-
-    .btn-close-modal:hover {
-      background: var(--hairline);
+    .contact-block h2 { max-width: 8ch; margin: 0 0 2.6rem; font-size: clamp(3.4rem, 8vw, 7rem); line-height: 0.9; letter-spacing: -0.04em; }
+    .contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+    .contact-details { display: grid; align-content: start; gap: 2rem; }
+    .contact-detail { padding-top: 1.1rem; border-top: 1px solid var(--line); }
+    .contact-detail h3 { margin: 0 0 0.55rem; font-size: 0.95rem; }
+    .contact-detail p { max-width: 38ch; margin: 0; color: var(--muted); }
+    .site-footer { border-top: 1px solid var(--line); padding-block: 2rem 6rem; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 2rem; align-items: start; }
+    .footer-brand p { max-width: 34ch; margin: 0.7rem 0 0; color: var(--muted); font-size: 0.9rem; }
+    .footer-links { display: grid; gap: 0.5rem; }
+    .footer-links a { width: fit-content; color: var(--muted); }
+    .footer-meta { color: var(--muted); font-size: 0.82rem; text-align: right; }
+    .mobile-action-bar { display: none; }
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
-
-    .btn-close-modal svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      will-change: transform;
+    @media (max-width: 1024px) {
+      .nav { grid-template-columns: 1fr auto; }
+      .nav-links, .nav > .nav-action { display: none; }
+      .mobile-menu { display: block; }
+      .hero { grid-template-columns: minmax(0, 46fr) minmax(0, 54fr); }
+      .hero h1 { font-size: clamp(3rem, 6vw, 4.4rem); }
+      .proof-rail { grid-template-columns: repeat(2, 1fr); }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .advisory { grid-template-columns: 1fr 1.2fr; gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-meta { grid-column: 1 / -1; text-align: left; }
     }
-
-    .modal-form {
-      margin-top: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .form-label {
-      font-size: 0.75rem; /* text-xs */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--ink-soft);
-    }
-
-    .form-input, .form-textarea {
-      width: 100%;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--hairline);
-      background: var(--background);
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem; /* text-sm */
-      font-family: inherit;
-      color: var(--ink);
-      transition: border-color 180ms ease, box-shadow 180ms ease;
-    }
-
-    .form-input:focus, .form-textarea:focus {
-      outline: none;
-      border-color: var(--brand-light);
-      box-shadow: 0 0 0 2px rgba(87, 144, 230, 0.25);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 5rem;
-    }
-
-    .btn-modal-submit {
-      border-radius: var(--radius-pill);
-      background: var(--ink);
-      color: #ffffff;
-      padding: 0.875rem 1.75rem;
-      font-size: 0.875rem; /* text-sm */
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: background 200ms ease, opacity 200ms ease;
-      margin-top: 0.5rem;
-    }
-
-    .btn-modal-submit:hover:not(:disabled) {
-      background: var(--brand-deep);
-    }
-
-    .btn-modal-submit:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* Modal Success State */
-    .modal-success-panel {
-      margin-top: 2rem;
-      border-radius: var(--radius-card);
-      background: var(--surface);
-      padding: 1.5rem;
-      text-align: center;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .modal-success-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: var(--radius-pill);
-      background: var(--brand);
-      color: #ffffff;
-      display: grid;
-      place-items: center;
-    }
-
-    .modal-success-icon svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    .modal-success-title {
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 500;
-      margin: 0;
-    }
-
-    .modal-success-sub {
-      font-size: 0.875rem; /* text-sm */
-      color: var(--ink-soft);
-      max-width: 20rem;
-      line-height: 1.5;
-    }
-
-    /* -------------------------------------------------------------
-       13. FULLSCREEN MENU OVERLAY (FROM BURGER)
-       ------------------------------------------------------------- */
-    #menu-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 70;
-      pointer-events: none;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #menu-overlay.menu-open {
-      pointer-events: auto;
-    }
-
-    .menu-backdrop {
-      position: absolute;
-      inset: 0;
-      background: var(--brand-deep);
-      opacity: 0;
-      will-change: opacity;
-    }
-
-    .menu-panel {
-      position: relative;
-      z-index: 10;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #ffffff;
-      padding: 1.5rem;
-      transform: translateY(-24px);
-      opacity: 0;
-      will-change: transform, opacity;
-    }
-
-    @media (min-width: 640px) {
-      .menu-panel {
-        padding: 2.5rem;
+    @media (max-width: 767px) {
+      :root { --header-height: 66px; --page-pad: 1rem; }
+      .section { padding-block: 6rem; }
+      .wordmark { display: grid; gap: 0; line-height: 1.08; }
+      .wordmark-devanagari { font-size: 0.72rem; }
+      .hero { min-height: auto; grid-template-columns: 1fr; }
+      .hero-copy { min-height: calc(58dvh - var(--header-height)); padding: 3.25rem var(--page-pad) 3rem; }
+      .hero h1 { max-width: 100%; font-size: clamp(2.85rem, 12vw, 4.15rem); }
+      .hero-subtitle { max-width: 25rem; margin-top: 1.5rem; font-size: 1.05rem; }
+      .hero-actions { margin-top: 2rem; gap: 1rem; }
+      .hero-media { height: 46dvh; min-height: 360px; }
+      .proof-rail { grid-template-columns: 1fr 1fr; }
+      .proof-item { padding: 1.1rem 1rem; }
+      .proof-item strong { font-size: 0.9rem; }
+      .proof-item span { font-size: 0.76rem; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-cell, .service-cell.is-image, .service-cell.is-primary, .service-cell.is-third { grid-column: 1; min-height: 270px; }
+      .service-cell.is-image { min-height: 360px; }
+      .advisory { display: block; }
+      .advisory-copy { min-height: auto; padding: 0 0 3.5rem; }
+      .advisory-panels { padding: 0; }
+      .advisory-panel { min-height: auto; margin-bottom: 1rem; }
+      .ulwe-story { padding-block: 6rem; }
+      .story-copy { font-size: clamp(2.15rem, 10.5vw, 3.6rem); }
+      .accordion { height: auto; display: grid; grid-template-columns: 1fr; gap: 1px; }
+      .accordion-panel { width: 100%; height: 118px; flex: none; transition: height 500ms var(--ease); }
+      .accordion-panel[aria-expanded="true"] { height: 285px; }
+      .reviews-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .review-stage { min-height: 360px; }
+      .review blockquote { max-width: 20ch; }
+      .contact-block { grid-template-columns: 1fr; }
+      .contact-block h2 { max-width: 7ch; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-meta { text-align: left; }
+      .site-footer { padding-bottom: 6.5rem; }
+      .mobile-action-bar {
+        position: fixed;
+        z-index: 40;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        padding: 0.6rem;
+        background: var(--bg);
+        border-top: 1px solid var(--line);
       }
+      .mobile-action-bar a { min-height: 46px; display: grid; place-items: center; text-decoration: none; font-weight: 700; }
+      .mobile-action-bar a:first-child { background: var(--accent); color: var(--accent-ink); }
+      .mobile-action-bar a:last-child { border: 1px solid var(--line); border-left: 0; }
     }
-
-    .menu-top-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .menu-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-
-    .menu-brand svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-
-    .btn-close-menu {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.15);
-      display: grid;
-      place-items: center;
-      color: #ffffff;
-      transition: background 180ms ease;
-    }
-
-    @media (hover: hover) and (min-width: 769px) {
-      .btn-close-menu:hover {
-        background: rgba(255, 255, 255, 0.25);
-      }
-    }
-
-    .btn-close-menu svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      will-change: transform;
-    }
-
-    .menu-nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .menu-link-item {
-      display: block;
-      font-size: 3rem; /* text-5xl */
-      font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      opacity: 0;
-      transform: translateY(28px);
-      will-change: transform, opacity;
-      transition: color 180ms ease;
-    }
-
-    @media (min-width: 640px) {
-      .menu-link-item {
-        font-size: 4.5rem; /* text-7xl */
-      }
-    }
-
-    .menu-link-item:hover {
-      color: var(--brand-light);
-    }
-
-    .menu-bottom-row {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 640px) {
-      .menu-bottom-row {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-
-    .menu-social-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .menu-social-links a {
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 180ms ease;
-    }
-
-    .menu-social-links a:hover {
-      color: #ffffff;
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .story-copy .word { opacity: 1; }
     }
   </style>
 </head>
 <body>
-
-  <!-- =============================================================
-       INTRO LOADER
-       ============================================================= -->
-  <div id="intro-loader" aria-hidden="false">
-    <div class="loader-wordmark" id="loader-wordmark">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9"/>
-        <path d="M4.8 5.6A9 9 0 0 0 4.8 18.4"/>
-        <path d="M19.2 5.6a9 9 0 0 1 0 12.8"/>
-      </svg>
-      <span>Baseline</span>
-    </div>
-    <div class="loader-track">
-      <div class="loader-bar" id="loader-bar"></div>
-    </div>
-  </div>
-
-  <!-- =============================================================
-       MAIN CONTENT CONTAINER
-       ============================================================= -->
-  <main>
-
-    <!-- 1) HERO SECTION -->
-    <section class="hero-section" id="hero">
-      <!-- Parallax Background Plate -->
-      <div class="hero-parallax-wrapper">
-        <div class="hero-parallax-inner" id="hero-plate">
-          <img
-            src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/hero/hero-court.webp"
-            alt="Player lunging for a shot on a hard court"
-            class="hero-bg-img"
-            fetchpriority="high"
-            loading="eager"
-          >
-          <div class="hero-gradient-overlay"></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="nav site-shell page-pad" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="OM Enterprises home">
+        <span>OM ENTERPRISES</span>
+        <span class="wordmark-devanagari" lang="hi">ओम एंटरप्राइजेज</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#advisory">How we help</a>
+        <a href="#ulwe">Ulwe guide</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-action" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <div class="mobile-menu-panel">
+          <a href="#services">Services</a>
+          <a href="#advisory">How we help</a>
+          <a href="#ulwe">Ulwe guide</a>
+          <a href="#contact">Contact</a>
+          <a href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="hero site-shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>Find the right</span><span>property in Ulwe<span class="accent-period">.</span></span></h1>
+        <p class="hero-subtitle">Local advice for buying, renting and investing, from search to registration.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a>
+          <a class="text-action" href="tel:+919820987706">Call +91 98209 87706</a>
         </div>
       </div>
-
-      <!-- Site Header -->
-      <header class="site-header">
-        <nav class="header-nav-left" aria-label="Primary navigation">
-          <a href="#programs">Programs &amp; Coaches</a>
-          <a href="#facilities">Club &amp; Events</a>
-        </nav>
-
-        <div class="header-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M4.8 5.6A9 9 0 0 0 4.8 18.4"/>
-            <path d="M19.2 5.6a9 9 0 0 1 0 12.8"/>
-          </svg>
-          <span>Baseline</span>
-        </div>
-
-        <div class="header-nav-right">
-          <button type="button" class="btn-book-visit-header" id="btn-header-modal">Book a Visit</button>
-          <button type="button" class="btn-burger" id="btn-open-menu" aria-label="Open menu">
-            <span class="burger-bar"></span>
-            <span class="burger-bar"></span>
-          </button>
-        </div>
-      </header>
-
-      <!-- Giant Title -->
-      <div class="hero-title-wrap">
-        <h1 id="hero-title">
-          <span class="word-clip"><span class="word-inner">Own</span></span>
-          <span class="word-clip"><span class="word-inner">The</span></span>
-          <span class="word-clip"><span class="word-inner">Court</span></span>
-        </h1>
+      <figure class="hero-media">
+        <img src="img/hero.webp" alt="Contemporary residence with a pool" width="1600" height="1061" fetchpriority="high">
+      </figure>
+    </section>
+    <section class="proof-rail site-shell" aria-label="Business credentials">
+      <div class="proof-item"><strong>MahaRERA registered</strong><span>A52000018878</span></div>
+      <div class="proof-item"><strong>4.9 Google rating</strong><span>232+ supplied profile reviews</span></div>
+      <div class="proof-item"><strong>Sector 18 office</strong><span>Sai Nakshatra, Ulwe</span></div>
+      <div class="proof-item"><strong>Tuesday to Sunday</strong><span>10:00 AM to 8:30 PM</span></div>
+    </section>
+    <section class="section site-shell page-pad" id="services" aria-labelledby="services-title">
+      <div class="services-intro">
+        <h2 class="section-heading" id="services-title">Property decisions need more than listings.</h2>
+        <p class="lede">OM Enterprises brings the search, paperwork, negotiation and follow-through into one local advisory relationship.</p>
       </div>
-
-      <!-- Hero Bottom Row -->
-      <div class="hero-bottom-row">
-        <!-- Tagline -->
-        <p class="hero-tagline" id="hero-tagline">
-          <span class="clip-line"><span class="clip-line-inner">Show Up,</span></span>
-          <span class="clip-line"><span class="clip-line-inner">Level Up</span></span>
-        </p>
-
-        <!-- Right Cluster -->
-        <div class="hero-right-cluster">
-          <!-- Collection Slider (3.8s Autoplay) -->
-          <div class="collection-slider-wrap inview-fade-up" id="collection-slider" data-delay="650">
-            <article class="collection-card">
-              <div class="collection-card-inner" id="collection-slide-inner">
-                <img
-                  id="collection-img"
-                  src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/2.webp"
-                  alt="Player driving a backhand on a hard court"
-                  class="collection-card-img"
-                >
-                <div class="collection-info">
-                  <span class="collection-brand" id="collection-brand">Baseline Pro</span>
-                  <span class="collection-title" id="collection-title">Featured Gear</span>
-                  <a href="#shop" class="collection-cta" id="collection-cta">Shop the kit &rarr;</a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Carousel Dots (Tone: Light) -->
-            <div class="carousel-dots tone-light" id="collection-dots" aria-label="Collection slides">
-              <button class="carousel-dot active" data-index="0" aria-label="Slide 1" aria-current="true"><span class="dot-pill"></span></button>
-              <button class="carousel-dot" data-index="1" aria-label="Slide 2"><span class="dot-pill"></span></button>
-              <button class="carousel-dot" data-index="2" aria-label="Slide 3"><span class="dot-pill"></span></button>
-            </div>
-          </div>
-
-          <!-- Membership Card -->
-          <article class="membership-card inview-fade-up" id="membership-card" data-delay="780">
-            <div class="membership-left">
-              <span class="membership-stat">9K+</span>
-              <div class="membership-avatars">
-                <div class="membership-avatar" style="background:#5790e6; z-index:4;"></div>
-                <div class="membership-avatar" style="background:#c2e029; z-index:3;"></div>
-                <div class="membership-avatar" style="background:#0b6e97; z-index:2;"></div>
-                <div class="membership-avatar" style="background:#ffffff; z-index:1;"></div>
-              </div>
-              <span class="membership-caption">Members on court</span>
-            </div>
-            <img
-              src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/1.webp"
-              alt="Player waiting to return on a clay court"
-              class="membership-img"
-              loading="lazy"
-            >
-          </article>
-        </div>
+      <div class="service-grid">
+        <figure class="service-cell is-image"><img src="img/sai_nakshatra.webp" alt="Residential tower exterior" width="1200" height="1600" loading="lazy"></figure>
+        <article class="service-cell is-primary"><h3>Buy with clarity</h3><p>Compare the right sectors, projects and home types before you commit your time or money.</p></article>
+        <article class="service-cell is-third"><h3>Rent without guesswork</h3><p>Property matching, tenant coordination, agreements and practical move-in support.</p></article>
+        <article class="service-cell is-third"><h3>Invest with local context</h3><p>Evaluate residential or commercial opportunities against access, use and realistic demand.</p></article>
+        <article class="service-cell is-third"><h3>Check the paperwork</h3><p>Review the key CIDCO, title, OC, CC and MahaRERA documents before the deal moves ahead.</p></article>
       </div>
     </section>
-
-    <!-- 2) TRUST SECTION ("TRUSTED BY SERIOUS PLAYERS") -->
-    <section class="trust-section" id="trust">
-      <!-- Top Badges Row -->
-      <div class="trust-top-row">
-        <!-- Percentage Badge -->
-        <div class="percent-badge inview-fade-up" id="percent-badge">
-          <span class="pct-num">100%</span>
-          <span class="pct-sub">Coaching built around your game</span>
-        </div>
-
-        <!-- Badge Card -->
-        <article class="trust-badge-card inview-fade-up" id="trust-badge-card" data-delay="120">
-          <span class="chip-index">#01</span>
-          <h3 class="trust-badge-title">Trusted by serious players</h3>
-          <p class="trust-badge-body">
-            From first-timers to nationally ranked juniors, players train here because the progress shows up on the scoreboard.
-          </p>
-        </article>
+    <section class="section site-shell page-pad advisory" id="advisory" aria-labelledby="advisory-title">
+      <div class="advisory-copy">
+        <h2 class="section-heading" id="advisory-title">One advisor through the whole transaction.</h2>
+        <p class="lede">A property deal has connected decisions. Keeping one informed person involved reduces missed details and repeated explanations.</p>
       </div>
-
-      <!-- Center Coach Card (6deg rotation) -->
-      <div class="coach-card-wrapper inview-fade-up" id="coach-card-wrap">
-        <figure class="coach-card">
-          <img
-            id="coach-photo"
-            src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/5.webp"
-            alt="Head coach set in a ready stance on clay"
-            class="coach-img"
-            loading="lazy"
-          >
-          <figcaption class="coach-caption">
-            <span class="coach-name" id="coach-name">Marco Vidal</span>
-            <span class="coach-role" id="coach-role">Head Coach</span>
-          </figcaption>
-        </figure>
-      </div>
-
-      <!-- Oversized Ghost Heading -->
-      <div class="trust-ghost-wrap" aria-hidden="true">
-        <h2 id="trust-title">
-          <div class="ghost-row">
-            <span class="ghost-word word-clip" id="gw-0"><span class="word-inner">Expert</span></span>
-            <span class="ghost-word word-clip" id="gw-1"><span class="word-inner">Result-</span></span>
-          </div>
-          <div class="ghost-row">
-            <span class="ghost-word word-clip highlight-ink" id="gw-2"><span class="word-inner">Driven</span></span>
-            <span class="ghost-word word-clip" id="gw-3"><span class="word-inner">Coaching</span></span>
-          </div>
-        </h2>
-      </div>
-
-      <!-- Carousel Controls Row -->
-      <div class="trust-controls-row">
-        <button type="button" class="arrow-button variant-outline btn-prev" id="btn-coach-prev" aria-label="Previous coach">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
-        </button>
-
-        <div class="carousel-dots tone-dark" id="coach-dots" aria-label="Coach slides">
-          <button class="carousel-dot active" data-index="0" aria-label="Slide 1" aria-current="true"><span class="dot-pill"></span></button>
-          <button class="carousel-dot" data-index="1" aria-label="Slide 2"><span class="dot-pill"></span></button>
-          <button class="carousel-dot" data-index="2" aria-label="Slide 3"><span class="dot-pill"></span></button>
-        </div>
-
-        <button type="button" class="arrow-button variant-solid btn-next" id="btn-coach-next" aria-label="Next coach">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
-        </button>
+      <div class="advisory-panels">
+        <article class="advisory-panel"><img src="img/consultation.webp" alt="Property consultation at a desk" width="1200" height="800" loading="lazy"><div class="advisory-panel-copy"><h3>Understand the requirement</h3><p>Budget, commute, carpet area, possession, family needs and investment goals shape the shortlist.</p></div></article>
+        <article class="advisory-panel"><img src="img/interior_living.webp" alt="Modern apartment living room" width="1200" height="900" loading="lazy"><div class="advisory-panel-copy"><h3>Inspect what matters</h3><p>Visit options with a clear comparison of layout, building condition, access and day-to-day usability.</p></div></article>
+        <article class="advisory-panel"><img src="img/greenfield.webp" alt="House model and keys on a desk" width="1200" height="901" loading="lazy"><div class="advisory-panel-copy"><h3>Verify before agreement</h3><p>Review the available approvals, title documents, carpet area disclosures and transaction terms.</p></div></article>
+        <article class="advisory-panel"><img src="img/office_advisory.webp" alt="Advisor reviewing property documents with clients" width="1200" height="801" loading="lazy"><div class="advisory-panel-copy"><h3>Stay supported after registration</h3><p>Coordinate the practical handover, society process, utility updates and local service referrals when needed.</p></div></article>
       </div>
     </section>
-
-    <!-- 3) PROGRAMS SECTION -->
-    <section class="programs-section" id="programs">
-      <div class="eyebrow tone-dark">
-        <span class="dot"></span>
-        <span>Training programs</span>
-      </div>
-
-      <h2 id="programs-title">
-        <span class="clip-line"><span class="clip-line-inner">Built for</span></span>
-        <span class="clip-line"><span class="clip-line-inner">every level</span></span>
-      </h2>
-
-      <ul class="programs-list">
-        <li>
-          <a href="#junior" class="program-row-link inview-fade-up" data-delay="0">
-            <div class="program-row-inner">
-              <span class="program-index">01</span>
-              <div class="program-content">
-                <span class="program-name">Junior Development</span>
-                <span class="program-desc">Fundamentals, footwork, and match play for ages 6–14.</span>
-              </div>
-              <div class="program-arrow-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6"/>
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#performance" class="program-row-link inview-fade-up" data-delay="90">
-            <div class="program-row-inner">
-              <span class="program-index">02</span>
-              <div class="program-content">
-                <span class="program-name">Performance Squad</span>
-                <span class="program-desc">High-volume training for competitive and ranked players.</span>
-              </div>
-              <div class="program-arrow-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6"/>
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#adult" class="program-row-link inview-fade-up" data-delay="180">
-            <div class="program-row-inner">
-              <span class="program-index">03</span>
-              <div class="program-content">
-                <span class="program-name">Adult Clinics</span>
-                <span class="program-desc">Small-group sessions to sharpen technique and fitness.</span>
-              </div>
-              <div class="program-arrow-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6"/>
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#private" class="program-row-link inview-fade-up" data-delay="270">
-            <div class="program-row-inner">
-              <span class="program-index">04</span>
-              <div class="program-content">
-                <span class="program-name">Private Coaching</span>
-                <span class="program-desc">One-to-one sessions tailored to your goals and schedule.</span>
-              </div>
-              <div class="program-arrow-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6"/>
-                </svg>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 4) FACILITIES SECTION -->
-    <section class="facilities-section" id="facilities">
-      <div class="facilities-grid">
-        <!-- Intro Column -->
-        <div class="facilities-intro-col">
-          <img
-            src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/3.webp"
-            alt="Player stretching for a forehand on clay"
-            class="facilities-icon-img inview-fade-up"
-            id="facilities-icon"
-            loading="lazy"
-          >
-
-          <h2 id="facilities-title">
-            <span class="clip-line"><span class="clip-line-inner">Tour Our</span></span>
-            <span class="clip-line"><span class="clip-line-inner">World-Class</span></span>
-            <span class="clip-line"><span class="clip-line-inner">Courts</span></span>
-          </h2>
-
-          <p class="facilities-body-text" id="facilities-body">
-            Reserve a court for focused practice, squad drills, or private sessions — and train in the same conditions you'll compete in.
-          </p>
-        </div>
-
-        <!-- Court Cards Cluster -->
-        <div class="facilities-cards-cluster">
-          <figure class="court-card-figure inview-fade-up" id="court-card-1" data-delay="0">
-            <img
-              src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/1.webp"
-              alt="Player on the baseline of an outdoor clay court"
-              loading="lazy"
-            >
-            <figcaption class="court-glass-caption tone-clay">
-              <span class="court-caption-name">Redline Clay</span>
-              <span class="court-caption-desc">A fast outdoor clay court tuned for long, physical rallies.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="court-card-figure stagger-baseline inview-fade-up" id="court-card-2" data-delay="140">
-            <img
-              src="https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/4.webp"
-              alt="Player following through on a blue hard court"
-              loading="lazy"
-            >
-            <figcaption class="court-glass-caption tone-blue">
-              <span class="court-caption-name">Harbor Court</span>
-              <span class="court-caption-desc">A sheltered hard court built for precision and night play.</span>
-            </figcaption>
-          </figure>
-        </div>
+    <section class="ulwe-story" id="ulwe" aria-labelledby="ulwe-title">
+      <div class="site-shell page-pad">
+        <h2 class="visually-hidden" id="ulwe-title">Why local Ulwe knowledge matters</h2>
+        <p class="story-copy" data-word-reveal>Ulwe changes block by block. Station access, road width, building approvals, daily services and future infrastructure all affect whether a property works for you. Local context turns a long list of options into a decision you can explain.</p>
       </div>
     </section>
-
-    <!-- 5) STATS SECTION -->
-    <section class="stats-section">
-      <div class="eyebrow tone-light">
-        <span class="dot"></span>
-        <span>By the numbers</span>
+    <section class="section site-shell page-pad" aria-labelledby="gallery-title">
+      <h2 class="section-heading gallery-heading" id="gallery-title">See the work up close.</h2>
+      <div class="accordion" role="group" aria-label="Property advisory areas">
+        <button class="accordion-panel" type="button" aria-expanded="true"><img src="img/interior_balcony.webp" alt="Balcony overlooking a residential neighborhood" width="1200" height="801" loading="lazy"><span class="accordion-title">Home search</span></button>
+        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/rental_residency.webp" alt="Residential building suitable for rental search" width="1200" height="893" loading="lazy"><span class="accordion-title">Rentals</span></button>
+        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/boulevard.webp" alt="Mixed-use boulevard and commercial frontage" width="1200" height="800" loading="lazy"><span class="accordion-title">Commercial property</span></button>
+        <button class="accordion-panel" type="button" aria-expanded="false"><img src="img/greenfield.webp" alt="House model and keys representing property documentation" width="1200" height="901" loading="lazy"><span class="accordion-title">Paperwork</span></button>
       </div>
-
-      <h2 id="stats-title">
-        <span class="clip-line"><span class="clip-line-inner">A club that</span></span>
-        <span class="clip-line"><span class="clip-line-inner">keeps score</span></span>
-      </h2>
-
-      <dl class="stats-grid">
-        <div class="stat-cell inview-fade-up" data-delay="0">
-          <dt class="sr-only">Certified coaches</dt>
-          <dd class="stat-value">24</dd>
-          <dd class="stat-label">Certified coaches</dd>
-        </div>
-        <div class="stat-cell inview-fade-up" data-delay="110">
-          <dt class="sr-only">Championship courts</dt>
-          <dd class="stat-value">12</dd>
-          <dd class="stat-label">Championship courts</dd>
-        </div>
-        <div class="stat-cell inview-fade-up" data-delay="220">
-          <dt class="sr-only">Members training</dt>
-          <dd class="stat-value">9K+</dd>
-          <dd class="stat-label">Members training</dd>
-        </div>
-        <div class="stat-cell inview-fade-up" data-delay="330">
-          <dt class="sr-only">Years on the baseline</dt>
-          <dd class="stat-value">15</dd>
-          <dd class="stat-label">Years on the baseline</dd>
-        </div>
-      </dl>
     </section>
-
-    <!-- 6) TESTIMONIALS SECTION -->
-    <section class="testimonials-section" id="testimonials">
-      <div class="eyebrow tone-dark">
-        <span class="dot"></span>
-        <span>What players say</span>
+    <section class="section site-shell page-pad reviews-layout" aria-labelledby="reviews-title">
+      <div><h2 class="section-heading" id="reviews-title">What clients say.</h2><p class="lede">Excerpts supplied from the OM Enterprises Google profile.</p></div>
+      <div>
+        <div class="review-stage" aria-live="polite">
+          <article class="review is-active"><blockquote>“Super responsive, helpful and knowledgeable.”</blockquote><footer>Aarti Soni, Google reviewer</footer></article>
+          <article class="review"><blockquote>“Really helpful and knowledgeable. A must visit for real estate deal makers.”</blockquote><footer>Shubham Shinde, Google Local Guide</footer></article>
+          <article class="review"><blockquote>“Professional, knowledgeable and transparent throughout the entire process.”</blockquote><footer>Guriya Kumari, Google reviewer</footer></article>
+        </div>
+        <div class="review-controls" aria-label="Review controls"><button type="button" data-review-prev>Previous</button><button type="button" data-review-next>Next</button></div>
       </div>
-
-      <h2 id="testimonials-title">
-        <span class="clip-line"><span class="clip-line-inner">Loved by</span></span>
-        <span class="clip-line"><span class="clip-line-inner">the locker room</span></span>
-      </h2>
-
-      <ul class="testimonials-grid">
-        <li class="inview-fade-up" data-delay="0">
-          <figure class="testimonial-card">
-            <div>
-              <span class="quote-glyph">&ldquo;</span>
-              <blockquote class="testimonial-quote">
-                I added a level to my serve in one season. The coaching is detailed and it actually sticks.
-              </blockquote>
-            </div>
-            <figcaption class="testimonial-author">
-              <span class="author-name">Priya Anand</span>
-              <span class="author-role">Performance Squad</span>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="inview-fade-up" data-delay="120">
-          <figure class="testimonial-card">
-            <div>
-              <span class="quote-glyph">&ldquo;</span>
-              <blockquote class="testimonial-quote">
-                Best courts in the city and a team that treats every member like a competitor.
-              </blockquote>
-            </div>
-            <figcaption class="testimonial-author">
-              <span class="author-name">Lukas Brenner</span>
-              <span class="author-role">Adult Clinics</span>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="inview-fade-up" data-delay="240">
-          <figure class="testimonial-card">
-            <div>
-              <span class="quote-glyph">&ldquo;</span>
-              <blockquote class="testimonial-quote">
-                My daughter went from shy beginner to club champion. Worth every minute.
-              </blockquote>
-            </div>
-            <figcaption class="testimonial-author">
-              <span class="author-name">Dana Okafor</span>
-              <span class="author-role">Parent, Junior Development</span>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
     </section>
-
-    <!-- 7) FOOTER -->
-    <footer class="footer-section" id="contact">
-      <!-- CTA Band -->
-      <div class="footer-cta-band">
-        <div>
-          <div class="eyebrow tone-light">
-            <span class="dot"></span>
-            <span>Get started</span>
-          </div>
-          <p class="footer-cta-title">
-            <span class="clip-line"><span class="clip-line-inner">Ready to</span></span>
-            <span class="clip-line"><span class="clip-line-inner">play?</span></span>
-          </p>
-        </div>
-
-        <button type="button" class="pill-button variant-light btn-open-modal inview-fade-up" data-delay="150" id="btn-footer-cta">
-          <span>Book a Visit</span>
-          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
-        </button>
+    <section class="contact-block site-shell page-pad" id="contact" aria-labelledby="contact-title">
+      <div><h2 id="contact-title">Talk property with Manoj.</h2><div class="contact-actions"><a class="button-primary" href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a><a class="text-action" href="tel:+919820987706">Call +91 98209 87706</a></div></div>
+      <div class="contact-details">
+        <div class="contact-detail"><h3>Visit the office</h3><p>Shop No. 2, Sai Nakshatra, Plot No. 116, Sector 18, Ulwe, Kharkopar, Navi Mumbai, Maharashtra 410206.</p><p><a href="https://share.google/NFXPxHE3tBVkWqDWu" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+        <div class="contact-detail"><h3>Working hours</h3><p>Tuesday to Sunday, 10:00 AM to 8:30 PM. Monday by prior appointment only.</p></div>
+        <div class="contact-detail"><h3>Mumbai branch</h3><p><a href="tel:+919137637158">+91 91376 37158</a></p></div>
       </div>
-
-      <!-- Columns Grid -->
-      <div class="footer-cols-grid">
-        <!-- Brand column -->
-        <div class="footer-brand-col">
-          <div class="footer-logo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M4.8 5.6A9 9 0 0 0 4.8 18.4"/>
-              <path d="M19.2 5.6a9 9 0 0 1 0 12.8"/>
-            </svg>
-            <span>Baseline</span>
-          </div>
-          <p class="footer-blurb">
-            A members' tennis club and academy where focused coaching meets championship courts.
-          </p>
-          <address class="footer-address">
-            <a href="mailto:play@baseline.club">play@baseline.club</a>
-            <a href="tel:+12125550148">+1 (212) 555-0148</a>
-            <span class="footer-muted-address">120 Court Lane, New York</span>
-          </address>
-        </div>
-
-        <!-- Programs nav -->
-        <nav class="footer-nav-col" aria-label="Programs links">
-          <span class="footer-nav-heading">Programs</span>
-          <ul class="footer-nav-links">
-            <li><a href="#junior">Junior Development</a></li>
-            <li><a href="#performance">Performance Squad</a></li>
-            <li><a href="#adult">Adult Clinics</a></li>
-            <li><a href="#private">Private Coaching</a></li>
-          </ul>
-        </nav>
-
-        <!-- Club nav -->
-        <nav class="footer-nav-col" aria-label="Club links">
-          <span class="footer-nav-heading">Club</span>
-          <ul class="footer-nav-links">
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#club">Events</a></li>
-            <li><a href="#shop">Pro Shop</a></li>
-          </ul>
-        </nav>
-
-        <!-- Company nav -->
-        <nav class="footer-nav-col" aria-label="Company links">
-          <span class="footer-nav-heading">Company</span>
-          <ul class="footer-nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Coaches</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <span>&copy; 2026 Baseline Tennis Club. All rights reserved.</span>
-        <nav class="footer-social-links" aria-label="Social media">
-          <a href="#instagram">Instagram</a>
-          <a href="#x">X</a>
-          <a href="#youtube">YouTube</a>
-          <a href="#linkedin">LinkedIn</a>
-        </nav>
-        <nav class="footer-legal-links" aria-label="Legal">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-        </nav>
-      </div>
-    </footer>
-
+    </section>
   </main>
-
-  <!-- =============================================================
-       CONTACT MODAL (PORTALED AT BODY LEVEL)
-       ============================================================= -->
-  <div id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
-    <div class="modal-backdrop" id="modal-backdrop"></div>
-    <div class="modal-panel" id="modal-panel">
-      <div class="modal-header">
-        <div>
-          <div class="eyebrow tone-dark">
-            <span class="dot"></span>
-            <span>Book a visit</span>
-          </div>
-          <h2 class="modal-title" id="modal-heading">
-            <span class="clip-line"><span class="clip-line-inner">Come see</span></span>
-            <span class="clip-line"><span class="clip-line-inner">the courts</span></span>
-          </h2>
-        </div>
-        <button type="button" class="btn-close-modal" id="btn-close-modal" aria-label="Close dialog">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 6l12 12M18 6L6 18"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Form -->
-      <form class="modal-form" id="contact-form" novalidate>
-        <div class="form-group">
-          <label class="form-label" for="full-name">Full name</label>
-          <input type="text" id="full-name" name="name" class="form-input" placeholder="Alex Rivera" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="email-address">Email</label>
-          <input type="email" id="email-address" name="email" class="form-input" placeholder="you@email.com" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="message">What would you like to play?</label>
-          <textarea id="message" name="message" rows="3" class="form-textarea" placeholder="I'd love to try a private lesson on the clay courts…"></textarea>
-        </div>
-
-        <button type="submit" class="btn-modal-submit" id="btn-submit-visit">
-          Request a visit
-        </button>
-      </form>
-
-      <!-- Success Panel Stub -->
-      <div class="modal-success-panel" id="modal-success">
-        <div class="modal-success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 13l4 4L19 7"/>
-          </svg>
-        </div>
-        <h3 class="modal-success-title">Request received</h3>
-        <p class="modal-success-sub" id="modal-success-msg">
-          Thanks, there — our team will be in touch to lock in your visit.
-        </p>
-        <button type="button" class="pill-button variant-solid" id="btn-done-modal" style="margin-top:0.5rem;">
-          <span>Done</span>
-        </button>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-grid site-shell page-pad">
+      <div class="footer-brand"><a class="wordmark" href="#top"><span>OM ENTERPRISES</span><span class="wordmark-devanagari" lang="hi">ओम एंटरप्राइजेज</span></a><p>Building Relations. Property advisory for Ulwe and Navi Mumbai.</p></div>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#advisory">How we help</a><a href="#ulwe">Ulwe guide</a><a href="#contact">Contact</a></nav>
+      <div class="footer-meta"><div>MahaRERA: A52000018878</div><div>© <span data-year>2026</span> OM Enterprises</div></div>
     </div>
-  </div>
-
-  <!-- =============================================================
-       FULLSCREEN MENU OVERLAY (FROM BURGER)
-       ============================================================= -->
-  <div id="menu-overlay" aria-hidden="true">
-    <div class="menu-backdrop" id="menu-backdrop"></div>
-    <div class="menu-panel" id="menu-panel">
-      <!-- Top Row -->
-      <div class="menu-top-row">
-        <div class="menu-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M4.8 5.6A9 9 0 0 0 4.8 18.4"/>
-            <path d="M19.2 5.6a9 9 0 0 1 0 12.8"/>
-          </svg>
-          <span>Baseline</span>
-        </div>
-        <button type="button" class="btn-close-menu" id="btn-close-menu" aria-label="Close menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 6l12 12M18 6L6 18"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Center Links -->
-      <nav class="menu-nav-links" aria-label="Fullscreen navigation">
-        <a href="#programs" class="menu-link-item" data-index="0">Programs</a>
-        <a href="#facilities" class="menu-link-item" data-index="1">Facilities</a>
-        <a href="#testimonials" class="menu-link-item" data-index="2">Reviews</a>
-        <a href="#contact" class="menu-link-item" data-index="3">Contact</a>
-      </nav>
-
-      <!-- Bottom Row -->
-      <div class="menu-bottom-row">
-        <button type="button" class="pill-button variant-light" id="btn-menu-book">
-          <span>Book a Visit</span>
-          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
-        </button>
-
-        <nav class="menu-social-links" aria-label="Menu social links">
-          <a href="#instagram">Instagram</a>
-          <a href="#x">X</a>
-          <a href="#youtube">YouTube</a>
-          <a href="#linkedin">LinkedIn</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-  <!-- =============================================================
-       SCRIPTS: LENIS, SPRING DRIVERS & INTERACTIONS
-       ============================================================= -->
-  <script type="module">
-    import Lenis from 'lenis';
-
-    // 1. Initial State & Scroll Lock Helper
-    window.scrollTo(0, 0);
-
-    const lenis = new Lenis({
-      smoothWheel: true,
-      duration: 1.15
-    });
-
-    let isScrollLocked = false;
-
-    function lockScroll() {
-      if (isScrollLocked) return;
-      isScrollLocked = true;
-      lenis.stop();
-      document.documentElement.style.overflow = 'hidden';
-      document.documentElement.style.height = '100%';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function unlockScroll() {
-      if (!isScrollLocked) return;
-      isScrollLocked = false;
-      lenis.start();
-      document.documentElement.style.removeProperty('overflow');
-      document.documentElement.style.removeProperty('height');
-      document.body.style.removeProperty('overflow');
-    }
-
-    // Lock scroll immediately for loader
-    lockScroll();
-
-    // 2. Adaptive Rem Scale-up for viewports > 1920px
-    const FONT_BASE = 16, BASE_W = 1920, COEF = 0.6666;
-    function updateRemScale() {
-      const reduction = ((BASE_W - window.innerWidth) / BASE_W) * 100 * COEF;
-      const size = FONT_BASE - (FONT_BASE * reduction) / 100;
-      if (size > FONT_BASE) {
-        document.documentElement.style.fontSize = size + "px";
+  </footer>
+  <nav class="mobile-action-bar" aria-label="Quick contact"><a href="https://wa.me/919820987706?text=Hello%20Manoj%2C%20I%20would%20like%20property%20guidance%20in%20Ulwe." target="_blank" rel="noopener">WhatsApp Manoj</a><a href="tel:+919820987706">Call</a></nav>
+  <script src="/vendor/gsap.min.js"></script>
+  <script src="/vendor/ScrollTrigger.min.js"></script>
+  <script>
+    (() => {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const year = document.querySelector("[data-year]");
+      if (year) year.textContent = new Date().getFullYear();
+      document.querySelectorAll(".mobile-menu-panel a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const menu = link.closest("details");
+          if (menu) menu.removeAttribute("open");
+        });
+      });
+      const accordionPanels = Array.from(document.querySelectorAll(".accordion-panel"));
+      accordionPanels.forEach((panel) => {
+        panel.addEventListener("click", () => {
+          accordionPanels.forEach((item) => item.setAttribute("aria-expanded", String(item === panel)));
+        });
+      });
+      const reviews = Array.from(document.querySelectorAll(".review"));
+      let reviewIndex = 0;
+      const showReview = (index) => {
+        reviewIndex = (index + reviews.length) % reviews.length;
+        reviews.forEach((review, current) => review.classList.toggle("is-active", current === reviewIndex));
+      };
+      document.querySelector("[data-review-prev]")?.addEventListener("click", () => showReview(reviewIndex - 1));
+      document.querySelector("[data-review-next]")?.addEventListener("click", () => showReview(reviewIndex + 1));
+      const story = document.querySelector("[data-word-reveal]");
+      if (story) {
+        const copy = story.textContent.trim();
+        story.setAttribute("aria-label", copy);
+        story.innerHTML = copy.split(/\s+/).map((word) => `<span class="word" aria-hidden="true">${word}</span>`).join(" ");
+      }
+      if (!reducedMotion && window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".hero-copy > *", { y: 28, opacity: 0, duration: 0.85, stagger: 0.09, ease: "expo.out", clearProps: "transform,opacity" });
+        gsap.from(".hero-media img", { scale: 1.06, duration: 1.4, ease: "expo.out", clearProps: "transform" });
+        ScrollTrigger.matchMedia({
+          "(min-width: 768px)": () => {
+            ScrollTrigger.create({ trigger: ".advisory", start: "top top", end: "bottom bottom", pin: ".advisory-copy", pinSpacing: false });
+            gsap.utils.toArray(".advisory-panel").forEach((panel) => {
+              gsap.fromTo(panel, { scale: 0.92, opacity: 0.52 }, { scale: 1, opacity: 1, ease: "none", scrollTrigger: { trigger: panel, start: "top 86%", end: "top 34%", scrub: true } });
+            });
+          }
+        });
+        if (story) {
+          gsap.to(story.querySelectorAll(".word"), { opacity: 1, stagger: 0.035, ease: "none", scrollTrigger: { trigger: story, start: "top 78%", end: "bottom 55%", scrub: true } });
+        }
       } else {
-        document.documentElement.style.removeProperty("font-size");
+        document.querySelectorAll(".story-copy .word").forEach((word) => { word.style.opacity = "1"; });
       }
-    }
-    window.addEventListener("resize", updateRemScale);
-    updateRemScale();
-
-    // 3. Tiny Spring & Eased Tween Engine (rAF integrated)
-    const easings = {
-      easeOutExpo: (x) => x === 1 ? 1 : 1 - Math.pow(2, -10 * x),
-      easeOutQuart: (x) => 1 - Math.pow(1 - x, 4),
-      easeInOutCubic: (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2
-    };
-
-    class Spring {
-      constructor({ from = 0, to = 0, tension = 170, friction = 26, onUpdate, onComplete } = {}) {
-        this.current = from;
-        this.target = to;
-        this.velocity = 0;
-        this.tension = tension;
-        this.friction = friction;
-        this.onUpdate = onUpdate;
-        this.onComplete = onComplete;
-        this.settled = false;
-      }
-      setTarget(newTarget) {
-        this.target = newTarget;
-        this.settled = false;
-      }
-      step(time, dt) {
-        if (this.settled) return;
-        const fSpring = -this.tension * (this.current - this.target);
-        const fDamper = -this.friction * this.velocity;
-        const a = fSpring + fDamper;
-        this.velocity += a * dt;
-        this.current += this.velocity * dt;
-        if (Math.abs(this.velocity) < 0.0005 && Math.abs(this.current - this.target) < 0.0005) {
-          this.current = this.target;
-          this.velocity = 0;
-          this.settled = true;
-          if (this.onComplete) this.onComplete();
-        }
-        if (this.onUpdate) this.onUpdate(this.current);
-      }
-    }
-
-    class Tween {
-      constructor({ from = 0, to = 1, duration = 1000, delay = 0, easing = 'easeOutExpo', onUpdate, onComplete } = {}) {
-        this.from = from;
-        this.to = to;
-        this.duration = duration;
-        this.delay = delay;
-        this.easeFn = easings[easing] || easings.easeOutExpo;
-        this.onUpdate = onUpdate;
-        this.onComplete = onComplete;
-        this.startTime = null;
-        this.settled = false;
-      }
-      step(time, dt) {
-        if (this.settled) return;
-        const now = typeof time === "number" ? time : performance.now();
-        if (this.startTime === null) this.startTime = now;
-        const elapsed = now - this.startTime - this.delay;
-        if (elapsed < 0) return;
-        const progress = Math.min(Math.max(elapsed / this.duration, 0), 1);
-        const eased = this.easeFn(progress);
-        const current = this.from + (this.to - this.from) * eased;
-        if (this.onUpdate) this.onUpdate(current);
-        if (progress >= 1) {
-          this.settled = true;
-          if (this.onComplete) this.onComplete();
-        }
-      }
-    }
-
-    const activeAnimators = new Set();
-    let lastTime = performance.now();
-
-    function addAnim(anim) {
-      activeAnimators.add(anim);
-      return anim;
-    }
-
-    // Main rAF loop: Lenis + Spring/Tween updates + Parallax
-    function raf(rawTime) {
-      const now = performance.now();
-      lenis.raf(now);
-      const dt = Math.min(Math.max((now - lastTime) / 1000, 0.001), 0.064);
-      lastTime = now;
-
-      for (const anim of activeAnimators) {
-        anim.step(now, dt);
-        if (anim.settled) {
-          activeAnimators.delete(anim);
-        }
-      }
-
-      updateParallax();
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // 4. Intro Loader Progression & Reveal Timing
-    const MIN_VISIBLE_MS = 1400;
-    const MAX_VISIBLE_MS = 2600;
-    const EXIT_MS = 850;
-
-    const loaderEl = document.getElementById("intro-loader");
-    const loaderWordmark = document.getElementById("loader-wordmark");
-    const loaderBar = document.getElementById("loader-bar");
-
-    // Spring in loader wordmark
-    addAnim(new Spring({
-      from: 0,
-      to: 1,
-      tension: 200,
-      friction: 22,
-      onUpdate: (v) => {
-        if (loaderWordmark) {
-          loaderWordmark.style.opacity = v;
-          loaderWordmark.style.transform = `translateY(${(1 - v) * 16}px)`;
-        }
-      }
-    }));
-
-    // Fill loader progress bar (easeInOutCubic, duration 1280ms, delay 120ms)
-    addAnim(new Tween({
-      from: 0,
-      to: 1,
-      duration: 1280,
-      delay: 120,
-      easing: 'easeInOutCubic',
-      onUpdate: (v) => {
-        if (loaderBar) loaderBar.style.transform = `scaleX(${v})`;
-      }
-    }));
-
-    let loaderDismissed = false;
-
-    function dismissLoader() {
-      if (loaderDismissed) return;
-      loaderDismissed = true;
-
-      // Slide curtain up (0% -> -105%, EXIT_MS 850, easeInOutCubic)
-      if (loaderEl) {
-        loaderEl.style.transition = `transform ${EXIT_MS}ms var(--ease-in-out-cubic)`;
-        loaderEl.style.transform = "translateY(-105%)";
-      }
-
-      unlockScroll();
-      triggerHeroEntrance();
-
-      setTimeout(() => {
-        if (loaderEl) {
-          loaderEl.style.display = "none";
-          loaderEl.remove();
-        }
-      }, EXIT_MS);
-    }
-
-    const mountTime = performance.now();
-
-    // Check if prefers-reduced-motion is enabled
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setTimeout(dismissLoader, 200);
-    } else {
-      // Normal flow: min 1400ms, max 2600ms
-      window.addEventListener("load", () => {
-        const elapsed = performance.now() - mountTime;
-        const delay = Math.max(0, MIN_VISIBLE_MS - elapsed);
-        setTimeout(dismissLoader, delay);
-      });
-
-      // Hard max visible ceiling
-      setTimeout(dismissLoader, MAX_VISIBLE_MS);
-    }
-
-    // 5. Hero Entrance Animations (Gated on loader ready)
-    function triggerHeroEntrance() {
-      // Hero giant title word-by-word reveal (stagger 140ms, duration 1100ms, easeOutExpo)
-      const heroWords = document.querySelectorAll("#hero-title .word-inner");
-      heroWords.forEach((word, idx) => {
-        setTimeout(() => {
-          word.style.transition = "transform 1100ms var(--ease-out-expo), opacity 1100ms var(--ease-out-expo)";
-          word.style.transform = "translateY(0)";
-          word.style.opacity = "1";
-        }, idx * 140);
-      });
-
-      // Hero tagline stacked lines (baseDelay 350ms, stagger 110ms, duration 900ms, easeOutExpo)
-      const taglineLines = document.querySelectorAll("#hero-tagline .clip-line-inner");
-      taglineLines.forEach((line, idx) => {
-        setTimeout(() => {
-          line.style.transition = "transform 900ms var(--ease-out-expo), opacity 900ms var(--ease-out-expo)";
-          line.style.transform = "translateY(0)";
-          line.style.opacity = "1";
-        }, 350 + idx * 110);
-      });
-
-      // Hero Collection Slider Inview (delay 650ms, {tension: 200, friction: 26})
-      const collWrap = document.getElementById("collection-slider");
-      if (collWrap) {
-        setTimeout(() => {
-          collWrap.style.transition = "transform 850ms var(--ease-out-expo), opacity 850ms var(--ease-out-expo)";
-          collWrap.style.transform = "translateY(0)";
-          collWrap.style.opacity = "1";
-        }, 650);
-      }
-
-      // Hero Membership Card Inview (delay 780ms, {tension: 200, friction: 26})
-      const memCard = document.getElementById("membership-card");
-      if (memCard) {
-        setTimeout(() => {
-          memCard.style.transition = "transform 850ms var(--ease-out-expo), opacity 850ms var(--ease-out-expo)";
-          memCard.style.transform = "translateY(0)";
-          memCard.style.opacity = "1";
-        }, 780);
-      }
-
-      // Start Collection Slider autoplay
-      startCollectionSlider();
-    }
-
-    // 6. Hero Parallax & Trust Ghost Words Parallax
-    const heroPlate = document.getElementById("hero-plate");
-    const trustSection = document.getElementById("trust");
-    const gw0 = document.getElementById("gw-0");
-    const gw1 = document.getElementById("gw-1");
-    const gw2 = document.getElementById("gw-2");
-    const gw3 = document.getElementById("gw-3");
-
-    function updateParallax() {
-      const scrollY = window.scrollY || window.pageYOffset;
-
-      // Hero Parallax: translateY(0%) -> translateY(12%)
-      if (heroPlate) {
-        const heroHeight = window.innerHeight;
-        const progress = Math.min(Math.max(scrollY / heroHeight, 0), 1);
-        heroPlate.style.transform = `translate3d(0, ${progress * 12}%, 0)`;
-      }
-
-      // Trust Ghost Words Opposing Scroll Parallax
-      if (trustSection && gw0 && gw1 && gw2 && gw3) {
-        const rect = trustSection.getBoundingClientRect();
-        const winH = window.innerHeight;
-        const total = winH + rect.height;
-        const current = winH - rect.top;
-        const p = Math.min(Math.max(current / total, 0), 1);
-
-        // top-left x: -3% -> 3%, top-right x: 3% -> -3%
-        // bottom-left x: -2% -> 4%, bottom-right x: 4% -> -3%
-        const xTL = -3 + p * 6;
-        const xTR = 3 - p * 6;
-        const xBL = -2 + p * 6;
-        const xBR = 4 - p * 7;
-
-        gw0.style.transform = `translateX(${xTL.toFixed(2)}%)`;
-        gw1.style.transform = `translateX(${xTR.toFixed(2)}%)`;
-        gw2.style.transform = `translateX(${xBL.toFixed(2)}%)`;
-        gw3.style.transform = `translateX(${xBR.toFixed(2)}%)`;
-      }
-    }
-
-    // 7. Inview System with Spring Physics
-    function animateInviewElement(el, delay = 0) {
-      setTimeout(() => {
-        // Special element configs
-        if (el.id === "percent-badge") {
-          addAnim(new Spring({
-            from: 0.9,
-            to: 1,
-            tension: 220,
-            friction: 22,
-            onUpdate: (v) => {
-              el.style.transform = `scale(${v})`;
-              el.style.opacity = Math.min(1, (v - 0.9) * 10);
-            }
-          }));
-        } else if (el.id === "coach-card-wrap") {
-          addAnim(new Spring({
-            from: 60,
-            to: 0,
-            tension: 170,
-            friction: 26,
-            onUpdate: (v) => {
-              const scale = 0.92 + (1 - v / 60) * 0.08;
-              if (window.innerWidth >= 640) {
-                el.style.transform = `translate(-50%, calc(-50% + ${v}px)) scale(${scale})`;
-              } else {
-                el.style.transform = `translateY(${v}px) scale(${scale})`;
-              }
-              el.style.opacity = 1 - v / 60;
-            }
-          }));
-        } else if (el.id === "facilities-icon") {
-          addAnim(new Spring({
-            from: 0.85,
-            to: 1,
-            tension: 240,
-            friction: 20,
-            onUpdate: (v) => {
-              el.style.transform = `scale(${v})`;
-              el.style.opacity = Math.min(1, (v - 0.85) * 6.66);
-            }
-          }));
-        } else {
-          // Standard spring rise-in
-          addAnim(new Spring({
-            from: 28,
-            to: 0,
-            tension: 190,
-            friction: 26,
-            onUpdate: (v) => {
-              el.style.transform = `translateY(${v}px)`;
-              el.style.opacity = Math.max(0, 1 - v / 28);
-            }
-          }));
-        }
-
-        // Clip-line reveals inside this element
-        el.querySelectorAll(".clip-line-inner").forEach((inner, idx) => {
-          addAnim(new Tween({
-            from: 115,
-            to: 0,
-            duration: 950,
-            delay: idx * 120,
-            easing: 'easeOutExpo',
-            onUpdate: (v) => {
-              inner.style.transform = `translateY(${v}%)`;
-              inner.style.opacity = 1 - v / 115;
-            }
-          }));
-        });
-
-        // Facilities body text word reveal
-        if (el.id === "facilities-body") {
-          revealFacilitiesBody();
-        }
-      }, delay);
-    }
-
-    const inviewObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const delay = parseInt(el.getAttribute("data-delay") || "0", 10);
-          animateInviewElement(el, delay);
-          inviewObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(".inview-fade-up").forEach(el => inviewObserver.observe(el));
-
-    // Observe section titles for stacked lines
-    const titleObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const inners = entry.target.querySelectorAll(".clip-line-inner");
-          inners.forEach((inner, idx) => {
-            addAnim(new Tween({
-              from: 115,
-              to: 0,
-              duration: 950,
-              delay: idx * 120,
-              easing: 'easeOutExpo',
-              onUpdate: (v) => {
-                inner.style.transform = `translateY(${v}%)`;
-                inner.style.opacity = 1 - v / 115;
-              }
-            }));
-          });
-          titleObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    ["#programs-title", "#facilities-title", "#stats-title", "#testimonials-title"].forEach(sel => {
-      const el = document.querySelector(sel);
-      if (el) titleObserver.observe(el);
-    });
-
-    // 8. Facilities Body Text Word Fade (easeOutQuart, wordStagger 28ms, delayIn 250ms, duration 700ms)
-    const facilitiesBodyEl = document.getElementById("facilities-body");
-    if (facilitiesBodyEl) {
-      const rawText = facilitiesBodyEl.textContent.trim();
-      const words = rawText.split(/\s+/);
-      facilitiesBodyEl.innerHTML = words.map(w => `<span class="facilities-body-word">${w}</span>`).join(" ");
-      inviewObserver.observe(facilitiesBodyEl);
-    }
-
-    function revealFacilitiesBody() {
-      const wordSpans = document.querySelectorAll(".facilities-body-word");
-      wordSpans.forEach((span, i) => {
-        addAnim(new Tween({
-          from: 18,
-          to: 0,
-          duration: 700,
-          delay: 250 + i * 28,
-          easing: 'easeOutQuart',
-          onUpdate: (v) => {
-            span.style.transform = `translateY(${v}px)`;
-            span.style.opacity = 1 - v / 18;
-          }
-        }));
-      });
-    }
-
-    // 9. Hero Collection Slider (3 slides, 3800ms autoplay)
-    const collectionData = [
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/2.webp",
-        brand: "Baseline Pro",
-        title: "Featured Gear",
-        cta: "Shop the kit \u2192",
-        alt: "Player driving a backhand on a hard court"
-      },
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/3.webp",
-        brand: "Court Series",
-        title: "Summer Drop",
-        cta: "View the line \u2192",
-        alt: "Player stretching for a forehand on clay"
-      },
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/5.webp",
-        brand: "Academy Kit",
-        title: "Junior Range",
-        cta: "Browse juniors \u2192",
-        alt: "Player set in a ready stance on clay"
-      }
-    ];
-
-    let collectionIdx = 0;
-    let collectionTimer = null;
-    const collInner = document.getElementById("collection-slide-inner");
-    const collImg = document.getElementById("collection-img");
-    const collBrand = document.getElementById("collection-brand");
-    const collTitle = document.getElementById("collection-title");
-    const collCta = document.getElementById("collection-cta");
-    const collDots = document.querySelectorAll("#collection-dots .carousel-dot");
-
-    function renderCollectionSlide(idx) {
-      if (!collInner) return;
-      // Spring crossfade: { tension: 210, friction: 24 }
-      addAnim(new Spring({
-        from: 0,
-        to: 16,
-        tension: 210,
-        friction: 24,
-        onUpdate: (v) => {
-          collInner.style.transform = `translateY(${v}px) scale(${1 - (v / 16) * 0.04})`;
-          collInner.style.opacity = 1 - v / 16;
-        },
-        onComplete: () => {
-          const item = collectionData[idx];
-          collImg.src = item.img;
-          collImg.alt = item.alt;
-          collBrand.textContent = item.brand;
-          collTitle.textContent = item.title;
-          collCta.textContent = item.cta;
-
-          collDots.forEach((d, i) => {
-            d.classList.toggle("active", i === idx);
-            d.setAttribute("aria-current", i === idx ? "true" : "false");
-          });
-
-          addAnim(new Spring({
-            from: 16,
-            to: 0,
-            tension: 210,
-            friction: 24,
-            onUpdate: (v2) => {
-              collInner.style.transform = `translateY(${v2}px) scale(${1 - (v2 / 16) * 0.04})`;
-              collInner.style.opacity = 1 - v2 / 16;
-            }
-          }));
-        }
-      }));
-    }
-
-    function nextCollectionSlide() {
-      collectionIdx = (collectionIdx + 1) % collectionData.length;
-      renderCollectionSlide(collectionIdx);
-    }
-
-    function startCollectionSlider() {
-      if (collectionTimer) clearInterval(collectionTimer);
-      collectionTimer = setInterval(nextCollectionSlide, 3800);
-    }
-
-    collDots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        collectionIdx = parseInt(dot.getAttribute("data-index"), 10);
-        renderCollectionSlide(collectionIdx);
-        startCollectionSlider();
-      });
-    });
-
-    // 10. Trust Coach Carousel & Ghost Heading Re-fire
-    const coachData = [
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/5.webp",
-        name: "Marco Vidal",
-        role: "Head Coach",
-        alt: "Head coach set in a ready stance on clay",
-        headline: ["Expert", "Result-", "Driven", "Coaching"]
-      },
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/4.webp",
-        name: "Elena Sokolova",
-        role: "Performance Coach",
-        alt: "Performance coach following through on a serve",
-        headline: ["Sharper", "Faster", "Stronger", "Player"]
-      },
-      {
-        img: "https://api.getlayers.ai/storage/v1/object/public/public/assets/baseline-88535e4000/1.webp",
-        name: "James Okoro",
-        role: "Juniors Lead",
-        alt: "Juniors lead waiting to return on clay",
-        headline: ["Future", "Champions", "Start", "Here"]
-      }
-    ];
-
-    let coachIdx = 0;
-    const coachPhoto = document.getElementById("coach-photo");
-    const coachName = document.getElementById("coach-name");
-    const coachRole = document.getElementById("coach-role");
-    const coachDots = document.querySelectorAll("#coach-dots .carousel-dot");
-    const btnCoachPrev = document.getElementById("btn-coach-prev");
-    const btnCoachNext = document.getElementById("btn-coach-next");
-
-    function renderCoachSlide(idx) {
-      coachIdx = idx;
-      const data = coachData[coachIdx];
-
-      // Cross-fade photo ({tension: 260, friction: 26})
-      addAnim(new Spring({
-        from: 1,
-        to: 0,
-        tension: 260,
-        friction: 26,
-        onUpdate: (v) => {
-          coachPhoto.style.opacity = v;
-        },
-        onComplete: () => {
-          coachPhoto.src = data.img;
-          coachPhoto.alt = data.alt;
-          coachName.textContent = data.name;
-          coachRole.textContent = data.role;
-
-          addAnim(new Spring({
-            from: 0,
-            to: 1,
-            tension: 260,
-            friction: 26,
-            onUpdate: (v2) => {
-              coachPhoto.style.opacity = v2;
-            }
-          }));
-        }
-      }));
-
-      // Update dots
-      coachDots.forEach((d, i) => {
-        d.classList.toggle("active", i === coachIdx);
-        d.setAttribute("aria-current", i === coachIdx ? "true" : "false");
-      });
-
-      // Re-fire ghost words clip-mask reveal (duration 700ms, easeOutExpo)
-      for (let i = 0; i < 4; i++) {
-        const gwEl = document.getElementById(`gw-${i}`);
-        const inner = gwEl.querySelector(".word-inner");
-        inner.textContent = data.headline[i];
-        addAnim(new Tween({
-          from: 115,
-          to: 0,
-          duration: 700,
-          delay: i * 70,
-          easing: 'easeOutExpo',
-          onUpdate: (v) => {
-            inner.style.transform = `translateY(${v}%)`;
-            inner.style.opacity = 1 - v / 115;
-          }
-        }));
-      }
-    }
-
-    // Initial ghost word reveal on load
-    setTimeout(() => {
-      renderCoachSlide(0);
-    }, 300);
-
-    if (btnCoachPrev) {
-      btnCoachPrev.addEventListener("click", () => {
-        const next = (coachIdx - 1 + coachData.length) % coachData.length;
-        renderCoachSlide(next);
-      });
-    }
-
-    if (btnCoachNext) {
-      btnCoachNext.addEventListener("click", () => {
-        const next = (coachIdx + 1) % coachData.length;
-        renderCoachSlide(next);
-      });
-    }
-
-    coachDots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        renderCoachSlide(parseInt(dot.getAttribute("data-index"), 10));
-      });
-    });
-
-    // 11. Spring Hover Micro-Interactions (Enabled on viewport > 768px)
-    if (window.innerWidth > 768) {
-      // Program rows hover arrow spring (x: 0 -> 8, opacity: 0.55 -> 1, { tension: 300, friction: 20 })
-      document.querySelectorAll(".program-row-link").forEach(row => {
-        const svg = row.querySelector(".program-arrow-circle svg");
-        let arrowSpring = null;
-        row.addEventListener("pointerenter", () => {
-          if (arrowSpring) arrowSpring.settled = true;
-          arrowSpring = addAnim(new Spring({
-            from: 0,
-            to: 8,
-            tension: 300,
-            friction: 20,
-            onUpdate: (v) => {
-              svg.style.transform = `translateX(${v}px)`;
-              svg.style.opacity = 0.55 + (v / 8) * 0.45;
-            }
-          }));
-        });
-        row.addEventListener("pointerleave", () => {
-          if (arrowSpring) arrowSpring.settled = true;
-          arrowSpring = addAnim(new Spring({
-            from: 8,
-            to: 0,
-            tension: 300,
-            friction: 20,
-            onUpdate: (v) => {
-              svg.style.transform = `translateX(${v}px)`;
-              svg.style.opacity = 0.55 + (v / 8) * 0.45;
-            }
-          }));
-        });
-      });
-
-      // Facilities court card hover scale (scale: 1 -> 1.03, { tension: 300, friction: 22 })
-      document.querySelectorAll(".court-card-figure").forEach(fig => {
-        const img = fig.querySelector("img");
-        let scaleSpring = null;
-        fig.addEventListener("pointerenter", () => {
-          if (scaleSpring) scaleSpring.settled = true;
-          scaleSpring = addAnim(new Spring({
-            from: 1,
-            to: 1.03,
-            tension: 300,
-            friction: 22,
-            onUpdate: (v) => { img.style.transform = `scale(${v})`; }
-          }));
-        });
-        fig.addEventListener("pointerleave", () => {
-          if (scaleSpring) scaleSpring.settled = true;
-          scaleSpring = addAnim(new Spring({
-            from: 1.03,
-            to: 1,
-            tension: 300,
-            friction: 22,
-            onUpdate: (v) => { img.style.transform = `scale(${v})`; }
-          }));
-        });
-      });
-
-      // Testimonial card hover lift (y: 0 -> -8, { tension: 300, friction: 22 })
-      document.querySelectorAll(".testimonial-card").forEach(card => {
-        let liftSpring = null;
-        card.addEventListener("pointerenter", () => {
-          if (liftSpring) liftSpring.settled = true;
-          liftSpring = addAnim(new Spring({
-            from: 0,
-            to: -8,
-            tension: 300,
-            friction: 22,
-            onUpdate: (v) => { card.style.transform = `translateY(${v}px)`; }
-          }));
-        });
-        card.addEventListener("pointerleave", () => {
-          if (liftSpring) liftSpring.settled = true;
-          liftSpring = addAnim(new Spring({
-            from: -8,
-            to: 0,
-            tension: 300,
-            friction: 22,
-            onUpdate: (v) => { card.style.transform = `translateY(${v}px)`; }
-          }));
-        });
-      });
-
-      // Modal close button X rotate (0 -> 90deg, { tension: 300, friction: 18 })
-      const btnCloseModalEl = document.getElementById("btn-close-modal");
-      if (btnCloseModalEl) {
-        const svg = btnCloseModalEl.querySelector("svg");
-        let rotSpring = null;
-        btnCloseModalEl.addEventListener("pointerenter", () => {
-          if (rotSpring) rotSpring.settled = true;
-          rotSpring = addAnim(new Spring({
-            from: 0,
-            to: 90,
-            tension: 300,
-            friction: 18,
-            onUpdate: (v) => { svg.style.transform = `rotate(${v}deg)`; }
-          }));
-        });
-        btnCloseModalEl.addEventListener("pointerleave", () => {
-          if (rotSpring) rotSpring.settled = true;
-          rotSpring = addAnim(new Spring({
-            from: 90,
-            to: 0,
-            tension: 300,
-            friction: 18,
-            onUpdate: (v) => { svg.style.transform = `rotate(${v}deg)`; }
-          }));
-        });
-      }
-
-      // Menu close button X rotate (0 -> 90deg, { tension: 300, friction: 18 })
-      const btnCloseMenuEl = document.getElementById("btn-close-menu");
-      if (btnCloseMenuEl) {
-        const svg = btnCloseMenuEl.querySelector("svg");
-        let rotSpring2 = null;
-        btnCloseMenuEl.addEventListener("pointerenter", () => {
-          if (rotSpring2) rotSpring2.settled = true;
-          rotSpring2 = addAnim(new Spring({
-            from: 0,
-            to: 90,
-            tension: 300,
-            friction: 18,
-            onUpdate: (v) => { svg.style.transform = `rotate(${v}deg)`; }
-          }));
-        });
-        btnCloseMenuEl.addEventListener("pointerleave", () => {
-          if (rotSpring2) rotSpring2.settled = true;
-          rotSpring2 = addAnim(new Spring({
-            from: 90,
-            to: 0,
-            tension: 300,
-            friction: 18,
-            onUpdate: (v) => { svg.style.transform = `rotate(${v}deg)`; }
-          }));
-        });
-      }
-    }
-
-    // 12. Contact Modal Logic (Portaled, scroll-locked, stub submission)
-    const modalEl = document.getElementById("contact-modal");
-    const modalBackdrop = document.getElementById("modal-backdrop");
-    const modalPanel = document.getElementById("modal-panel");
-    const btnCloseModal = document.getElementById("btn-close-modal");
-    const btnDoneModal = document.getElementById("btn-done-modal");
-    const contactForm = document.getElementById("contact-form");
-    const modalSuccess = document.getElementById("modal-success");
-    const modalSuccessMsg = document.getElementById("modal-success-msg");
-    const nameInput = document.getElementById("full-name");
-    const btnSubmitVisit = document.getElementById("btn-submit-visit");
-
-    function openModal() {
-      modalEl.classList.add("modal-open");
-      modalEl.setAttribute("aria-hidden", "false");
-      lockScroll();
-
-      // Backdrop fade (tension: 240, friction: 30)
-      addAnim(new Spring({
-        from: 0,
-        to: 1,
-        tension: 240,
-        friction: 30,
-        onUpdate: (v) => { modalBackdrop.style.opacity = v; }
-      }));
-
-      // Panel spring {opacity: 0, y: 28, scale: 0.96} -> {opacity: 1, y: 0, scale: 1} (tension: 240, friction: 26)
-      addAnim(new Spring({
-        from: 28,
-        to: 0,
-        tension: 240,
-        friction: 26,
-        onUpdate: (v) => {
-          const scale = 0.96 + (1 - v / 28) * 0.04;
-          modalPanel.style.transform = `translateY(${v}px) scale(${scale})`;
-          modalPanel.style.opacity = 1 - v / 28;
-        }
-      }));
-
-      // Modal title stacked lines reveal (stagger 90ms, duration 800ms)
-      const modalInners = modalEl.querySelectorAll(".clip-line-inner");
-      modalInners.forEach((inner, idx) => {
-        addAnim(new Tween({
-          from: 115,
-          to: 0,
-          duration: 800,
-          delay: idx * 90,
-          easing: 'easeOutExpo',
-          onUpdate: (v) => {
-            inner.style.transform = `translateY(${v}%)`;
-            inner.style.opacity = 1 - v / 115;
-          }
-        }));
-      });
-
-      // Focus name input after 120ms
-      setTimeout(() => {
-        if (nameInput) nameInput.focus();
-      }, 120);
-    }
-
-    function closeModal() {
-      // Backdrop fade out
-      addAnim(new Spring({
-        from: 1,
-        to: 0,
-        tension: 240,
-        friction: 30,
-        onUpdate: (v) => { modalBackdrop.style.opacity = v; }
-      }));
-
-      // Panel spring out
-      addAnim(new Spring({
-        from: 0,
-        to: 28,
-        tension: 240,
-        friction: 26,
-        onUpdate: (v) => {
-          const scale = 1 - (v / 28) * 0.04;
-          modalPanel.style.transform = `translateY(${v}px) scale(${scale})`;
-          modalPanel.style.opacity = 1 - v / 28;
-        },
-        onComplete: () => {
-          modalEl.classList.remove("modal-open");
-          modalEl.setAttribute("aria-hidden", "true");
-        }
-      }));
-
-      unlockScroll();
-
-      // Reset form state after 350ms
-      setTimeout(() => {
-        if (contactForm) contactForm.reset();
-        if (contactForm) contactForm.style.display = "flex";
-        if (modalSuccess) modalSuccess.style.display = "none";
-        if (btnSubmitVisit) {
-          btnSubmitVisit.disabled = false;
-          btnSubmitVisit.textContent = "Request a visit";
-        }
-      }, 350);
-    }
-
-    // Modal triggers
-    document.querySelectorAll(".btn-open-modal, #btn-header-modal, #btn-footer-cta").forEach(btn => {
-      btn.addEventListener("click", openModal);
-    });
-
-    if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
-    if (btnCloseModal) btnCloseModal.addEventListener("click", closeModal);
-    if (btnDoneModal) btnDoneModal.addEventListener("click", closeModal);
-
-    // Form Submission Stub
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const enteredName = nameInput.value.trim();
-        const firstName = enteredName.split(" ")[0] || "there";
-
-        btnSubmitVisit.disabled = true;
-        btnSubmitVisit.textContent = "Sending…";
-
-        setTimeout(() => {
-          contactForm.style.display = "none";
-          modalSuccess.style.display = "flex";
-          modalSuccessMsg.textContent = `Thanks, ${firstName} — our team will be in touch to lock in your visit.`;
-        }, 400);
-      });
-    }
-
-    // 13. Fullscreen Menu Overlay
-    const menuEl = document.getElementById("menu-overlay");
-    const menuBackdrop = document.getElementById("menu-backdrop");
-    const menuPanel = document.getElementById("menu-panel");
-    const btnOpenMenu = document.getElementById("btn-open-menu");
-    const btnCloseMenu = document.getElementById("btn-close-menu");
-    const btnMenuBook = document.getElementById("btn-menu-book");
-    const menuLinks = document.querySelectorAll(".menu-link-item");
-
-    function openMenu() {
-      menuEl.classList.add("menu-open");
-      menuEl.setAttribute("aria-hidden", "false");
-      lockScroll();
-
-      // Backdrop fade (tension: 260, friction: 30)
-      addAnim(new Spring({
-        from: 0,
-        to: 1,
-        tension: 260,
-        friction: 30,
-        onUpdate: (v) => { menuBackdrop.style.opacity = v; }
-      }));
-
-      // Panel spring {opacity: 0, y: -24} -> {opacity: 1, y: 0} (tension: 220, friction: 28)
-      addAnim(new Spring({
-        from: -24,
-        to: 0,
-        tension: 220,
-        friction: 28,
-        onUpdate: (v) => {
-          menuPanel.style.transform = `translateY(${v}px)`;
-          menuPanel.style.opacity = 1 - Math.abs(v) / 24;
-        }
-      }));
-
-      // Menu links spring rise-in (delayIn: 120 + i*70 ms, tension: 200, friction: 26)
-      menuLinks.forEach((link, idx) => {
-        setTimeout(() => {
-          addAnim(new Spring({
-            from: 28,
-            to: 0,
-            tension: 200,
-            friction: 26,
-            onUpdate: (v) => {
-              link.style.transform = `translateY(${v}px)`;
-              link.style.opacity = 1 - v / 28;
-            }
-          }));
-        }, 120 + idx * 70);
-      });
-    }
-
-    function closeMenu() {
-      // Backdrop fade out
-      addAnim(new Spring({
-        from: 1,
-        to: 0,
-        tension: 260,
-        friction: 30,
-        onUpdate: (v) => { menuBackdrop.style.opacity = v; }
-      }));
-
-      // Panel spring out
-      addAnim(new Spring({
-        from: 0,
-        to: -24,
-        tension: 220,
-        friction: 28,
-        onUpdate: (v) => {
-          menuPanel.style.transform = `translateY(${v}px)`;
-          menuPanel.style.opacity = 1 - Math.abs(v) / 24;
-        },
-        onComplete: () => {
-          menuEl.classList.remove("menu-open");
-          menuEl.setAttribute("aria-hidden", "true");
-        }
-      }));
-
-      unlockScroll();
-    }
-
-    if (btnOpenMenu) btnOpenMenu.addEventListener("click", openMenu);
-    if (btnCloseMenu) btnCloseMenu.addEventListener("click", closeMenu);
-    if (menuBackdrop) menuBackdrop.addEventListener("click", closeMenu);
-
-    if (btnMenuBook) {
-      btnMenuBook.addEventListener("click", () => {
-        closeMenu();
-        setTimeout(openModal, 200);
-      });
-    }
-
-    // Smooth-scroll from menu links
-    menuLinks.forEach(link => {
-      link.addEventListener("click", (e) => {
-        const href = link.getAttribute("href");
-        if (href && href.startsWith("#")) {
-          e.preventDefault();
-          closeMenu();
-          const target = document.querySelector(href);
-          if (target) {
-            setTimeout(() => lenis.scrollTo(target), 200);
-          }
-        }
-      });
-    });
-
-    // Smooth-scroll for in-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      if (a.classList.contains("menu-link-item")) return;
-      a.addEventListener("click", (e) => {
-        const href = a.getAttribute("href");
-        if (href && href.length > 1) {
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            lenis.scrollTo(target);
-          }
-        }
-      });
-    });
-
-    // 14. Keyboard Accessibility (Esc closes open modal or menu)
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        if (modalEl && modalEl.classList.contains("modal-open")) {
-          closeModal();
-        } else if (menuEl && menuEl.classList.contains("menu-open")) {
-          closeMenu();
-        }
-      }
-    });
+    })();
   </script>
 </body>
 </html>
