@@ -8,18 +8,18 @@ colors:
   ink: "#15191f"
   ink-muted: "#59626e"
   divider: "#c2c8cf"
-  cobalt: "#0757d9"
-  cobalt-hover: "#0648b5"
-  cobalt-ink: "#f7f9fc"
-  canvas-dark: "#15191f"
-  surface-dark: "#1e242c"
-  surface-strong-dark: "#29313b"
-  ink-dark: "#edf1f5"
-  ink-muted-dark: "#b0bac5"
-  divider-dark: "#3d4651"
-  cobalt-dark: "#5d91ff"
-  cobalt-hover-dark: "#7aa5ff"
-  cobalt-ink-dark: "#10151c"
+  crimson: "#d32f2f"
+  crimson-hover: "#b71c1c"
+  crimson-ink: "#ffffff"
+  canvas-dark: "#0c1015"
+  surface-dark: "#141922"
+  surface-strong-dark: "#1d232e"
+  ink-dark: "#f0f4f8"
+  ink-muted-dark: "#8a96a4"
+  divider-dark: "#262e3b"
+  crimson-dark: "#e53935"
+  crimson-hover-dark: "#ef5350"
+  crimson-ink-dark: "#ffffff"
 typography:
   display:
     fontFamily: "Geist, Noto Sans Devanagari, system-ui, sans-serif"
@@ -71,15 +71,15 @@ spacing:
   section: "clamp(6.5rem, 12vw, 11rem)"
 components:
   button-primary:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.cobalt-ink}"
+    backgroundColor: "{colors.crimson}"
+    textColor: "{colors.crimson-ink}"
     typography: "{typography.label}"
     rounded: "{rounded.control}"
     padding: "0.94rem 1.45rem"
     height: "54px"
   button-primary-hover:
-    backgroundColor: "{colors.cobalt-hover}"
-    textColor: "{colors.cobalt-ink}"
+    backgroundColor: "{colors.crimson-hover}"
+    textColor: "{colors.crimson-ink}"
     rounded: "{rounded.control}"
   button-secondary:
     backgroundColor: "transparent"
@@ -89,8 +89,8 @@ components:
     padding: "0.7rem 1rem"
     height: "44px"
   nav-action:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.cobalt-ink}"
+    backgroundColor: "{colors.crimson}"
+    textColor: "{colors.crimson-ink}"
     typography: "{typography.label}"
     rounded: "{rounded.control}"
     padding: "0.72rem 1rem"
@@ -110,24 +110,25 @@ components:
 
 The system treats the page like a precise architectural elevation: squared panes, charcoal mullions, mineral surfaces, and supplied views into homes and residential settings. It makes local property advice feel concrete and legible without borrowing the glossy collage language of luxury-property portals or the soft beige styling of generic realtor templates.
 
-The experience is editorial in scale but operational in purpose. Wide Geist typography delivers direct claims, structural dividers organize evidence, and a single cobalt accent marks every meaningful action. Motion supports the advisory story: the narrative pins while service panes pass, then the Ulwe explanation resolves word by word. It never delays access to content, and the reduced-motion path presents the complete story immediately.
+The experience is editorial in scale but operational in purpose. Wide Geist typography delivers direct claims, structural dividers organize evidence, and a single architectural crimson accent marks every meaningful action, matching OM Enterprises' official brand identity. Motion supports the advisory story: the narrative pins while service panes pass, then the Ulwe explanation resolves word by word. It never delays access to content, and the reduced-motion path presents the complete story immediately.
 
 **Key Characteristics:**
-- Mineral off-white and system-dark canvases with charcoal structure.
-- One cobalt action accent, used deliberately and consistently.
+- Mineral off-white and deep obsidian-charcoal canvases with slate structure.
+- One architectural crimson action accent (#d32f2f / #e53935), matching the firm's storefront identity.
 - Square architectural panels, real repository photography, and border-built hierarchy.
 - Expansive type and asymmetrical grids that collapse cleanly to one column.
 - Purposeful scroll narrative with a complete reduced-motion fallback.
-- A persistent frosted navigation shell that keeps project discovery and direct contact available on every route.
+- A docked, full-width frosted glass navigation shell that stays pinned to the top while scrolling across every route.
+- An expansive display wordmark in the footer inspired by architectural editorial systems.
 
 ## Colors
 
-The palette is mineral and infrastructural: quiet neutral planes carry the content while cobalt identifies interaction.
+The palette is mineral and infrastructural: quiet neutral planes carry the content while crimson identifies interaction.
 
 ### Primary
-- **Signal Cobalt:** The only action color. Use it for primary buttons, linked actions, selection, focus, and the hero's terminal punctuation.
-- **Deep Signal Cobalt:** The light-theme hover state for solid cobalt actions.
-- **Night Signal Cobalt:** The brighter system-dark equivalent, tuned to remain legible against charcoal surfaces.
+- **Architectural Crimson:** The only action color. Use it for primary buttons, linked actions, selection, focus, and the hero's terminal punctuation.
+- **Deep Crimson:** The light-theme hover state for solid crimson actions.
+- **Vibrant Night Crimson:** The brighter system-dark equivalent, tuned to remain legible against obsidian charcoal surfaces.
 
 ### Neutral
 - **Mineral Canvas:** The light-theme page field and default card plane.
@@ -136,11 +137,11 @@ The palette is mineral and infrastructural: quiet neutral planes carry the conte
 - **Charcoal Ink:** Primary light-theme text and the source of structural contrast.
 - **Slate Copy:** Supporting light-theme copy.
 - **Window Mullion:** Hairline dividers, grid seams, and control borders.
-- **System Charcoal:** The dark-theme page field, paired with progressively lighter inset surfaces and cool off-white text.
+- **Deep Obsidian Charcoal:** The dark-theme page field, paired with progressively lighter inset surfaces and cool off-white text.
 
 ### Named Rules
 
-**The One Signal Rule.** Cobalt is the only chromatic interface accent; never introduce a second action color.
+**The One Signal Rule.** Crimson is the only chromatic interface accent; never introduce a second action color.
 
 **The Structural Neutral Rule.** Create hierarchy with neutral planes and divider lines before reaching for color.
 
@@ -205,11 +206,17 @@ The content language remains square and architectural. Cards, panels, rails and 
 
 ### Navigation
 
-The desktop navigation is a fixed 64px three-track glass shell: English wordmark, route links, and one solid cobalt WhatsApp action. It is always visible and inset from the viewport edge. Links gain a thin cobalt underline on hover and on the current route. Below 1100px, route links and the desktop action become a native `details` menu with a morphing two-line control and a frosted dropdown. Below 768px, a persistent bottom action bar keeps WhatsApp and call actions reachable.
+### Navigation
+
+The desktop navigation is a fixed 68px glass bar: authentic OM Enterprises dual-arrow emblem, brand wordmark, centered route links, and a solid crimson WhatsApp action. It is docked to the top edge (zero floating offset) and stays pinned while scrolling across all routes with frosted glass blur. Links gain a thin crimson underline on hover and on the current route. Below 1100px, desktop links become a native details menu with a morphing two-line control and an edge-to-edge frosted dropdown. Below 768px, a persistent bottom action bar keeps WhatsApp and call actions reachable.
 
 ### Proof Rail
 
 Credential items are compact, factual panes separated by shared hairlines. Each uses a strong first line and smaller muted evidence beneath it. The rail moves from four columns to two without becoming a carousel.
+
+### Footer Watermark
+
+A massive, architectural display wordmark ("OM ENTERPRISES") runs edge-to-edge along the bottom of the footer, set in tight display proportions with subtle tone-on-tone contrast, anchoring the site with high-end editorial gravity.
 
 ### Reveal Motion
 
@@ -219,7 +226,7 @@ The first viewport enters once with a short upward type resolve and a slow image
 
 ### Do:
 - **Do** use real repository photography as full-bleed architectural panes.
-- **Do** preserve cobalt for actions, focus, and sparse emphasis.
+- **Do** preserve architectural crimson for actions, focus, and sparse emphasis.
 - **Do** organize dense information with shared one-pixel seams and neutral surface shifts.
 - **Do** keep desktop narrative motion tied to reading progress and restore normal flow on mobile.
 - **Do** expose all interactive states through semantic attributes and visible focus treatment.
@@ -227,6 +234,7 @@ The first viewport enters once with a short upward type resolve and a slow image
 
 ### Don't:
 - **Don't** add rounded content cards, pill buttons, decorative glass panels, glows, or ambient shadows. Glass is reserved for persistent navigation surfaces.
+- **Don't** introduce floating pill navbars with artificial margins; keep the navbar docked to the viewport top.
 - **Don't** introduce a second accent color, gradients, or ornamental color blocks.
 - **Don't** replace the supplied repository imagery with unrelated luxury-property collages or generated lifestyle scenes.
 - **Don't** turn the layout into a uniform card grid; preserve the weighted architectural proportions.

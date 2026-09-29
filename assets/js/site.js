@@ -17,6 +17,12 @@ document.documentElement.classList.add("js");
     });
   });
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".mobile-menu[open]").forEach((menu) => menu.removeAttribute("open"));
+    }
+  });
+
   const reviews = Array.from(document.querySelectorAll(".review"));
   if (reviews.length) {
     let reviewIndex = 0;

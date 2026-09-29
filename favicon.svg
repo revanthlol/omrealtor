@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OM Enterprises">
-  <rect width="64" height="64" rx="10" fill="#0757d9"/>
-  <path d="M16 18h32v28H16z" fill="none" stroke="#f7f9fc" stroke-width="4"/>
-  <path d="M32 18v28M16 32h32" stroke="#f7f9fc" stroke-width="4"/>
+  <rect width="64" height="64" rx="12" fill="#0c1015"/>
+  <g transform="translate(4, 4) scale(0.56)">
+    <!-- Left Slate Path -->
+    <path d="M 48 16 L 16 44 L 26 44 L 26 76 L 36 76" stroke="#cbd5e1" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+    <polygon points="34,68 49,76 34,84" fill="#cbd5e1"/>
+    <!-- Right Crimson Path -->
+    <path d="M 52 16 L 84 44 L 74 44 L 74 76 L 58 76 L 58 48 L 42 48" stroke="#e53935" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  </g>
 </svg>
